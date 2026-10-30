@@ -6,6 +6,9 @@ node_modules/
 dist/
 build/
 .next/
+*.tsbuildinfo
+supabase/.temp/
+supabase/.branches/
 coverage/
 *.log
 .data/

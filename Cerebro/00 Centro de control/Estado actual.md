@@ -1,45 +1,34 @@
 # Estado actual
 
-Actualizado: 30 de octubre de 2026.
+Actualizado: 30 de octubre de 2026. Primera base de aplicación local.
 
-## Contexto confirmado
+## Decisiones vigentes
 
-Proyecto de fidelización para bares y cafeterías en España; aún no hay piloto concreto. Nombre de trabajo Fideresto; marca final pendiente. Ronda 1 confirmada en [[Requisitos confirmados]]: tarjeta personalizable, premio estacional configurable, NFC y QR, Wallet iOS/Android y WhatsApp como núcleo; implantación/configuración/formación asistidas por nuestro equipo.
+Fideresto para bares/cafeterías en España. Víctor será a priori el primer comercio piloto; datos de su negocio por concretar. Método Nexo para cerebro y seguridad, identidad visual independiente. Requisitos canónicos: [[Requisitos confirmados]], [[Reglas de sellos y premios]] y [[Decisiones]].
 
-Método: Nexo como referencia para el cerebro y la seguridad. Diseño visual independiente; «CristalWhite» solo como posibilidad. Fuente vigente: [[Decisiones]].
+Web principalmente móvil, administración Fideresto y comercio con dueño/camarero; consumidor con recorrido separado. Alta del consumidor al verificar móvil sin aprobación manual; camarero confirma sellos, canjea y solicita correcciones motivadas. Dueño configura y autoriza. NFC/QR, ambos Wallet y WhatsApp del negocio siguen siendo núcleo del piloto.
 
-Ronda 2: un sello por cuenta; tarjeta en curso pasa al premio estacional vigente; acumulación continua con premios pendientes; caducidad configurable. Ronda 3 confirma agenda propia básica apoyada en solicitudes WhatsApp, registro/confirmación por personal, y conservación de premios ya ganados para canjear. Ver [[Reglas de sellos y premios]].
+Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccionadas, pero proyecto SIN CREAR: coste cotizado 10 USD/mes; Víctor pide dejar su creación pendiente. No se autoriza ese coste. No se usan proyectos Supabase de otras apps.
 
-Ronda 4: nombre y móvil obligatorios, cumpleaños opcional (día/mes); WhatsApp emisor del negocio; dispositivo del local o personal con acceso individual dedicado. Ronda 5: verificar móvil al registrarse (método pendiente); el empleado confirma la cuenta pagada inicialmente; correcciones por solicitud con motivo y autorización del encargado/propietario. Verificación adicional de cuentas se estudiará después.
+## Implementado localmente
 
-Ronda 6: importe mínimo configurable incluido 0; premio como campo de texto libre, sin catálogo de tipos ni cálculo automático de descuentos; caducidades separadas (sellos por inactividad y premios desde obtención) con opción de desactivación.
+- Next.js 16.4.3, React/TypeScript y SDK Supabase SSR; dependencias/lockfile publicados con el código.
+- Login profesional preparado, verificación de usuario en servidor, selector de comercio y permisos dueño/camarero; panel de administración acotado para provisionar comercio.
+- Formulario del programa: sellos, premio en texto libre, mínimo incluido 0 y caducidades independientes/desactivables.
+- Gestión de etiquetas por dueño, enlace estable, QR descargable y escritura Web NFC condicionada a compatibilidad. Entrada pública mínima por etiqueta; no suma sellos.
+- Migración versionada de comercios, pertenencias, programa, NFC y auditoría; RLS/grants y funciones administrativas sin clave de servicio en runtime.
+- Demo `/demo` con datos ficticios y estado efímero: roles, configuración y sellos/canje simulados. No es acceso real ni almacena clientes. Visual inicial por revisar.
 
-Arquitectura: Víctor plantea web centrada en móvil, administración Fideresto y comercio con roles dueño/camarero. Confirma activación tras verificar móvil, sin revisión manual, y canjes por camarero. Propuesta técnica y límites NFC contrastados en [[Arquitectura y entornos]]; stack, proveedores y flujo NFC cotidiano aún por validar.
+## Comprobado
 
-## Existe realmente
+`npm test`: cinco pruebas, incluida ejecución de migración y casos SQL de aislamiento/escalada entre dos comercios sobre PGlite. `npm run typecheck` y `npm run build` superados. Revisión de navegador de demo, configuración, obtención/canje ficticio, rol de camarero y redirección de administración sin configuración. Composición móvil comprobada con captura estática a 390 px; no se ha probado en móvil físico. Enlaces del vault y diff comprobados al publicar.
 
-- Carpeta local `outputs/fideresto` dentro del espacio de este chat.
-- Repositorio Git local en `main`, documentos iniciales, instrucciones `AGENTS.md` y este vault.
-- Proyecto Fideresto en NEXO, ID `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`: seis fases y 30 tareas; ronda 3 añade agenda básica y conserva premios ganados, sin marcar desarrollo completado. Revisión final de esta actualización en [[Seguimiento Nexo]]. Ver [[Seguimiento Nexo]].
-- Fecha objetivo del piloto elegida por Víctor: 31/01/2027. Fechas intermedias y alcance detallado son propuestas revisables.
-- [[Requisitos confirmados]] de ronda 1; [[Pantallas y flujos]] v0.2 y [[Plan inicial]] v0.3 ajustados y disponibles en NEXO. Diseño visual y reglas detalladas todavía pendientes.
-- Consulta de `git ls-remote` completada sin referencias: el repositorio remoto estaba vacío al comprobarlo.
+## Pendiente
 
-## No implementado
+Crear/conectar Supabase cuando Víctor decida, aplicar migración y comprobar Auth/RLS en el servicio real. MFA, invitaciones/revocación desde panel, imagen de tarjeta, consumidores con teléfono verificado, movimientos reales de sellos/canjes/correcciones y caducidad, Wallet, WhatsApp, agenda, trabajos en segundo plano, alojamiento web, copias y piloto real. El flujo NFC cotidiano sigue por validar; ninguna prueba con chips físicos aún.
 
-No hay aplicación ejecutable, base de datos, autenticación, tarjetas Wallet, mensajería ni despliegue. Ningún control de seguridad está implementado por el hecho de estar documentado.
+## Ubicación y continuidad
 
-## Sincronización
+Repositorio `outputs/fideresto`; remoto autorizado `https://github.com/VictorvilchezDev/fideresto.git`, rama `main`. Git contiene código y cerebro; NEXO la planificación, sin sincronización automática. Ver [[Seguimiento Nexo]] para revisión/IDs actuales. Objetivo revisable de piloto 31/01/2027.
 
-Destino autorizado: `https://github.com/VictorvilchezDev/fideresto.git`. Base documental publicada en `main`: commit inicial `7240fddf2603146466d00787e17f623c67f12e7e`, comprobado contra `git ls-remote`. La rama local sigue `origin/main`. El historial de Git es la referencia para el último commit; esta nota registra la primera publicación verificada.
-
-Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --check` correcto y exclusiones de `.env`, secretos y archivos privados comprobadas. Son verificaciones documentales y de Git, no pruebas de una aplicación.
-
-## Siguiente trabajo
-
-1. Concretar método de verificación/acceso del consumidor, cuentas partidas y casos límite del vencimiento. Confirmación inicial por empleado y correcciones mediante solicitud motivada/autorización ya acordadas.
-2. Revisar [[Arquitectura y entornos]] v0.1: matriz inicial de permisos, PWA/backend modular y NFC. Concretar flujo diario de sello y elegir stack/alojamiento antes de implementar; agenda del camarero por confirmar.
-3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
-4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.
-
-No se ha creado un proyecto registrado en la barra lateral de Codex ni un chat nuevo; la carpeta está disponible desde este chat. El proyecto de seguimiento en NEXO sí está creado. No hay sincronización automática entre NEXO y GitHub.
+Previsualización de esta sesión: `http://127.0.0.1:3017/demo`. No es un despliegue y necesita que el servidor local siga activo. Reproducción/conexión en `docs/DESARROLLO.md`. No se ha registrado un proyecto en la barra lateral de Codex ni creado otro chat.

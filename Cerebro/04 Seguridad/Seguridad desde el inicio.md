@@ -4,7 +4,7 @@
 
 Víctor exige adoptar el método de trabajo de seguridad de Nexo desde el comienzo. Se reutilizan principios y lecciones, no credenciales, permisos operativos, infraestructura ni afirmaciones de seguridad de otra aplicación.
 
-**Estado real:** requisitos documentados; aplicación y controles todavía no implementados. Los siguientes controles son una propuesta técnica de adaptación a Fideresto, pendiente de concretar en arquitectura y pruebas.
+**Estado real:** primera base local implementada. Sesión profesional validada en servidor, acceso por pertenencia/rol, RLS y privilegios de columna para configuración/NFC, funciones administrativas acotadas y auditoría de cambios. Pruebas SQL locales con PGlite y usuarios ficticios superadas. Supabase alojado no creado; no se ha probado autenticación real ni producción. Los controles de sellos/canjes, MFA, comunicaciones, backups y carga siguen pendientes. La tabla siguiente conserva el diseño previsto del producto completo.
 
 ## Activos y límites de confianza
 
@@ -51,3 +51,9 @@ Verificar móvil al registrarse, con método/canal pendiente. Diseñar códigos/
 ## Revisión de arquitectura
 
 Matriz inicial y límites en [[Arquitectura y entornos]]. Administración Fideresto y dueño requieren autenticación reforzada propuesta; acceso de soporte acotado y trazable, sin lectura/modificación global de clientes por defecto. El camarero no configura programa, WhatsApp ni etiquetas ni autoriza sus propias correcciones. Altas se activan al verificar móvil; canje por camarero confirmado. El NFC público contiene una URL copiable, sin claves ni datos personales: no prueba presencia ni autoriza sellos. Verificar ámbito de comercio en cada operación y trabajo en segundo plano. Ninguno de estos controles se ha implementado todavía.
+
+## Evidencia de la primera base
+
+`npm test`: validación de programa (mínimo 0, premio libre, caducidad independiente) y ejecución de migración/pruebas SQL contra PostgreSQL WASM/PGlite. Casos: aislamiento de dos negocios, intento de cambio de ámbito, cambios de programa rechazados a camarero, autopromoción y creación de NFC rechazadas, administración con listado acotado y sin lectura operativa global, entrada pública mínima y etiqueta desactivada. `npm run typecheck` y compilación de producción superadas. Dependencias auditadas sin vulnerabilidades reportadas en instalación.
+
+UI revisada por navegador: demo, simulación de sello/premio/canje, configuración y cambio a rol camarero; administración sin Supabase redirige al acceso y no expone panel. Composición móvil revisada mediante captura estática a 390 px, no dispositivo real ni NFC físico. Credenciales/cookies no se registran en vault. No reutilizar fixtures ficticios como cuenta de producción.

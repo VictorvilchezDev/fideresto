@@ -31,6 +31,10 @@ Proyecto `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`, creado por petición de Víctor
 - Probar con datos ficticios y recursos independientes. No reutilizar conexiones, secretos, bases ni autorizaciones operativas de otras aplicaciones.
 - Mantener credenciales, claves de Wallet, datos personales y evidencias privadas fuera de Git y del vault.
 - Documentar controles propuestos, implementados, probados y desplegados como estados diferentes. Una prueba local no verifica producción.
-- El stack, alojamiento, presupuesto, precio y marca final siguen pendientes; no convertir recomendaciones anteriores en decisiones.
+- Base implementada con Next.js/TypeScript y Supabase Auth/PostgreSQL preparado. El proyecto alojado de Supabase no se ha creado: Víctor aplaza el coste cotizado de 10 USD/mes. Alojamiento web, presupuesto, precio y marca final siguen pendientes. No crear recursos de pago sin autorización.
 
 Este archivo orienta el trabajo; el vault contiene los detalles. No garantiza memoria automática: hay que leerlo y mantenerlo.
+
+## Verificación del código
+
+Ejecutar `npm test`, `npm run typecheck` y `npm run build` tras cambios relevantes. Las pruebas SQL usan PGlite con identidades ficticias y la migración real; no equivalen a comprobar Supabase alojado. Nunca ejecutar `supabase/tests/bootstrap-local.sql` en un proyecto real. La demo `/demo` es pública, ficticia y no persiste: no usarla como acceso ni respaldo de autorización. Las rutas reales aplican sesión validada y RLS.

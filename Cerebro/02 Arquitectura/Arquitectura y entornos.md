@@ -1,6 +1,6 @@
 # Arquitectura y entornos
 
-Propuesta v0.1 · 30 de octubre de 2026. Evaluación de la propuesta de Víctor, con contraste de NFC en documentación oficial. Sin aplicación implementada; stack y alojamiento recomendados no elegidos todavía. Nexo aporta método de cerebro/seguridad, no infraestructura ni stack heredados.
+Base v0.2 · 30 de octubre de 2026. Víctor acepta comenzar sobre la propuesta y elige Supabase para la base de datos. Aplicación local inicial implementada con Next.js/TypeScript; Supabase Auth profesional y PostgreSQL/RLS preparados. Proyecto alojado sin crear por decisión de aplazar coste (10 USD/mes cotizados). Wallet, WhatsApp, movimientos de fidelización y procesos en segundo plano todavía pendientes. Nexo aporta método de cerebro/seguridad, no infraestructura ni stack heredados.
 
 ## Base planteada por Víctor
 
@@ -13,18 +13,18 @@ Cada persona accede con su identidad, desde dispositivo del negocio o propio. El
 
 Aclaraciones confirmadas en este turno: la afiliación se activa al verificar el móvil, sin aprobación manual de altas. El camarero también registra canjes. Se mantiene la solicitud de corrección con mensaje de motivo y autorización del dueño/encargado; un rol adicional de encargado sigue siendo una ampliación por decidir.
 
-## Recomendación técnica, pendiente de elección
+## Base técnica y siguientes componentes
 
 Una web adaptable e instalable como PWA, un backend modular y una base de datos transaccional. Una base de código y despliegue inicial sencillo; separar responsabilidades dentro del código. Los trabajos de WhatsApp y Wallet se procesan con reintentos y límites en segundo plano, en un proceso del mismo proyecto. No necesitan bloquear el botón de confirmar sello.
 
-Stack candidato: TypeScript con React/Next.js para interfaz y servidor, PostgreSQL para datos y almacenamiento de objetos para imágenes. No se instala ni contrata nada en este turno. Alojamiento, proveedores, versiones, presupuesto y método de autenticación se elegirán antes de implementar. Next.js permite alojamiento propio; no implica contratar un proveedor concreto.
+Base instalada: TypeScript, React/Next.js, cliente Supabase SSR y Supabase Auth para identidades profesionales. PostgreSQL en Supabase es la elección del usuario; imágenes/Storage, proveedor de verificación telefónica del consumidor, alojamiento web y trabajos externos aún pendientes. Dependencias fijadas en package-lock.json. No se ha creado infraestructura de pago ni usado otros proyectos.
 
 ```mermaid
 flowchart TD
     A[Administración Fideresto] --> S[Backend: identidad, permisos y reglas]
     B[Comercio: dueño o camarero] --> S
     C[Consumidor: alta y tarjeta] --> S
-    S --> D[(PostgreSQL: datos por comercio)]
+    S --> D[(Supabase PostgreSQL: datos por comercio)]
     S --> I[Imágenes de tarjetas]
     S --> Q[Trabajos pendientes]
     Q --> W[Proceso en segundo plano]
@@ -95,7 +95,7 @@ Como alternativa de operación, el camarero puede leer el QR personal de la tarj
 - Imágenes y texto libre como entradas no confiables, con límites y presentación segura.
 - Desarrollo, pruebas y producción separados; datos ficticios y recursos independientes. Copias y restauración ensayadas antes del piloto.
 
-Consultar [[Seguridad desde el inicio]]. Todos estos controles están documentados, no implementados ni probados por esta nota.
+Consultar [[Seguridad desde el inicio]]. Permisos de configuración/NFC y aislamiento implementados en servidor y SQL; pruebas locales con PGlite superadas. MFA, colas, claves Wallet/WhatsApp, copias, producción y movimientos transaccionales de sellos/canjes pendientes. La autenticación preparada no se ha probado con Supabase alojado.
 
 ## Fuentes contrastadas
 
@@ -113,3 +113,9 @@ Consultadas el 30/10/2026; revisar al implementar y probar en dispositivos reale
 ## Alojamiento y Git
 
 Alojamiento propio/compartido pendiente; no existe autorización para reutilizar infraestructura de Nexo ni modificar servicios ajenos. Repositorio autorizado: `https://github.com/VictorvilchezDev/fideresto.git`. Commits acotados, comprobaciones proporcionales, publicación verificada y sin forzar historia remota.
+
+## Primera entrega implementada
+
+Acceso profesional, selector de comercios, panel propio, edición de programa por dueño, etiquetas NFC con URL estable/QR, grabación Web NFC condicionada a compatibilidad y panel de administración para alta comercial. Migración versionada con RLS, privilegios de columna, funciones acotadas y auditoría de configuración. Camarero sin edición de programa/NFC ni promoción de permisos. Altas profesionales iniciales y asignación de equipo se provisionarán de forma controlada; invitaciones/revocación desde panel aún pendientes. Sin clave de servicio en runtime.
+
+Demo local ficticia separada: cambiar rol, simular sellos/canje, editar programa y preparar QR. No valida identidades ni persiste datos; no conecta con Supabase. Interfaz visual es una primera propuesta independiente por revisar, no una aprobación de estilo definitivo. Manifest preparado; no hay operaciones sin conexión. Guía de conexión en `docs/DESARROLLO.md`.

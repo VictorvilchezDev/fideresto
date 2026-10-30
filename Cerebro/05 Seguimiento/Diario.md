@@ -68,3 +68,9 @@ Víctor confirma importe mínimo por local incluido 0, premio en un campo de tex
 ## 2026-10-30 · Propuesta de arquitectura y NFC
 
 Víctor plantea web principalmente móvil, administración Fideresto y comercio con dueño/camarero. Aclara que verificar móvil activa afiliación sin aprobación manual y que camarero puede registrar canjes. FID-034–037 separan propuesta de usuario, aclaraciones confirmadas y recomendación técnica. Se documentan arquitectura v0.1, matriz de permisos, PWA/backend modular/stack candidato, NFC URL estable y alternativas de grabación Android/iPhone. Fuentes oficiales consultadas; no se probó hardware ni se implementó aplicación. Agenda del camarero y flujo NFC cotidiano pendientes de validar. Plan y copia NEXO según [[Seguimiento Nexo]].
+
+## 2026-10-30 · Primera base de aplicación
+
+Víctor pide comenzar, se propone como piloto y elige Supabase. Se conecta Supabase MCP, se consulta organización/proyectos y se elige Victor Vilchez/París. Intento de creación no completado por confirmación caducada; coste consultado 10 USD/mes. Víctor decide aplazar creación. No se crea infraestructura ni se aplica migración a proyectos ajenos. FID-038–040.
+
+Implementada web Next.js/TypeScript con acceso Supabase SSR, permisos servidor, configuración, NFC/QR, administración inicial y demo ficticia separada. Migración con RLS/grants/auditoría y pruebas locales PGlite. Tests, tipos y build superados; revisión visual de escritorio y composición móvil estática. No hay autenticación alojada ni operaciones reales de consumidor/sellos/Wallet/WhatsApp todavía. Guía de desarrollo y estado actual actualizados; NEXO según [[Seguimiento Nexo]].

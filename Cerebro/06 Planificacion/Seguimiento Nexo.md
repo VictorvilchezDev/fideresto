@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 14, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 16, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -114,3 +114,17 @@ Archivos leídos con contenido coincidente, índice actualizado con hash de conc
 - `Documentacion/Requisitos-confirmados-vigentes.md`, hash `7f944e9b989f872b109d3e94bd0890509f185b48043993f19c4573c066d1fb20`.
 
 Comprobados enlaces internos del vault y formato del diff antes de publicar; no son pruebas de aplicación ni de dispositivos.
+
+## Primera base de aplicación local
+
+Víctor pide empezar, se propone como primer comercio piloto y elige Supabase. Organización Victor Vilchez y París confirmadas; coste consultado 10 USD/mes y creación aplazada expresamente por el usuario. Consulta posterior de proyectos confirma que no existe Fideresto; no hay migraciones aplicadas a otros proyectos.
+
+Ocho tareas puestas en curso con evidencia y límites de la primera base; revisión 16/30 tareas comprobada. Solo sigue completada la tarea de repositorio/vault. Acceso preparado, programa/NFC y administración inicial implementados localmente; Auth alojado y operaciones del piloto pendientes. Cinco pruebas automáticas (incluye SQL/RLS en PGlite), tipos y build superados. Revisión de navegador y composición móvil estática, sin hardware real.
+
+Copias leídas de vuelta con coincidencia exacta; índice actualizado con hash:
+
+- `Documentacion/Arquitectura-base-v0.2.md`, hash `3fa6c389667e6e14a492e27fa3b1da118f7e724030ac2deb732f17795c25a50e`.
+- `Documentacion/Primera-base-local-v0.1.md`, hash `1d69368b64e7eea2d43f903d3aebc2a3e8b30ed94941e6437ccc4d6793447073`.
+- `Documentacion/Requisitos-confirmados-vigentes.md`, hash `630c69a4a317a49e9f58503f09a5512802cfac7c82f29a54440ea2eb79b170c5`.
+
+Enlaces del vault, exclusión de configuración local y formato del diff comprobados antes de publicar código/cerebro en GitHub. La previsualización local no es un despliegue.

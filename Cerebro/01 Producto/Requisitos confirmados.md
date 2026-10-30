@@ -47,3 +47,7 @@ La configuración concreta no está decidida por el ejemplo previo de ocho visit
 ## Aclaraciones de arquitectura
 
 Víctor propone web centrada en móvil con administración de Fideresto y área de comercio con roles dueño/camarero. Se confirman activación tras verificar móvil y canjes por camarero. Evaluación técnica, matriz propuesta y límites NFC en [[Arquitectura y entornos]]. Stack y flujo NFC diario pendientes de validación.
+
+## Inicio de implementación
+
+Víctor será a priori el primer comercio piloto y elige Supabase para alojar PostgreSQL. Creación del proyecto aplazada expresamente al conocer el coste cotizado de 10 USD/mes. Hay una primera base local; Wallet/WhatsApp reales, verificación telefónica y operaciones reales de fidelización aún no implementadas. Demo ficticia no equivale al piloto.
