@@ -31,11 +31,13 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-025 | 2026-10-30 | Confirmado | Nombre y móvil obligatorios; cumpleaños opcional (día/mes). Ronda 4, respuesta 1. Acceso y verificación por definir. |
 | FID-026 | 2026-10-30 | Confirmado | Mensajes desde el WhatsApp de cada negocio. Ronda 4, respuesta 2; número actual/dedicado y compatibilidad por concretar. |
 | FID-027 | 2026-10-30 | Confirmado | Dispositivo del negocio o personal con acceso individual dedicado. Ronda 4, respuesta 3. No implica cuentas compartidas ni permisos globales. |
-
 | FID-028 | 2026-10-30 | Confirmado | Verificar el móvil del consumidor al registrarse. Ronda 5, respuesta 1; método/canal todavía por elegir. |
 | FID-029 | 2026-10-30 | Confirmado | Al inicio, el empleado confirma la cuenta pagada para otorgar el sello; posteriormente se estudiará verificación adicional. Ronda 5, respuesta 2. No exige referencia de ticket ni integración con TPV en esta modalidad. |
 | FID-030 | 2026-10-30 | Confirmado | Correcciones mediante solicitud, mensaje explicando el motivo y autorización del encargado/propietario. Ronda 5, respuesta 3 a la propuesta anterior; conservar registro. Detalle de permisos y rechazo por diseñar. |
+| FID-031 | 2026-10-30 | Confirmado | Importe mínimo de cuenta configurable por local, incluido 0. Ronda 6, respuesta 1. |
+| FID-032 | 2026-10-30 | Confirmado; aclara FID-013 | Premio en un único campo de texto libre escrito por el comercio. Ronda 6, respuesta 2: sustituye la propuesta de tipos/opciones estructuradas y cálculo de descuentos. El empleado entrega/aplica lo descrito y registra el canje. |
+| FID-033 | 2026-10-30 | Confirmado; concreta FID-021 | Caducidades configurables por separado: sellos tras un plazo sin actividad y premios desde su obtención; posibilidad de desactivar la caducidad. Ronda 6, respuesta 3. |
 
 ## Propuestas abiertas
 
-Precio, stack, alojamiento, cuentas partidas, modalidades de descuento, cómputo de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.
+Precio, stack, alojamiento, cuentas partidas, efectos de cambios de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

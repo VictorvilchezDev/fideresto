@@ -12,6 +12,8 @@ Ronda 2: un sello por cuenta; tarjeta en curso pasa al premio estacional vigente
 
 Ronda 4: nombre y móvil obligatorios, cumpleaños opcional (día/mes); WhatsApp emisor del negocio; dispositivo del local o personal con acceso individual dedicado. Ronda 5: verificar móvil al registrarse (método pendiente); el empleado confirma la cuenta pagada inicialmente; correcciones por solicitud con motivo y autorización del encargado/propietario. Verificación adicional de cuentas se estudiará después.
 
+Ronda 6: importe mínimo configurable incluido 0; premio como campo de texto libre, sin catálogo de tipos ni cálculo automático de descuentos; caducidades separadas (sellos por inactividad y premios desde obtención) con opción de desactivación.
+
 ## Existe realmente
 
 - Carpeta local `outputs/fideresto` dentro del espacio de este chat.
@@ -33,7 +35,7 @@ Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --ch
 
 ## Siguiente trabajo
 
-1. Concretar método de verificación/acceso del consumidor, cuentas partidas, modalidades de descuento y detalle del vencimiento. Confirmación inicial por empleado y correcciones mediante solicitud motivada/autorización ya acordadas.
+1. Concretar método de verificación/acceso del consumidor, cuentas partidas y casos límite del vencimiento. Confirmación inicial por empleado y correcciones mediante solicitud motivada/autorización ya acordadas.
 2. Diseñar el modelo de amenazas y matriz de permisos antes de implementar operaciones.
 3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
 4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.

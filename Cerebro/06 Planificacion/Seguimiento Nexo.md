@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 10, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 12, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -97,3 +97,9 @@ Cinco tareas ajustadas; revisión 8/30 tareas comprobada sin cambios de estados,
 Cinco tareas y descripción del proyecto actualizadas; revisión 10/30 tareas comprobada sin cambios de estados, participantes o fechas. Verificar móvil al registrarse (método pendiente); empleado confirma cuenta pagada inicialmente; corrección requiere solicitud con mensaje de motivo y autorización del encargado/propietario. Verificación adicional de tickets por estudiar.
 
 Requisitos consolidados actualizados mediante hash y leídos de vuelta con contenido coincidente: `Documentacion/Requisitos-confirmados-vigentes.md`, rondas 1–5, hash `45b5311229046782b9054bcdaddc94f2d67a0ed2e10f2a3d6180bcbb1bb9bfc6`. Los hashes anteriores son históricos. Sin desarrollo implementado. Se comprueban enlaces internos del vault y formato del diff antes de publicar en GitHub.
+
+## Ronda 6 · Premio libre, mínimo y caducidades
+
+Cinco tareas y descripción actualizadas; revisión 12/30 tareas comprobada, sin cambiar estados, participantes o fechas. Premio como campo de texto libre, sin catálogo de tipos ni cálculo automático de descuentos; mínimo configurable incluido 0; caducidades separadas/desactivables (sellos por inactividad y premios desde obtención). Estas decisiones prevalecen sobre los ejemplos y propuestas anteriores.
+
+Documento consolidado rondas 1–6 escrito con hash y leído con contenido coincidente: `Documentacion/Requisitos-confirmados-vigentes.md`, hash `706d753e36a9fa9921209b045ec014f87b43f3fb84852a0bf9edd3d7a839a76c`. Enlaces internos y formato del diff comprobados antes de publicar. Sin aplicación implementada.

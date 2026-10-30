@@ -60,3 +60,7 @@ NEXO: cinco tareas ajustadas; revisión 8/30 tareas comprobada, sin marcar desar
 ## 2026-10-30 · Ronda 5: verificación y correcciones
 
 Víctor confirma verificación del móvil al registrarse, cuenta pagada confirmada inicialmente por el empleado y correcciones mediante solicitud con mensaje de motivo y autorización. Registrados FID-028–030; método de verificación, cuentas partidas y detalles de permisos pendientes. Actualizados requisitos, reglas, flujos, seguridad y estado. Sin aplicación ni controles implementados; comprobación documental y sincronización registradas en [[Seguimiento Nexo]].
+
+## 2026-10-30 · Ronda 6: simplificación del premio
+
+Víctor confirma importe mínimo por local incluido 0, premio en un campo de texto libre y caducidades separadas/desactivables: sellos por inactividad y premios desde obtención. Corrige la propuesta innecesaria de enumerar/modelar descuentos; se elimina esa complejidad de requisitos, flujos y planificación. FID-031–033. Se conservan reglas estacionales y canjes trazables. Documentación actualizada, sin código ni controles implementados; sincronización y comprobaciones en [[Seguimiento Nexo]].

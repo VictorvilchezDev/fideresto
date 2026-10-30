@@ -25,7 +25,7 @@ Público confirmado: bares y cafeterías. La tarjeta en Wallet iOS/Android y Wha
 | Empleado | Actividad de trabajo | Consultar operaciones permitidas y solicitar correcciones con mensaje de motivo; autorización del encargado/propietario antes de aplicarlas. |
 | Propietario | Inicio | Actividad, clientes recurrentes, premios y campañas; distinguir datos registrados de estimaciones. |
 | Propietario | Clientes y ficha | Historial, estado del programa y preferencias, con datos mínimos. |
-| Propietario | Programa y recompensas | Número de sellos, imagen de tarjeta, premio de producto/servicio gratis o descuento, cambios por temporada, límites y versiones. |
+| Propietario | Programa y recompensas | Número de sellos, imagen de tarjeta, premio en texto libre, importe mínimo (admite 0), caducidades separadas/desactivables y cambios de temporada. |
 | Propietario | Equipo y permisos | Altas, roles, revocación y acceso al comercio. |
 | Propietario | Campañas | Cumpleaños, inactividad, promociones, experiencia/reseñas y comunicaciones de reservas; biblioteca ampliable de plantillas, vista previa, límites y resultados. |
 | Personal y propietario | Agenda de reservas | Fecha/hora, nombre, personas y estado; registro y confirmación manual de solicitudes recibidas por WhatsApp. |
@@ -49,7 +49,7 @@ No se pide información de cumpleaños si no se va a utilizar; valorar día/mes 
 ## Flujo 2 · Visita y sello
 
 1. El cliente muestra su tarjeta personal.
-2. Un empleado autenticado identifica la tarjeta y confirma la cuenta pagada; se concede un sello por cuenta. Inicialmente no se exige número de ticket; se estudiará verificación adicional posteriormente.
+2. Un empleado autenticado identifica la tarjeta y confirma la cuenta pagada; se concede un sello por cuenta. El empleado comprueba el mínimo configurado por el local (0 significa sin mínimo). Inicialmente no se exige número de ticket; se estudiará verificación adicional posteriormente.
 3. El servidor verifica empleado, comercio, tarjeta y reglas.
 4. Registra un movimiento único y actualiza el progreso.
 5. Cliente y empleado reciben el resultado.
@@ -87,7 +87,7 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 ## Decisiones de producto por cerrar
 
 - Un sello por cuenta confirmado; falta identificación de la cuenta y tratamiento de cuentas partidas.
-- El comercio configura umbral, imagen, premio y caducidad. La tarjeta en curso adopta el premio nuevo; los premios ganados se conservan para canjear. Faltan detalles del cómputo de caducidad y correcciones.
+- El comercio configura umbral, imagen, premio y caducidad. La tarjeta en curso adopta el premio nuevo; los premios ganados se conservan para canjear. Caducidades separadas: sellos por inactividad y premios desde obtención, con opción de desactivar. Premio como texto libre; sin tipos estructurados ni cálculo automático de descuentos.
 - Solicitud de corrección con motivo y autorización del encargado/propietario confirmada; falta concretar estados y permisos detallados.
 - Datos mínimos y verificación de móvil al registrarse confirmados; falta elegir mecanismo de verificación/acceso/recuperación del cliente.
 - Comercio piloto y responsable; presupuesto y proveedores.

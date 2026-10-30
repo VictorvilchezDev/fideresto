@@ -11,13 +11,13 @@ El piloto debe demostrar que el personal puede operarlo y que los clientes lo en
 
 ## Primer alcance propuesto
 
-Primer público confirmado: bares y cafeterías en España. El comercio configura número de sellos, imagen de tarjeta y premio de producto/servicio gratuito o descuento, que puede cambiar por temporada. Nuestro equipo instala, ayuda en la configuración inicial y forma al personal. Un establecimiento para comenzar; arquitectura preparada para aislar comercios.
+Primer público confirmado: bares y cafeterías en España. El comercio configura número de sellos, imagen de tarjeta y premio en texto libre, que puede cambiar por temporada. Nuestro equipo instala, ayuda en la configuración inicial y forma al personal. Un establecimiento para comenzar; arquitectura preparada para aislar comercios.
 
 Cliente, empleado y propietario disponen de recorridos separados. El acceso público del comercio solo permite descubrir/registrarse; no permite añadir sellos.
 
 Wallet en iOS y Android, WhatsApp, NFC y QR son núcleo obligatorio del piloto. Durante desarrollo se pueden revisar partes con datos ficticios; una demo web o integraciones simuladas no cumplen el piloto. Las comunicaciones incluyen todas las planteadas y nuevas plantillas configurables según demanda. Ver [[Requisitos confirmados]].
 
-Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumulación continua y caducidad configurable. Los premios ya ganados se conservan para canjear; agenda propia básica con solicitudes WhatsApp confirmada. Faltan cómputo del vencimiento, cuentas partidas, correcciones y acceso del consumidor. Ver [[Reglas de sellos y premios]].
+Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumulación continua y caducidad configurable. Los premios ya ganados se conservan para canjear; agenda propia básica con solicitudes WhatsApp confirmada. Ronda 6: mínimo de cuenta configurable incluido 0 y caducidad separada (sellos por inactividad, premios desde obtención), desactivable. Correcciones mediante solicitud motivada y autorización. Faltan casos límite de vencimiento, cuentas partidas y método de acceso/verificación del consumidor. Ver [[Reglas de sellos y premios]].
 
 ## Fases propuestas y entregables
 
@@ -47,7 +47,7 @@ NEXO contiene seis fases y 30 tareas con dependencias y puntos relativos, no hor
 9. El núcleo es utilizable en móvil y distingue errores, carga, falta de conexión y confirmaciones.
 10. Una función externa no integrada se identifica como simulada.
 11. El piloto incorpora Apple Wallet, Google Wallet, WhatsApp, NFC y QR reales y comprobados.
-12. El comercio puede configurar imagen, número de sellos y tipo de premio, preservando historial y la política estacional que se acuerde.
+12. El comercio puede configurar imagen, número de sellos, texto libre del premio, importe mínimo (incluido 0) y caducidades separadas/desactivables, preservando historial y reglas estacionales confirmadas.
 13. Las comunicaciones admiten plantillas ampliables, preferencias, bajas y límites.
 14. Nuestro equipo completa configuración y formación antes de abrir el piloto.
 

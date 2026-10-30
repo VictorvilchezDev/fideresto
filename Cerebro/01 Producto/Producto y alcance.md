@@ -2,7 +2,7 @@
 
 ## Confirmado
 
-Víctor quiere ejecutar un servicio de fidelización para bares y cafeterías en España. El comercio configura número de sellos, imagen y premio de producto/servicio gratuito o descuento, cambiable por temporada. NFC, QR, Wallet en iOS/Android y WhatsApp son núcleo del piloto. Implantación, configuración inicial y formación a cargo de nuestro equipo. Detalle y límites en [[Requisitos confirmados]]. Ningún establecimiento piloto seleccionado todavía.
+Víctor quiere ejecutar un servicio de fidelización para bares y cafeterías en España. El comercio configura número de sellos, imagen y premio en texto libre, cambiable por temporada. NFC, QR, Wallet en iOS/Android y WhatsApp son núcleo del piloto. Implantación, configuración inicial y formación a cargo de nuestro equipo. Detalle y límites en [[Requisitos confirmados]]. Ningún establecimiento piloto seleccionado todavía.
 
 ## Problema que se propone resolver
 

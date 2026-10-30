@@ -22,7 +22,7 @@ Ayudar al comercio a conseguir más visitas recurrentes y evaluar si el benefici
 
 ## Punto de partida propuesto
 
-Público confirmado: bares y cafeterías. El comercio configura número de sellos, imagen y premio estacional de producto/servicio gratuito o descuento. Núcleo del piloto: Wallet iOS/Android, WhatsApp, NFC y QR. Nuestro equipo instala, configura inicialmente y forma al personal. Precio, marca y reglas detalladas siguen pendientes.
+Público confirmado: bares y cafeterías. El comercio configura número de sellos, imagen y premio estacional en texto libre. Núcleo del piloto: Wallet iOS/Android, WhatsApp, NFC y QR. Nuestro equipo instala, configura inicialmente y forma al personal. Precio, marca y reglas detalladas siguen pendientes.
 
 El primer entregable será una demo con datos ficticios que permita recorrer:
 
