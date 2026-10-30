@@ -2,6 +2,8 @@
 
 Versión 0.2 · Ajustada a la ronda 1 del 30 de octubre de 2026. No son pantallas implementadas ni diseños aprobados.
 
+Reglas actualizadas en ronda 2: [[Reglas de sellos y premios]] prevalece sobre las cuestiones todavía abiertas del diseño inicial.
+
 ## Organización del producto
 
 Una plataforma para varios comercios, con datos aislados y un programa independiente por comercio. No se propone una tarjeta universal que mezcle recompensas de negocios ajenos.
@@ -46,7 +48,7 @@ No se pide información de cumpleaños si no se va a utilizar; valorar día/mes 
 ## Flujo 2 · Visita y sello
 
 1. El cliente muestra su tarjeta personal.
-2. Un empleado autenticado identifica la tarjeta y confirma una visita elegible.
+2. Un empleado autenticado identifica la tarjeta y confirma la cuenta; se concede un sello por cuenta.
 3. El servidor verifica empleado, comercio, tarjeta y reglas.
 4. Registra un movimiento único y actualiza el progreso.
 5. Cliente y empleado reciben el resultado.
@@ -59,7 +61,7 @@ Escanear el QR público del comercio no añade sellos. La identificación de la 
 2. El cliente la solicita en el establecimiento.
 3. El empleado verifica y confirma el canje.
 4. El servidor consume el premio una sola vez, incluso con doble clic o peticiones simultáneas.
-5. Se registra quién, cuándo y en qué comercio; el siguiente ciclo se aplica según las reglas.
+5. Se registra quién, cuándo y en qué comercio; el cliente sigue acumulando en otro ciclo aunque tenga premios pendientes de canjear.
 
 ## Flujo 4 · Recuperación de cliente
 
@@ -83,7 +85,7 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 
 ## Decisiones de producto por cerrar
 
-- Qué cuenta como visita y si se exige compra mínima.
+- Un sello por cuenta confirmado; falta identificación de la cuenta y tratamiento de cuentas partidas.
 - El comercio configura umbral, imagen y premio. Faltan coste/condiciones, caducidad y reglas para tarjetas/premios existentes al cambiar temporada.
 - Quién corrige operaciones y con qué trazabilidad.
 - Datos mínimos y mecanismo de acceso/recuperación del cliente.

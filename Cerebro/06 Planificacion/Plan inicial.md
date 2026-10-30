@@ -17,7 +17,7 @@ Cliente, empleado y propietario disponen de recorridos separados. El acceso púb
 
 Wallet en iOS y Android, WhatsApp, NFC y QR son núcleo obligatorio del piloto. Durante desarrollo se pueden revisar partes con datos ficticios; una demo web o integraciones simuladas no cumplen el piloto. Las comunicaciones incluyen todas las planteadas y nuevas plantillas configurables según demanda. Ver [[Requisitos confirmados]].
 
-Las reglas del premio, visitas elegibles, caducidad, correcciones y acceso del consumidor siguen pendientes de concretar.
+Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumulación continua y caducidad configurable. Falta aclarar recompensas ya obtenidas, cómputo del vencimiento, cuentas partidas, correcciones y acceso del consumidor. Reservas mediante agenda propia y/o WhatsApp por decidir. Ver [[Reglas de sellos y premios]].
 
 ## Fases propuestas y entregables
 

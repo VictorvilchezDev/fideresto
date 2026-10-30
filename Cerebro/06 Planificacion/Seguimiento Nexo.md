@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 4, seis fases y 29 tareas.
+- Última planificación comprobada: revisión 5, seis fases y 29 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -70,3 +70,9 @@ Copias vigentes leídas de vuelta con contenido coincidente:
 - `Documentacion/Pantallas-y-flujos-v0.2.md`, hash `84eb4db4317af4a8f6ccec8aa0fdd0ce2e56dc62df23330874047817ad681d57`.
 - `Documentacion/Requisitos-confirmados-ronda-1.md`, hash `fdbc8eace0bf570b3d53759c4a8e7b829294e309f3a4b36b0792db0b3b79c830`.
 - `Documentacion/00-Documentacion-vigente.md`, hash `872b98b815ed04134d076d252b8ac3de3caba2af8ec567aa8fbb55a2deba8607`.
+
+## Ronda 2 · Sellos, premios y reservas
+
+Cinco tareas actualizadas y revisión 5/29 tareas verificada. Estados, participantes y calendario conservados. Nota `Documentacion/Reglas-sellos-premios-ronda-2.md` leída con contenido coincidente, hash `f893a9f0ddaf762fb3b6315e00fddcaf7530cdc87420746d8f0f80021bad3b3f`. El índice de documentación vigente se ha actualizado mediante hash de concurrencia; su hash de ronda 1 queda como histórico.
+
+Reglas confirmadas en [[Reglas de sellos y premios]]. La agenda manual apoyada en WhatsApp es propuesta por revisar, no implementación ni requisito aceptado.

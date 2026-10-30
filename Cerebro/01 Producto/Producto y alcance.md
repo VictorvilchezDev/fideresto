@@ -22,6 +22,10 @@ Durante el desarrollo puede demostrarse un recorrido web parcial con datos ficti
 
 Los hitos están en [[Plan inicial]]. Bares y cafeterías ya están confirmados; precio, tecnología, reglas detalladas y ampliaciones adicionales siguen abiertos. Reservas propias frente a mensajes/enlaces de reserva requiere aclaración.
 
+## Reglas confirmadas de fidelización
+
+Un sello por cuenta. Las tarjetas en curso pasan al premio estacional vigente; se sigue acumulando aunque existan recompensas pendientes. Caducidad configurable. No se decide todavía qué ocurre con premios ya ganados ni una agenda de reservas concreta: ver [[Reglas de sellos y premios]].
+
 ## Medición
 
 Separar registros, visitas, canjes y visitas vinculadas a campañas de visitas adicionales causadas por ellas. No prometer incremento de ingresos sin medirlo.

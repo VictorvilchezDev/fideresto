@@ -13,6 +13,7 @@ Vault local de Markdown compatible con Obsidian. Contiene el conocimiento para r
 - [[Como mantener el cerebro]]: protocolo de mantenimiento tomado como referencia de Nexo.
 - [[Producto y alcance]]: problema, usuarios y alcance propuesto.
 - [[Requisitos confirmados]]: respuestas de Víctor y núcleo obligatorio del piloto.
+- [[Reglas de sellos y premios]]: un sello por cuenta, temporadas, acumulación, caducidad y propuesta de reservas.
 - [[Pantallas y flujos]]: recorridos de cliente, empleado y propietario; propuesta de primera versión.
 - [[Arquitectura y entornos]]: decisiones técnicas pendientes y límites de infraestructura.
 - [[Identidad e interfaz]]: diseño propio; corrección de la referencia visual a Nexo.

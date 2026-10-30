@@ -21,6 +21,11 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-015 | 2026-10-30 | Confirmado | Wallet iOS/Android y WhatsApp son el núcleo de la app y del piloto, no extras aplazables tras una versión web. Respuesta 4. |
 | FID-016 | 2026-10-30 | Confirmado | Todas las comunicaciones planteadas y nuevas plantillas adaptables a la demanda del comercio. Mensajes de reserva no confirman aún un motor de reservas propio. Respuesta 5. |
 | FID-017 | 2026-10-30 | Confirmado | Nuestro equipo instala, forma al personal y ayuda con la configuración inicial. Respuesta 6. |
+| FID-018 | 2026-10-30 | Confirmado | Un sello por cuenta, no por persona. Ronda 2, respuesta 1. Identificación de cuenta y cuentas partidas aún por concretar. |
+| FID-019 | 2026-10-30 | Confirmado | La tarjeta en curso pasa al nuevo premio de temporada. Respuesta 2 al ejemplo de tarjeta sin completar; no se extiende automáticamente a recompensas ya ganadas sin canjear. |
+| FID-020 | 2026-10-30 | Confirmado | El cliente sigue acumulando con recompensas pendientes. Ronda 2, respuesta 3. |
+| FID-021 | 2026-10-30 | Confirmado | El comercio configura la caducidad. Ronda 2, respuesta 4; detalles de cómputo pendientes. |
+| FID-022 | 2026-10-30 | Orientación pendiente | Víctor valora agenda propia o WhatsApp al inicio y considera engorroso integrar sistemas de reserva diferentes. La combinación de agenda manual y solicitudes WhatsApp es propuesta del asistente por validar. |
 
 ## Propuestas abiertas
 

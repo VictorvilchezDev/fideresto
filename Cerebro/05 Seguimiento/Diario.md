@@ -33,3 +33,12 @@ Siguiente: revisar con Víctor el recorrido propuesto y concretar reglas de visi
 - El alcance de un motor propio de reservas sigue pendiente; los mensajes relacionados con reservas sí están confirmados. No hay código ejecutable todavía.
 
 Siguiente ronda: visitas elegibles/límites, transición de temporada, ciclo de canje, caducidad y alcance de reservas. Después concretar datos, acceso y operación.
+
+## 2026-10-30 · Respuestas de producto, ronda 2
+
+- Un sello por cuenta; tarjeta en curso pasa al premio nuevo de temporada; seguir acumulando con premios pendientes; caducidad configurable por comercio. Registrados FID-018–021.
+- Reservas: Víctor valora agenda propia o WhatsApp y no desea integrar cada sistema ajeno. Se propone agenda manual sencilla con solicitudes por WhatsApp, pendiente de elección. No se interpreta como aprobación de disponibilidad/mesas automáticas. FID-022.
+- Se crea [[Reglas de sellos y premios]] y se actualizan requisitos, producto, flujos, plan y estado. Sigue pendiente aclarar recompensas ya ganadas ante cambio de temporada.
+- NEXO: cinco tareas ajustadas, revisión 5/29 comprobada, sin cambiar estados de avance. Nota de ronda 2 cargada y leída de vuelta; índice actualizado con hash vigente.
+
+Siguiente: aclarar premio ya ganado y elegir modalidad inicial de reservas. No hay aplicación ni controles implementados todavía.
