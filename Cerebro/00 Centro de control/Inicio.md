@@ -18,6 +18,7 @@ Vault local de Markdown compatible con Obsidian. Contiene el conocimiento para r
 - [[Arquitectura y entornos]]: decisiones técnicas pendientes y límites de infraestructura.
 - [[Identidad e interfaz]]: diseño propio; corrección de la referencia visual a Nexo.
 - [[Seguridad desde el inicio]]: activos, riesgos, controles y verificaciones previstas.
+- [[Siguiente entrega]]: prioridad inmediata, criterios del núcleo y condiciones para conexiones/piloto.
 - [[Plan inicial]]: hitos y criterios de revisión.
 - [[Seguimiento Nexo]]: proyecto, tareas, fecha objetivo e instrucciones de actualización por MCP.
 - [[Decisiones]]: acuerdos, propuestas y decisiones sustituidas.

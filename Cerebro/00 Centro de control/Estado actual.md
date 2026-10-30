@@ -17,7 +17,7 @@ Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccio
 - Formulario del programa: sellos, premio en texto libre, mínimo incluido 0 y caducidades independientes/desactivables.
 - Gestión de etiquetas por dueño, enlace estable, QR descargable y escritura Web NFC condicionada a compatibilidad. Entrada pública mínima por etiqueta; no suma sellos.
 - Migración versionada de comercios, pertenencias, programa, NFC y auditoría; RLS/grants y funciones administrativas sin clave de servicio en runtime.
-- Demo `/demo` con datos ficticios y estado efímero: roles, configuración y sellos/canje simulados. No es acceso real ni almacena clientes. Visual Crystal Clear aplicado tras nueva corrección de Víctor: vidrio blanco/frío y azul, sin verde/oliva. Ejecución por revisar; ver [[Identidad e interfaz]].
+- Demo `/demo` con datos ficticios y estado efímero: roles, configuración y sellos/canje simulados. No es acceso real ni almacena clientes. Visual Crystal Clear aplicado tras nueva corrección de Víctor: vidrio blanco/frío y azul, sin verde/oliva. Víctor la valora positivamente y se adopta como referencia para continuar; ver [[Identidad e interfaz]].
 
 ## Comprobado
 
@@ -26,6 +26,10 @@ Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccio
 ## Pendiente
 
 Crear/conectar Supabase cuando Víctor decida, aplicar migración y comprobar Auth/RLS en el servicio real. MFA, invitaciones/revocación desde panel, imagen de tarjeta, consumidores con teléfono verificado, movimientos reales de sellos/canjes/correcciones y caducidad, Wallet, WhatsApp, agenda, trabajos en segundo plano, alojamiento web, copias y piloto real. El flujo NFC cotidiano sigue por validar; ninguna prueba con chips físicos aún.
+
+## Prioridad siguiente
+
+[[Siguiente entrega]]: modelo de consumidores/movimientos/premios y recorrido del camarero, con sellos/canjes/correcciones persistentes probados localmente con datos ficticios. Después, conectar y verificar Supabase cuando se autorice su creación, verificación telefónica y ambos Wallet/WhatsApp/NFC/QR, además de agenda y operación del piloto. La propuesta de orden no altera la fecha objetivo ni autoriza costes.
 
 ## Ubicación y continuidad
 

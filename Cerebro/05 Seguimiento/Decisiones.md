@@ -45,6 +45,7 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-039 | 2026-10-30 | Confirmado | Base de datos alojada en Supabase. Organización Victor Vilchez y París elegidas. Coste consultado: 10 USD/mes; Víctor pide dejar la creación pendiente. No crear ni aceptar ese coste; no se ha creado el proyecto. |
 | FID-040 | 2026-10-30 | Confirmado inicio; elección de implementación | Víctor acepta la propuesta y pide empezar. Primera base en Next.js/TypeScript con Supabase Auth profesional/PostgreSQL preparado, permisos por comercio y demo independiente. No implica completar Wallet/WhatsApp, flujo NFC diario o aprobar el estilo visual definitivo. |
 | FID-041 | 2026-10-30 | Confirmado; concreta FID-005/006 | Víctor reitera que no quiere colores ni estilo de Nexo y pide «cristalclear o algo así». Se sustituye la propuesta verde/oliva por dirección Crystal Clear: blancos fríos, vidrio y acento azul discreto como interpretación implementada. Ejecución concreta y marca final por revisar. |
+| FID-042 | 2026-10-30 | Confirmado como referencia de continuidad | Tras ver Crystal Clear, Víctor responde «OH!! mucho mejor!» y pide próximos pasos y seguir actualizando NEXO. Se adopta la base actual para las siguientes pantallas; no implica aprobar marca comercial final ni dar el piloto por completo. Orden de siguiente entrega propuesto en [[Siguiente entrega]]. |
 
 ## Propuestas abiertas
 

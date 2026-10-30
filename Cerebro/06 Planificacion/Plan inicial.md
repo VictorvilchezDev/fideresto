@@ -1,6 +1,6 @@
 # Plan inicial
 
-Versión 0.3 · 30 de octubre de 2026 · Propuesta de producto y calendario.
+Versión 0.4 · 30 de octubre de 2026 · Propuesta de producto y calendario.
 Fecha objetivo elegida por Víctor: **31 de enero de 2027**, para tener el piloto preparado. Las fechas intermedias, reglas y funcionalidades son propuestas revisables.
 
 ## Objetivo
@@ -32,7 +32,7 @@ Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumu
 
 La seguridad se diseña e implementa en todas las fases. La fase 05 comprueba el conjunto, no es el momento de empezar a protegerlo.
 
-NEXO contiene seis fases y 30 tareas con dependencias y puntos relativos, no horas. La base documental figura completada; la definición del producto está en curso. Los responsables están pendientes de asignación; no se han invitado personas.
+NEXO contiene seis fases y 30 tareas con dependencias y puntos relativos, no horas. La base documental figura completada; Crystal Clear se adopta como referencia visual, y la definición de producto, identidad/tokens y desarrollo funcional siguen en curso. Los responsables están pendientes de asignación; no se han invitado personas.
 
 ## Criterios del núcleo funcional
 
@@ -63,4 +63,4 @@ Medir registros, visitas repetidas, canjes, bajas y gasto. Separar visitas vincu
 
 ## Siguiente paso
 
-Concretar el programa de ejemplo y sus reglas con Víctor, cerrar matriz de permisos y presentar pantallas propias. Ver [[Pantallas y flujos]], [[Seguridad desde el inicio]] y [[Seguimiento Nexo]].
+Priorizar el núcleo transaccional y el recorrido cotidiano de cliente/camarero, con pruebas locales y datos ficticios. Ver [[Siguiente entrega]], [[Pantallas y flujos]], [[Seguridad desde el inicio]] y [[Seguimiento Nexo]]. Supabase alojado sigue aplazado por coste; se conserva el núcleo completo exigido para el piloto.

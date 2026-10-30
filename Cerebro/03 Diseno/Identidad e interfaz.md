@@ -2,7 +2,7 @@
 
 ## Dirección vigente: Crystal Clear
 
-El 30/10/2026 Víctor vuelve a corregir la propuesta inicial: «no quiero los colores y estilo de Nexo. Quiero un estilo cristalclear o algo así». Dirección clara y cristalina confirmada; la ejecución visual concreta sigue pendiente de su revisión. La primera interfaz verde/oliva queda sustituida.
+El 30/10/2026 Víctor vuelve a corregir la propuesta inicial: «no quiero los colores y estilo de Nexo. Quiero un estilo cristalclear o algo así». Dirección clara y cristalina confirmada. Tras verla, Víctor responde «OH!! mucho mejor!»; se toma esta base visual como referencia para continuar. La primera interfaz verde/oliva queda sustituida.
 
 Nexo aporta exclusivamente el método del cerebro y seguridad. No es referencia de paleta, tipografía, logotipo o composición. La elección anterior «Nexo: Espacio claro» fue corregida antes de diseñar y no autoriza a recuperarla.
 
@@ -27,4 +27,4 @@ Se conservan foco visible y diseño adaptable. Sin soporte de backdrop-filter ha
 
 Revisión por navegador del panel, formulario y acceso; composición móvil mediante captura estática a 390 px. Cinco pruebas existentes, tipos y build superados. No se ha probado un dispositivo físico. Ajuste cosmético de la base local; no completa integraciones, datos alojados ni funciones pendientes del piloto.
 
-Estilo concreto por revisar con Víctor. No dar por aprobados marca final, modo oscuro o todos los componentes futuros por este cambio.
+Base actual bien recibida por Víctor y adoptada como referencia de continuidad. La tarea de identidad/tokens permanece en curso hasta cerrar la definición de alcance de la que depende; marca comercial definitiva, modo oscuro y componentes futuros siguen abiertos.

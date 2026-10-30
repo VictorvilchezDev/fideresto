@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 17, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 18, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -134,3 +134,17 @@ Enlaces del vault, exclusión de configuración local y formato del diff comprob
 Tarea de identidad actualizada, revisión 17/30 tareas leída; permanece en curso porque la ejecución concreta necesita revisión del usuario. Dirección clara/cristalina confirmada por Víctor, sustituyendo verde/oliva. Nexo solo aporta método de cerebro y seguridad. Acceso, panel, formularios, marca/icono y tema/manifest actualizados de forma coherente.
 
 `Documentacion/Identidad-Crystal-Clear-v0.1.md` cargado y leído con coincidencia exacta; hash `25bf7297c0449dcbc92377acf2d64b5816726f227d9b17d8ff539acc06e20713`. Índice actualizado con hash vigente. Cinco pruebas existentes, tipos y build superados; navegador de escritorio y composición móvil estática revisados. La primera validación detectó duplicados generados en .next; se excluyen del análisis las copias numeradas con espacios en ese directorio, manteniendo originales/validadores, antes de verificar de nuevo. Sin cambios de datos, permisos, proveedores o coste.
+
+## Siguiente entrega priorizada
+
+Víctor recibe positivamente Crystal Clear y pide próximos pasos/actualizar NEXO. Base visual adoptada como referencia de continuidad; tarea de identidad conserva estado en curso por su dependencia de definición del alcance y aspectos finales abiertos. Ocho tareas ajustadas, cuatro prioridades elevadas; revisión 18/30 comprobada, sin cambiar fechas, responsables o dependencias. Solo sigue completada la base documental.
+
+Prioridad: modelo de afiliaciones/movimientos/premios, tarjeta del consumidor y recorrido del camarero, con operaciones persistentes e idempotentes y pruebas locales. El hito funcional sigue pendiente. Supabase alojado permanece aplazado por coste; Wallet, WhatsApp, NFC/QR, campañas y agenda siguen dentro del alcance del piloto.
+
+Documentos leídos con coincidencia exacta e índice actualizado:
+
+- `Documentacion/Siguiente-entrega-v0.1.md`, hash `85ea22eb8c75e26bb0092c999889d470fb120dac6756340f0a63bb652ebc06ab`.
+- `Documentacion/Plan-inicial-v0.4.md`, hash `2a460824f451aff5648c9d90d9881c5ac85efcaf8c2900f82d57b4eb9f7f5d5f`.
+- `Documentacion/Identidad-Crystal-Clear-v0.1.md`, hash `63b29747eed585e3053a6acc2071ac1b18330e146b334c0cda6fe9fbd6de1e96`.
+
+Cambio de planificación/documentación; no hay código funcional nuevo ni nuevas pruebas de aplicación en esta actualización. Se comprueban enlaces del vault y formato del diff antes de publicar.
