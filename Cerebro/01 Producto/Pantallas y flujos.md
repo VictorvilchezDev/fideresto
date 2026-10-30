@@ -95,3 +95,7 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 ## Revisión de arquitectura v0.1
 
 Dos áreas profesionales planteadas por Víctor: administración Fideresto y comercio; dentro del comercio, dueño y camarero/dependiente. El recorrido público del consumidor es separado. Camarero confirma sellos, registra canjes y solicita correcciones con motivo; dueño configura y autoriza. No se requiere aprobar altas tras verificar móvil. Acceso del camarero a agenda pendiente ante la restricción de funciones planteada. Propuesta de uso cotidiano NFC/QR y alternativa QR personal en [[Arquitectura y entornos]]; no prometer lectura Wallet por acercar dos móviles.
+
+## Recorrido funcional local · 30/10/2026
+
+[[Nucleo de fidelizacion]] recoge el estado vigente: sellos/canjes/correcciones persistentes, premios con condiciones guardadas, autorización SQL por comercio y laboratorio ficticio independiente de la demo visual. Crystal Clear continúa en tarjeta, operación del camarero e historial. 22 comprobaciones locales, tipos/build y recorrido de navegador superados. Las afirmaciones anteriores de movimientos pendientes describen la primera base y quedan sustituidas por este avance local; no se ha creado ni probado Supabase alojado, verificación real del móvil o concurrencia multisesión.

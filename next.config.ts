@@ -4,6 +4,7 @@ const config: NextConfig = {
   agentRules: false,
   turbopack: { root: process.cwd() },
   poweredByHeader: false,
+  serverExternalPackages: ["@electric-sql/pglite"],
   async headers() {
     return [
       {

@@ -84,3 +84,11 @@ Cinco pruebas existentes, tipos y build superados. El primer chequeo detecta tip
 ## 2026-10-30 · Referencia visual y siguiente entrega
 
 Víctor recibe positivamente Crystal Clear y pide próximos pasos y mantener NEXO actualizado. FID-042: base visual adoptada para continuar, sin aprobar marca comercial final. Se propone completar núcleo persistente y recorrido cliente/camarero con pruebas locales, seguido de conexiones reales y preparación del piloto. No se implementan operaciones ni se autoriza creación de Supabase por esta planificación. [[Siguiente entrega]] recoge criterios y límites. Identidad, estado, plan e índice del vault actualizados; seguimiento NEXO según [[Seguimiento Nexo]].
+
+## 30/10/2026 · Núcleo persistente local
+
+Tras autorización «venga ok dale», implementados afiliaciones, movimientos, sellos, premios obtenidos, canjes y correcciones con motivo/autorización. Laboratorio PGlite con almacenamiento local ignorado, identidades ficticias y gate exclusivo de desarrollo/loopback. API profesional valida sesión y SQL mantiene permisos; consumidor consulta su tarjeta sin motivos internos. UI Crystal Clear conserva demo visual independiente.
+
+22 comprobaciones automáticas, tipos y build superados. Navegador: obtención/canje, solicitud y autorización, restauración del premio, consulta del consumidor y persistencia al recargar; acumulación continúa con premio pendiente. Sin multisesión real, Auth/servicios alojados, hardware ni despliegue. Supabase no creado y sin costes aceptados. Ver [[Nucleo de fidelizacion]] y [[Seguimiento Nexo]].
+
+Composición estática del nuevo flujo revisada a 390 px en navegador, sin desbordes observados. No sustituye prueba en móvil físico. Archivos temporales de QA retirados; captura final queda fuera del repositorio.

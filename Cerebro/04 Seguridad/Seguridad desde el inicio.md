@@ -4,7 +4,7 @@
 
 Víctor exige adoptar el método de trabajo de seguridad de Nexo desde el comienzo. Se reutilizan principios y lecciones, no credenciales, permisos operativos, infraestructura ni afirmaciones de seguridad de otra aplicación.
 
-**Estado real:** primera base local implementada. Sesión profesional validada en servidor, acceso por pertenencia/rol, RLS y privilegios de columna para configuración/NFC, funciones administrativas acotadas y auditoría de cambios. Pruebas SQL locales con PGlite y usuarios ficticios superadas. Supabase alojado no creado; no se ha probado autenticación real ni producción. Los controles de sellos/canjes, MFA, comunicaciones, backups y carga siguen pendientes. La tabla siguiente conserva el diseño previsto del producto completo.
+**Estado real:** primera base local implementada. Sesión profesional validada en servidor, acceso por pertenencia/rol, RLS y privilegios de columna para configuración/NFC, funciones administrativas acotadas y auditoría de cambios. Pruebas SQL locales con PGlite y usuarios ficticios superadas. Supabase alojado no creado; no se ha probado autenticación real ni producción. Los controles transaccionales de sellos/canjes ya están implementados y probados localmente; ver el avance del núcleo al final. MFA, comunicaciones, backups, carga y concurrencia multisesión real siguen pendientes. La tabla siguiente conserva el diseño previsto del producto completo.
 
 ## Activos y límites de confianza
 
@@ -57,3 +57,7 @@ Matriz inicial y límites en [[Arquitectura y entornos]]. Administración Fidere
 `npm test`: validación de programa (mínimo 0, premio libre, caducidad independiente) y ejecución de migración/pruebas SQL contra PostgreSQL WASM/PGlite. Casos: aislamiento de dos negocios, intento de cambio de ámbito, cambios de programa rechazados a camarero, autopromoción y creación de NFC rechazadas, administración con listado acotado y sin lectura operativa global, entrada pública mínima y etiqueta desactivada. `npm run typecheck` y compilación de producción superadas. Dependencias auditadas sin vulnerabilidades reportadas en instalación.
 
 UI revisada por navegador: demo, simulación de sello/premio/canje, configuración y cambio a rol camarero; administración sin Supabase redirige al acceso y no expone panel. Composición móvil revisada mediante captura estática a 390 px, no dispositivo real ni NFC físico. Credenciales/cookies no se registran en vault. No reutilizar fixtures ficticios como cuenta de producción.
+
+## Controles del núcleo implementados y probados localmente · 30/10/2026
+
+[[Nucleo de fidelizacion]] recoge el estado vigente: sellos/canjes/correcciones persistentes, premios con condiciones guardadas, autorización SQL por comercio y laboratorio ficticio independiente de la demo visual. Crystal Clear continúa en tarjeta, operación del camarero e historial. 22 comprobaciones locales, tipos/build y recorrido de navegador superados. Las afirmaciones anteriores de movimientos pendientes describen la primera base y quedan sustituidas por este avance local; no se ha creado ni probado Supabase alojado, verificación real del móvil o concurrencia multisesión.

@@ -14,7 +14,7 @@ npm run dev
 
 Abrir `http://127.0.0.1:3000/demo`. Si se utiliza otro puerto, ajustar `NEXT_PUBLIC_APP_URL` al origen exacto antes de generar enlaces NFC. En esta sesión la demo está en el puerto 3017.
 
-Sin Supabase configurado solo está disponible la demo pública ficticia; las rutas profesionales redirigen al acceso. No existe usuario/contraseña de prueba oculto ni bypass de autorización. La demo conserva cambios únicamente en memoria y no graba chips físicos.
+Sin Supabase configurado están disponibles la demo visual ficticia y, si se habilita expresamente, el laboratorio local; las rutas profesionales redirigen al acceso. No existe usuario/contraseña de prueba oculto ni bypass de autorización. La demo conserva cambios únicamente en memoria y no graba chips físicos.
 
 ## Supabase: creación pendiente
 
@@ -23,7 +23,7 @@ Víctor elige Supabase, organización Victor Vilchez y región París. Consulta 
 Cuando se autorice su creación:
 
 1. Crear un proyecto dedicado a Fideresto. Inspeccionar tablas existentes y confirmar el proyecto antes de aplicar migraciones.
-2. Aplicar `supabase/migrations/202610300001_foundation.sql`. Nunca aplicar `supabase/tests/bootstrap-local.sql` al servicio alojado: es solo un sustituto de Auth para una base temporal de pruebas.
+2. Aplicar ambas migraciones de `supabase/migrations/` en orden: fundación y núcleo de fidelización. Nunca aplicar `supabase/tests/bootstrap-local.sql` al servicio alojado: es solo un sustituto de Auth para una base temporal de pruebas.
 3. Configurar la URL y clave **publishable** en `.env.local`. No utilizar la clave secret/service_role en variables públicas ni en el runtime de esta base.
 4. Crear las cuentas profesionales mediante Supabase Auth de forma controlada, con correo verificado. No hay alta pública de dueños/camareros ni invitaciones desde el panel todavía.
 5. Asignar el primer administrador por SQL controlado, usando el UUID de esa cuenta verificada:
@@ -54,7 +54,7 @@ No guardar UUID personales, contraseñas o claves reales en ejemplos, Git o cere
 - Las páginas públicas de etiqueta muestran el programa y explican que el registro está pendiente.
 - Demo interactiva para revisar interfaz, roles y flujo ficticio.
 
-Faltan clientes reales, verificación de móvil, sellos/canjes/correcciones persistentes, historial de premios, caducidad aplicada, imagen de tarjeta, Wallet, WhatsApp, agenda y colas. El piloto exige estas integraciones reales; no dar la demo por producto terminado.
+El núcleo de sellos/canjes/correcciones e historial/caducidad ya está implementado y probado localmente. Faltan clientes reales, recorrido de verificación/acceso por móvil, comprobación alojada/multisesión, imagen de tarjeta, Wallet, WhatsApp, agenda y colas. El piloto exige estas integraciones reales; no dar la demo por producto terminado.
 
 ## Comprobaciones
 
@@ -67,3 +67,19 @@ npm run build
 Las pruebas de SQL ejecutan la migración real en PostgreSQL WASM/PGlite con un esquema Auth mínimo ficticio. Cubren aislamiento entre comercios, límites dueño/camarero, escalada de permisos, publicación mínima y revocación de etiquetas. No prueban Supabase Auth, PostgREST o el despliegue remoto. Los fixtures se revierten y la base está en memoria.
 
 El manifest permite preparar el uso como web instalada. No hay soporte de operaciones sin conexión. Alojamiento, integración de mensajería y presupuestos siguen pendientes.
+
+## Laboratorio persistente
+
+En `.env.local`, añadir `FIDERESTO_LOCAL_LAB=1` y arrancar `npm run dev`. Abrir `/laboratorio`: Alex/Mar ficticios, roles de prueba, pago → sello → premio → canje → solicitud motivada → autorización del dueño. Tres sellos por premio al arrancar el fixture; dueño puede cambiar ese programa independiente de `/demo`. Al recargar se mantiene el historial.
+
+PGlite guarda en `.data/loyalty-lab-v1/` fuera de Git. No introducir datos reales ni publicar el servidor de desarrollo. Para reiniciar el dataset, detener el servidor y mover esa carpeta a un respaldo local; al arrancar se reconstruye con fixtures. El bootstrap y los fixtures NUNCA se ejecutan en Supabase alojado. La inicialización del laboratorio v1 es de una vez; futuras migraciones necesitarán adaptar/recrear ese dataset ficticio, no se aplican silenciosamente sobre él.
+
+La API del laboratorio exige desarrollo + bandera explícita + host loopback + Origin coincidente. En producción `/laboratorio` y su API devuelven 404, incluso con la bandera: comprobado mediante solicitudes HTTP a `next start` local. La cola/transacción aísla los actores de prueba. El adaptador profesional usa Supabase Auth/RPC y nunca acepta `persona` como autorización.
+
+`/api/loyalty`: POST JSON con comercio, código opaco de tarjeta y comando opcional (acción, clave UUID idempotente y payload); origen de aplicación y usuario validado en servidor. RPC aplican permisos incluso si se llama directamente a PostgREST. `/tarjeta/[merchantId]` consulta la tarjeta propia; falta el recorrido de entrada/verificación del consumidor. Alta RPC solo tras `phone_confirmed_at` real; no enviar un «verified=true» inventado.
+
+Pruebas: 22 comprobaciones contando subcasos SQL. Incluyen temporadas, expiración, reintentos/doble canje secuencial, correcciones, permisos y privacidad de motivos, ventana de historial, gate del laboratorio y límite de lectura JSON. PGlite tiene una conexión: la carrera de dos sesiones PostgreSQL sigue pendiente. No se han usado asesores de un proyecto ajeno. Validar asesores, Auth, PostgREST, concurrencia y carga cuando se cree el proyecto dedicado.
+
+Los movimientos permanecen aunque se corrijan. Hay 60 movimientos recientes, hasta 100 premios y 100 solicitudes pendientes por tarjeta en la respuesta actual; paginación y bandeja global pendientes. El mínimo se comprueba mediante declaración del empleado, sin verificación independiente del ticket.
+
+CLI Supabase fijada en 2.122.0. Para evitar escribir configuración en el home puede usarse `SUPABASE_HOME=/ruta/de/trabajo/cli` (sin credenciales en el repo). Crear futuras migraciones con `npm exec -- supabase migration new nombre`, previa consulta de `--help`. No hace falta arrancar Docker ni crear Supabase alojado para ejecutar estas pruebas.

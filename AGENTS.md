@@ -38,3 +38,9 @@ Este archivo orienta el trabajo; el vault contiene los detalles. No garantiza me
 ## Verificación del código
 
 Ejecutar `npm test`, `npm run typecheck` y `npm run build` tras cambios relevantes. Las pruebas SQL usan PGlite con identidades ficticias y la migración real; no equivalen a comprobar Supabase alojado. Nunca ejecutar `supabase/tests/bootstrap-local.sql` en un proyecto real. La demo `/demo` es pública, ficticia y no persiste: no usarla como acceso ni respaldo de autorización. Las rutas reales aplican sesión validada y RLS.
+
+## Laboratorio del núcleo
+
+`/laboratorio` es una prueba local persistente con clientes ficticios; solo desarrollo, `FIDERESTO_LOCAL_LAB=1`, loopback y origen coincidente. Nunca introducir datos reales ni publicar el servidor de desarrollo. Dataset `.data/loyalty-lab-v1/` ignorado por Git. La API real usa sesión Supabase y RPC; jamás aceptar `persona` del laboratorio como autorización profesional. Ver `Cerebro/02 Arquitectura/Nucleo de fidelizacion.md`.
+
+Las dos migraciones se prueban con PGlite. Tiene una sola conexión: no presentar reintentos/doble canje secuencial como prueba real de concurrencia entre sesiones. Validar esa carrera y asesores/Auth/PostgREST en el proyecto dedicado cuando se cree; no usar otro proyecto para suplir la creación aplazada.

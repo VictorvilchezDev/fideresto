@@ -24,3 +24,7 @@ Campos del alcance aceptado: fecha, hora, nombre, número de personas y estado p
 ## Aclaraciones próximas
 
 Método de verificación del móvil y recuperación de tarjeta, cuentas partidas, efectos de cambios de vencimiento. El premio se define en texto libre y no requiere modelar modalidades de descuento. Datos mínimos, WhatsApp del negocio, confirmación inicial por empleado, solicitud motivada/autorizada de corrección, conservación de premio ganado y modalidad básica de reservas ya resueltos.
+
+## Estado de implementación local · 30/10/2026
+
+[[Nucleo de fidelizacion]] recoge el estado vigente: sellos/canjes/correcciones persistentes, premios con condiciones guardadas, autorización SQL por comercio y laboratorio ficticio independiente de la demo visual. Crystal Clear continúa en tarjeta, operación del camarero e historial. 22 comprobaciones locales, tipos/build y recorrido de navegador superados. Las afirmaciones anteriores de movimientos pendientes describen la primera base y quedan sustituidas por este avance local; no se ha creado ni probado Supabase alojado, verificación real del móvil o concurrencia multisesión.

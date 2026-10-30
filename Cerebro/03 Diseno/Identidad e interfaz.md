@@ -28,3 +28,7 @@ Se conservan foco visible y diseño adaptable. Sin soporte de backdrop-filter ha
 Revisión por navegador del panel, formulario y acceso; composición móvil mediante captura estática a 390 px. Cinco pruebas existentes, tipos y build superados. No se ha probado un dispositivo físico. Ajuste cosmético de la base local; no completa integraciones, datos alojados ni funciones pendientes del piloto.
 
 Base actual bien recibida por Víctor y adoptada como referencia de continuidad. La tarea de identidad/tokens permanece en curso hasta cerrar la definición de alcance de la que depende; marca comercial definitiva, modo oscuro y componentes futuros siguen abiertos.
+
+## Continuidad en el núcleo · 30/10/2026
+
+[[Nucleo de fidelizacion]] recoge el estado vigente: sellos/canjes/correcciones persistentes, premios con condiciones guardadas, autorización SQL por comercio y laboratorio ficticio independiente de la demo visual. Crystal Clear continúa en tarjeta, operación del camarero e historial. 22 comprobaciones locales, tipos/build y recorrido de navegador superados. Las afirmaciones anteriores de movimientos pendientes describen la primera base y quedan sustituidas por este avance local; no se ha creado ni probado Supabase alojado, verificación real del móvil o concurrencia multisesión.

@@ -47,6 +47,8 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-041 | 2026-10-30 | Confirmado; concreta FID-005/006 | Víctor reitera que no quiere colores ni estilo de Nexo y pide «cristalclear o algo así». Se sustituye la propuesta verde/oliva por dirección Crystal Clear: blancos fríos, vidrio y acento azul discreto como interpretación implementada. Ejecución concreta y marca final por revisar. |
 | FID-042 | 2026-10-30 | Confirmado como referencia de continuidad | Tras ver Crystal Clear, Víctor responde «OH!! mucho mejor!» y pide próximos pasos y seguir actualizando NEXO. Se adopta la base actual para las siguientes pantallas; no implica aprobar marca comercial final ni dar el piloto por completo. Orden de siguiente entrega propuesto en [[Siguiente entrega]]. |
 
+| FID-043 | 2026-10-30 | Confirmado avanzar; elecciones técnicas del asistente | Víctor responde «venga ok dale» al siguiente bloque. Implementado núcleo persistente local con migración/RPC y laboratorio ficticio; SQL exige móvil verificado para alta real pero proveedor/UI aún pendientes. Se mantienen costes aplazados. Detalle de caducidad, corrección y materialización tras bajar objetivo en [[Nucleo de fidelizacion]]; esos criterios técnicos no se presentan como nuevas decisiones expresas del usuario. |
+
 ## Propuestas abiertas
 
 Precio, alojamiento web, creación de Supabase pendiente por coste, cuentas partidas, efectos de cambios de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

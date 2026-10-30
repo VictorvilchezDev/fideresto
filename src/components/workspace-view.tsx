@@ -19,6 +19,7 @@ import {
   Users,
   MessageCircle,
 } from "lucide-react";
+import { LoyaltyWorkbench } from "@/components/loyalty-workbench";
 import { Brand } from "@/components/brand";
 import { ProgramForm } from "@/components/program-form";
 import { NfcPanel } from "@/components/nfc-panel";
@@ -129,6 +130,9 @@ export function WorkspaceView({
               <strong>Vista previa interactiva</strong> · Datos ficticios. Los cambios se pierden al
               recargar.
             </span>
+            <Link className="secondary button" href="/laboratorio">
+              Probar con historial
+            </Link>
             <label>
               Ver como
               <select
@@ -277,15 +281,7 @@ export function WorkspaceView({
                       </p>
                     </>
                   ) : (
-                    <div className="empty-state">
-                      <Coffee size={30} />
-                      <h3>El comienzo de tus habituales</h3>
-                      <p>
-                        En esta entrega puedes configurar el programa y sus accesos NFC/QR. El
-                        registro telefónico, los sellos y los canjes reales se incorporarán en la
-                        siguiente etapa.
-                      </p>
-                    </div>
+                    <LoyaltyWorkbench merchant={workspace.id} embedded />
                   )}
                   {notice && (
                     <p role="status" className="notice">

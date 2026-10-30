@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 18, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 20, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -148,3 +148,15 @@ Documentos leídos con coincidencia exacta e índice actualizado:
 - `Documentacion/Identidad-Crystal-Clear-v0.1.md`, hash `63b29747eed585e3053a6acc2071ac1b18330e146b334c0cda6fe9fbd6de1e96`.
 
 Cambio de planificación/documentación; no hay código funcional nuevo ni nuevas pruebas de aplicación en esta actualización. Se comprueban enlaces del vault y formato del diff antes de publicar.
+
+## Núcleo persistente local
+
+Víctor autoriza continuar («venga ok dale»). Siete tareas actualizadas con evidencia del núcleo, tarjeta/empleado/modelo/panel y pruebas; descripción del proyecto puesta al día. Revisión 20/30 tareas leída de vuelta, fecha 31/01/2027 conservada. Solo sigue completada la base del repositorio/vault. Las tareas de implementación quedan en curso: faltan proveedor telefónico, Supabase alojado y concurrencia multisesión, además del resto del piloto. No se eliminan dependencias ni se cierran hitos artificialmente.
+
+22 comprobaciones automáticas contando subcasos SQL, tipos/build y flujo del navegador con recarga persistente. Página y API de laboratorio devuelven 404 al ejecutar la compilación de producción aunque la bandera esté activa. Documentación canónica y límites en [[Nucleo de fidelizacion]].
+
+Archivo nuevo subido y leído con coincidencia exacta:
+
+- `Documentacion/Nucleo-local-v0.1.md`, hash `8b39ad24fb5fcb75db95d4dcec0ac14f809126473f581089e5b0e85373433857`.
+
+Índice vigente actualizado con hash de concurrencia y leído de vuelta. Se conservan versiones anteriores como historia; la nota del núcleo prevalece sobre sus afirmaciones de movimientos aún no implementados. Sin sincronización automática, recursos de pago ni despliegue.

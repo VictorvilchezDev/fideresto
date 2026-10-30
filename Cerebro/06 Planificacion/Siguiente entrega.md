@@ -1,6 +1,6 @@
 # Siguiente entrega
 
-Propuesta de orden de trabajo · 30/10/2026. Víctor valora positivamente Crystal Clear y pide próximos pasos/actualización de NEXO. La base visual se adopta para continuar; el producto todavía necesita operaciones reales e integraciones.
+Orden de trabajo y avance · 30/10/2026. Víctor valora positivamente Crystal Clear y pide próximos pasos/actualización de NEXO. La base visual se adopta para continuar; el producto todavía necesita operaciones reales e integraciones.
 
 ## Prioridad inmediata: núcleo de fidelización
 
@@ -30,4 +30,4 @@ Primer comercio previsto: Víctor; nombre comercial, configuración concreta y e
 
 ## Estado
 
-Plan priorizado, no entrega implementada. La demo actual conserva simulaciones de sellos/canjes y la base de datos alojada sigue pendiente. Ver [[Estado actual]] y [[Seguimiento Nexo]] para evidencia vigente.
+Núcleo implementado y comprobado localmente: [[Nucleo de fidelizacion]]. Laboratorio persistente, interfaz profesional preparada, RPC y 22 comprobaciones automáticas, tipos/build. La prueba real de dos sesiones concurrentes, Auth/PostgREST alojados y registro por teléfono siguen pendientes; no se da por alcanzado el hito completo. La demo visual sigue siendo efímera. Prioridad siguiente: registro/acceso verificado del consumidor y recorrido de identificación QR/NFC, sin crear recursos de pago mientras Víctor no lo autorice. Ver [[Estado actual]] y [[Seguimiento Nexo]].
