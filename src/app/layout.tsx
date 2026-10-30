@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   applicationName: "Fideresto",
   robots: { index: false, follow: false },
 };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f4f6f2" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#f4f7fc" };
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">

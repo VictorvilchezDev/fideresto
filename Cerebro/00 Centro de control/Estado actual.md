@@ -17,7 +17,7 @@ Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccio
 - Formulario del programa: sellos, premio en texto libre, mínimo incluido 0 y caducidades independientes/desactivables.
 - Gestión de etiquetas por dueño, enlace estable, QR descargable y escritura Web NFC condicionada a compatibilidad. Entrada pública mínima por etiqueta; no suma sellos.
 - Migración versionada de comercios, pertenencias, programa, NFC y auditoría; RLS/grants y funciones administrativas sin clave de servicio en runtime.
-- Demo `/demo` con datos ficticios y estado efímero: roles, configuración y sellos/canje simulados. No es acceso real ni almacena clientes. Visual inicial por revisar.
+- Demo `/demo` con datos ficticios y estado efímero: roles, configuración y sellos/canje simulados. No es acceso real ni almacena clientes. Visual Crystal Clear aplicado tras nueva corrección de Víctor: vidrio blanco/frío y azul, sin verde/oliva. Ejecución por revisar; ver [[Identidad e interfaz]].
 
 ## Comprobado
 

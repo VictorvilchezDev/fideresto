@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 16, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 17, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -128,3 +128,9 @@ Copias leídas de vuelta con coincidencia exacta; índice actualizado con hash:
 - `Documentacion/Requisitos-confirmados-vigentes.md`, hash `630c69a4a317a49e9f58503f09a5512802cfac7c82f29a54440ea2eb79b170c5`.
 
 Enlaces del vault, exclusión de configuración local y formato del diff comprobados antes de publicar código/cerebro en GitHub. La previsualización local no es un despliegue.
+
+## Revisión visual Crystal Clear
+
+Tarea de identidad actualizada, revisión 17/30 tareas leída; permanece en curso porque la ejecución concreta necesita revisión del usuario. Dirección clara/cristalina confirmada por Víctor, sustituyendo verde/oliva. Nexo solo aporta método de cerebro y seguridad. Acceso, panel, formularios, marca/icono y tema/manifest actualizados de forma coherente.
+
+`Documentacion/Identidad-Crystal-Clear-v0.1.md` cargado y leído con coincidencia exacta; hash `25bf7297c0449dcbc92377acf2d64b5816726f227d9b17d8ff539acc06e20713`. Índice actualizado con hash vigente. Cinco pruebas existentes, tipos y build superados; navegador de escritorio y composición móvil estática revisados. La primera validación detectó duplicados generados en .next; se excluyen del análisis las copias numeradas con espacios en ese directorio, manteniendo originales/validadores, antes de verificar de nuevo. Sin cambios de datos, permisos, proveedores o coste.

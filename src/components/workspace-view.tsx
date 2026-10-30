@@ -8,6 +8,7 @@ import {
   Check,
   Coffee,
   Gift,
+  Gem,
   Home,
   Layers2,
   LogOut,
@@ -200,7 +201,7 @@ export function WorkspaceView({
                       <small>TU TARJETA DE FIDELIDAD</small>
                     </div>
                     <span className="card-logo">
-                      <Layers2 size={24} />
+                      <Gem size={24} />
                     </span>
                   </div>
                   <div className="stamp-grid">
