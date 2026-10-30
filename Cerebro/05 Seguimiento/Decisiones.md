@@ -32,6 +32,10 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-026 | 2026-10-30 | Confirmado | Mensajes desde el WhatsApp de cada negocio. Ronda 4, respuesta 2; número actual/dedicado y compatibilidad por concretar. |
 | FID-027 | 2026-10-30 | Confirmado | Dispositivo del negocio o personal con acceso individual dedicado. Ronda 4, respuesta 3. No implica cuentas compartidas ni permisos globales. |
 
+| FID-028 | 2026-10-30 | Confirmado | Verificar el móvil del consumidor al registrarse. Ronda 5, respuesta 1; método/canal todavía por elegir. |
+| FID-029 | 2026-10-30 | Confirmado | Al inicio, el empleado confirma la cuenta pagada para otorgar el sello; posteriormente se estudiará verificación adicional. Ronda 5, respuesta 2. No exige referencia de ticket ni integración con TPV en esta modalidad. |
+| FID-030 | 2026-10-30 | Confirmado | Correcciones mediante solicitud, mensaje explicando el motivo y autorización del encargado/propietario. Ronda 5, respuesta 3 a la propuesta anterior; conservar registro. Detalle de permisos y rechazo por diseñar. |
+
 ## Propuestas abiertas
 
-Precio, stack, alojamiento, reglas de visitas/canjes, caducidad, transiciones estacionales, datos/acceso del consumidor y alcance de reservas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.
+Precio, stack, alojamiento, cuentas partidas, modalidades de descuento, cómputo de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

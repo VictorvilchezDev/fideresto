@@ -22,7 +22,7 @@ Público confirmado: bares y cafeterías. La tarjeta en Wallet iOS/Android y Wha
 | Empleado | Acceso | Identificación, comercio y permisos; recuperación/revocación. |
 | Empleado | Validar visita | Leer código personal de la tarjeta o localizar mediante un mecanismo autorizado; confirmar operación. |
 | Empleado | Canjear premio | Comprobar elegibilidad, confirmar, resolver reintentos y mostrar resultado. |
-| Empleado | Actividad de trabajo | Consultar operaciones permitidas y solicitar/realizar correcciones según su rol. |
+| Empleado | Actividad de trabajo | Consultar operaciones permitidas y solicitar correcciones con mensaje de motivo; autorización del encargado/propietario antes de aplicarlas. |
 | Propietario | Inicio | Actividad, clientes recurrentes, premios y campañas; distinguir datos registrados de estimaciones. |
 | Propietario | Clientes y ficha | Historial, estado del programa y preferencias, con datos mínimos. |
 | Propietario | Programa y recompensas | Número de sellos, imagen de tarjeta, premio de producto/servicio gratis o descuento, cambios por temporada, límites y versiones. |
@@ -39,7 +39,7 @@ La operación de Fideresto requerirá provisionar comercios y gestionar incidenc
 
 1. El comercio ofrece acceso por QR, NFC o enlace, con alternativas según compatibilidad.
 2. El cliente consulta el programa antes de registrarse.
-3. Aporta nombre y móvil obligatorios y cumpleaños opcional (día/mes); comunicaciones y participación se presentan de forma diferenciada. Verificación/acceso por definir.
+3. Aporta nombre y móvil obligatorios y cumpleaños opcional (día/mes); comunicaciones y participación se presentan de forma diferenciada. Debe verificar el móvil al registrarse; método de verificación, acceso y recuperación por definir.
 4. El servidor crea su afiliación al comercio.
 5. Accede a su tarjeta mediante un mecanismo privado y recuperable por definir.
 6. Añade su tarjeta a Apple Wallet o Google Wallet. Esta integración es requisito del piloto.
@@ -49,7 +49,7 @@ No se pide información de cumpleaños si no se va a utilizar; valorar día/mes 
 ## Flujo 2 · Visita y sello
 
 1. El cliente muestra su tarjeta personal.
-2. Un empleado autenticado identifica la tarjeta y confirma la cuenta; se concede un sello por cuenta.
+2. Un empleado autenticado identifica la tarjeta y confirma la cuenta pagada; se concede un sello por cuenta. Inicialmente no se exige número de ticket; se estudiará verificación adicional posteriormente.
 3. El servidor verifica empleado, comercio, tarjeta y reglas.
 4. Registra un movimiento único y actualiza el progreso.
 5. Cliente y empleado reciben el resultado.
@@ -88,6 +88,6 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 
 - Un sello por cuenta confirmado; falta identificación de la cuenta y tratamiento de cuentas partidas.
 - El comercio configura umbral, imagen, premio y caducidad. La tarjeta en curso adopta el premio nuevo; los premios ganados se conservan para canjear. Faltan detalles del cómputo de caducidad y correcciones.
-- Quién corrige operaciones y con qué trazabilidad.
-- Datos mínimos y mecanismo de acceso/recuperación del cliente.
+- Solicitud de corrección con motivo y autorización del encargado/propietario confirmada; falta concretar estados y permisos detallados.
+- Datos mínimos y verificación de móvil al registrarse confirmados; falta elegir mecanismo de verificación/acceso/recuperación del cliente.
 - Comercio piloto y responsable; presupuesto y proveedores.

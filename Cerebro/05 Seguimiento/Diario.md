@@ -56,3 +56,7 @@ Siguiente: datos y acceso del consumidor, emisor WhatsApp del comercio, disposit
 Víctor confirma nombre/móvil obligatorios y cumpleaños opcional día/mes, WhatsApp del negocio como emisor y dispositivo del establecimiento o personal con acceso dedicado individual. Registrados FID-025–027. Requisitos, flujo y estado actualizados.
 
 NEXO: cinco tareas ajustadas; revisión 8/30 tareas comprobada, sin marcar desarrollo realizado. Requisitos consolidados cargados y leídos con contenido coincidente; índice actualizado por hash. Próximo: verificar acceso del consumidor, registrar una cuenta sin duplicados y acordar permisos de corrección. No hay aplicación ejecutable.
+
+## 2026-10-30 · Ronda 5: verificación y correcciones
+
+Víctor confirma verificación del móvil al registrarse, cuenta pagada confirmada inicialmente por el empleado y correcciones mediante solicitud con mensaje de motivo y autorización. Registrados FID-028–030; método de verificación, cuentas partidas y detalles de permisos pendientes. Actualizados requisitos, reglas, flujos, seguridad y estado. Sin aplicación ni controles implementados; comprobación documental y sincronización registradas en [[Seguimiento Nexo]].

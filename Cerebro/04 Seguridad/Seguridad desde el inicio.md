@@ -43,3 +43,7 @@ Ronda 1: las imágenes de tarjeta configurables por comercio añaden una entrada
 Modelo de amenazas detallado; matriz de permisos; política de datos/consentimiento/retención para España; autenticación y recuperación; arquitectura de aislamiento; elección de alojamiento; costes/plantillas de WhatsApp; gestión de claves de Wallet; copias y recuperación.
 
 Revisar las reglas vigentes de cada integración al implementarla. No seleccionar únicamente clientes satisfechos para solicitar reseñas públicas.
+
+## Ronda 5 · Requisitos operativos confirmados
+
+Verificar móvil al registrarse, con método/canal pendiente. Diseñar códigos/enlaces con expiración, un solo uso y límites sin enumeración de clientes. Al principio el empleado confirma la cuenta pagada: esto no aporta verificación independiente del ticket; permisos, auditoría e idempotencia siguen siendo necesarios. Correcciones solo tras solicitud con motivo y autorización del encargado/propietario. Proponer registro de solicitud/autorización/resultado y pruebas de rechazo a operaciones directas de empleado sin autorización. Son controles por diseñar e implementar, no pruebas realizadas.

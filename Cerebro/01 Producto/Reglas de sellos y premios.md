@@ -1,13 +1,17 @@
 # Reglas de sellos y premios
 
-Rondas 2 y 3 · 30 de octubre de 2026 · Respuestas de Víctor.
+Rondas 2, 3 y 5 · 30 de octubre de 2026 · Respuestas de Víctor.
 
 ## Confirmado
 
-- **Un sello por cuenta.** No un sello por persona. No se ha definido todavía cómo identificar una cuenta ni cómo tratar cuentas partidas; no se presupone integración con el TPV.
+- **Un sello por cuenta.** No un sello por persona. Inicialmente el empleado confirma la cuenta pagada, sin exigir número de ticket; la verificación adicional se estudiará posteriormente. Cuentas partidas pendientes; no se presupone integración con el TPV. Evitar duplicados técnicos por reintento no depende de incorporar una integración con caja.
 - **Premio estacional vigente para progreso en curso.** Una tarjeta sin completar pasa al nuevo premio. Los premios ya ganados se conservan para canjear, según confirma Víctor en ronda 3; el cambio de temporada no los sustituye. Conservar recompensa, condiciones e historial al obtenerlos, sujeto a la caducidad que se configure.
 - **Seguir acumulando.** Tener una recompensa pendiente no impide sumar nuevos sellos y avanzar otro ciclo. Separar progreso de tarjeta y recompensas pendientes.
 - **Caducidad configurable por el comercio.** El detalle de plazos, punto de inicio, posible renovación por actividad y tratamiento de cambios sigue por concretar.
+
+## Correcciones confirmadas
+
+El empleado presenta una solicitud con un mensaje que explique el motivo. El encargado/propietario autoriza la corrección; el empleado no puede aplicarla unilateralmente. Conservar operación original, solicitud, motivo, solicitante, autorizador y resultado como diseño previsto. Detalle de rechazo, permisos y ejecución pendiente; no hay implementación.
 
 ## Reservas: alcance inicial confirmado
 
@@ -17,4 +21,4 @@ Campos del alcance aceptado: fecha, hora, nombre, número de personas y estado p
 
 ## Aclaraciones próximas
 
-Datos mínimos y recuperación de tarjeta, WhatsApp emisor del comercio, validación de cuentas/cuentas partidas, reglas detalladas de descuento y vencimiento. Conservación de premio ganado y modalidad básica de reservas ya resueltas.
+Método de verificación del móvil y recuperación de tarjeta, cuentas partidas, reglas detalladas de descuento y vencimiento. Datos mínimos, WhatsApp del negocio, confirmación inicial por empleado, solicitud motivada/autorizada de corrección, conservación de premio ganado y modalidad básica de reservas ya resueltos.

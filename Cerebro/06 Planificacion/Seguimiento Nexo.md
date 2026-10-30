@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 8, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 10, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -91,3 +91,9 @@ Nota `Documentacion/Reglas-premios-reservas-ronda-3.md` cargada y leída con con
 Cinco tareas ajustadas; revisión 8/30 tareas comprobada sin cambios de estados, responsables o fechas. Nombre/móvil obligatorios, cumpleaños opcional día/mes, WhatsApp de cada negocio y acceso individual del personal desde dispositivo del local o propio.
 
 `Documentacion/Requisitos-confirmados-vigentes.md` consolida rondas 1–4; carga leída de vuelta con contenido coincidente, hash `5851bee9edfd6d37a0dbe8e29d92372829778d4e8d12c107304d2fab3f3e6cde`. Índice actualizado con revisión de contenido. No hay verificación de teléfonos ni integración WhatsApp real implementadas todavía.
+
+## Ronda 5 · Verificación, cuentas y correcciones
+
+Cinco tareas y descripción del proyecto actualizadas; revisión 10/30 tareas comprobada sin cambios de estados, participantes o fechas. Verificar móvil al registrarse (método pendiente); empleado confirma cuenta pagada inicialmente; corrección requiere solicitud con mensaje de motivo y autorización del encargado/propietario. Verificación adicional de tickets por estudiar.
+
+Requisitos consolidados actualizados mediante hash y leídos de vuelta con contenido coincidente: `Documentacion/Requisitos-confirmados-vigentes.md`, rondas 1–5, hash `45b5311229046782b9054bcdaddc94f2d67a0ed2e10f2a3d6180bcbb1bb9bfc6`. Los hashes anteriores son históricos. Sin desarrollo implementado. Se comprueban enlaces internos del vault y formato del diff antes de publicar en GitHub.
