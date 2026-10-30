@@ -24,3 +24,12 @@ Siguiente: definir flujos y matriz de permisos, y preparar propuesta visual prop
 - Comprobación documental: 13 notas con enlaces internos resueltos y enlaces locales README/plan correctos; diff sin errores de formato. No se han ejecutado pruebas de aplicación porque no hay código ejecutable.
 
 Siguiente: revisar con Víctor el recorrido propuesto y concretar reglas de visita/premio, datos mínimos y acceso, antes de elegir tecnología e implementar.
+
+## 2026-10-30 · Respuestas de producto, ronda 1
+
+- Víctor confirma bares/cafeterías; configuración por comercio de número de sellos, imagen y premio estacional (producto/servicio gratis o descuento); NFC y QR; Wallet iOS/Android y WhatsApp como núcleo; todas las comunicaciones y plantillas ampliables; instalación/configuración/formación asistidas por nuestro equipo.
+- Registrados FID-012 a FID-017 y nota principal [[Requisitos confirmados]]. Actualizados producto, planificación, pantallas, seguridad, instrucciones y estado. No se ha elegido regla para premios en curso, caducidad o ciclos.
+- NEXO: descripción y 12 tareas ajustadas; revisión 4/29 tareas comprobadas, sin cambios de estados ni participantes. Se conserva trabajo existente y se exige NFC para el hito de piloto. Documentos vigentes e índice cargados y leídos de vuelta con contenido coincidente.
+- El alcance de un motor propio de reservas sigue pendiente; los mensajes relacionados con reservas sí están confirmados. No hay código ejecutable todavía.
+
+Siguiente ronda: visitas elegibles/límites, transición de temporada, ciclo de canje, caducidad y alcance de reservas. Después concretar datos, acceso y operación.

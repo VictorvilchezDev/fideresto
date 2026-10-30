@@ -4,7 +4,7 @@ Actualizado: 30 de octubre de 2026.
 
 ## Contexto confirmado
 
-Proyecto de fidelización para comercios, con primer mercado en España. Víctor considera que hay cafeterías/restaurantes disponibles para mostrarlo; aún no se ha elegido uno concreto. Nombre de trabajo: Fideresto, a partir del repositorio indicado; marca final pendiente.
+Proyecto de fidelización para bares y cafeterías en España; aún no hay piloto concreto. Nombre de trabajo Fideresto; marca final pendiente. Ronda 1 confirmada en [[Requisitos confirmados]]: tarjeta personalizable, premio estacional configurable, NFC y QR, Wallet iOS/Android y WhatsApp como núcleo; implantación/configuración/formación asistidas por nuestro equipo.
 
 Método: Nexo como referencia para el cerebro y la seguridad. Diseño visual independiente; «CristalWhite» solo como posibilidad. Fuente vigente: [[Decisiones]].
 
@@ -12,9 +12,9 @@ Método: Nexo como referencia para el cerebro y la seguridad. Diseño visual ind
 
 - Carpeta local `outputs/fideresto` dentro del espacio de este chat.
 - Repositorio Git local en `main`, documentos iniciales, instrucciones `AGENTS.md` y este vault.
-- Proyecto Fideresto creado por MCP en NEXO, ID `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`: seis fases y 29 tareas comprobadas en revisión 2. Base documental completada, definición de alcance en curso y resto pendiente. Ver [[Seguimiento Nexo]].
+- Proyecto Fideresto en NEXO, ID `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`: seis fases y 29 tareas, revisión 4 comprobada tras ronda 1. Doce tareas ajustadas sin marcar desarrollo completado; núcleo e implantación asistida incorporados. Ver [[Seguimiento Nexo]].
 - Fecha objetivo del piloto elegida por Víctor: 31/01/2027. Fechas intermedias y alcance detallado son propuestas revisables.
-- Propuesta de [[Pantallas y flujos]] v0.1 y [[Plan inicial]] v0.2 redactadas; no hay aceptación final del diseño o reglas del programa.
+- [[Requisitos confirmados]] de ronda 1; [[Pantallas y flujos]] v0.2 y [[Plan inicial]] v0.3 ajustados y disponibles en NEXO. Diseño visual y reglas detalladas todavía pendientes.
 - Consulta de `git ls-remote` completada sin referencias: el repositorio remoto estaba vacío al comprobarlo.
 
 ## No implementado
@@ -29,7 +29,7 @@ Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --ch
 
 ## Siguiente trabajo
 
-1. Concretar flujos de cliente, empleado y propietario.
+1. Concretar reglas de visita, transición de premios estacionales, ciclos/caducidad y alcance de reservas con Víctor.
 2. Diseñar el modelo de amenazas y matriz de permisos antes de implementar operaciones.
 3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
 4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.

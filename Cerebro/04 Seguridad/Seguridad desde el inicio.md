@@ -12,6 +12,8 @@ Clientes y datos de contacto; identidad de empleados y propietarios; visitas, se
 
 Tratar navegador, QR/NFC públicos y mensajes externos como entradas no confiables. Separar clientes, empleados, propietarios, comercios, aplicación, proveedor de mensajes y servidor.
 
+Ronda 1: las imágenes de tarjeta configurables por comercio añaden una entrada de archivos que validar y limitar (formato real, dimensiones, tamaño y renderizado sin contenido activo). Las transiciones de premios estacionales requieren conservar reglas e historial según el acuerdo aún pendiente, sin alterar retroactivamente operaciones. Las plantillas ampliables no eliminan permisos, controles del proveedor, consentimiento, bajas ni límites de gasto.
+
 ## Riesgos y controles propuestos
 
 | Riesgo | Diseño previsto | Evidencia que habrá que obtener |

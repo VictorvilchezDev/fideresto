@@ -2,7 +2,7 @@
 
 ## Confirmado
 
-Víctor quiere estudiar y ejecutar una versión propia, mejorada y ampliable, de un servicio de fidelización. Mercado inicial: España. Hay comercios candidatos, pero ninguno seleccionado.
+Víctor quiere ejecutar un servicio de fidelización para bares y cafeterías en España. El comercio configura número de sellos, imagen y premio de producto/servicio gratuito o descuento, cambiable por temporada. NFC, QR, Wallet en iOS/Android y WhatsApp son núcleo del piloto. Implantación, configuración inicial y formación a cargo de nuestro equipo. Detalle y límites en [[Requisitos confirmados]]. Ningún establecimiento piloto seleccionado todavía.
 
 ## Problema que se propone resolver
 
@@ -18,9 +18,9 @@ Convertir visitas ocasionales en relaciones recurrentes y ayudar al comercio a e
 
 ## Primera demo propuesta
 
-Registro por enlace/QR, tarjeta web, visitas validadas por personal, recompensa de un uso y panel de actividad. Datos ficticios; campañas, Wallet y NFC se identificarán como simulados cuando no estén integrados. Separación de comercios, permisos y consistencia de sellos/canjes forman parte del diseño inicial.
+Durante el desarrollo puede demostrarse un recorrido web parcial con datos ficticios. El piloto requiere tarjeta real en ambos Wallet, NFC y QR, WhatsApp, programa configurable y panel de actividad. Todo componente aún simulado debe identificarse como tal y no acredita el núcleo confirmado. Separación de comercios, permisos y consistencia de sellos/canjes forman parte del diseño inicial.
 
-Los hitos y criterios completos están en [[Plan inicial]]. Comenzar por cafeterías, cuotas mensuales, plazos y funciones ampliadas son propuestas, no acuerdos de precio o alcance cerrado.
+Los hitos están en [[Plan inicial]]. Bares y cafeterías ya están confirmados; precio, tecnología, reglas detalladas y ampliaciones adicionales siguen abiertos. Reservas propias frente a mensajes/enlaces de reserva requiere aclaración.
 
 ## Medición
 

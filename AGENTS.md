@@ -12,6 +12,7 @@ La memoria del proyecto es el vault Markdown `Cerebro/`, compatible con Obsidian
 
 - Usar Nexo como referencia de mantenimiento del cerebro y de trabajo de seguridad, no como identidad visual ni como autorización para acceder a su infraestructura.
 - Diseñar la seguridad desde el inicio: analizar riesgos, definir controles, implementar y comprobar. No aplazar el aislamiento o los permisos hasta después de la demo.
+- Núcleo confirmado: bares/cafeterías; número de sellos, imagen y premio estacional configurables por comercio; NFC y QR; Wallet iOS/Android y WhatsApp reales para el piloto. Nuestro equipo realiza implantación, configuración inicial y formación. Consultar `Cerebro/01 Producto/Requisitos confirmados.md`; no rebajar el piloto a una demo web parcial.
 - El estilo visual es propio. «CristalWhite» es una posibilidad sugerida, todavía sin especificación ni diseño aprobado. La elección anterior «Nexo: Espacio claro» quedó expresamente corregida por Víctor.
 - Repositorio autorizado para commits y pushes: `https://github.com/VictorvilchezDev/fideresto.git`. Publicar cambios coherentes y comprobados; nunca force-push por defecto.
 

@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 2, seis fases y 29 tareas.
+- Última planificación comprobada: revisión 4, seis fases y 29 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -40,7 +40,7 @@ Antes de escribir mediante MCP, consultar proyecto/tareas y revisión vigente. C
 | 04 | `96531f47-8d01-4eb4-a2b5-82349b222040` | Integrar emisión y actualización de Google Wallet |
 | 04 | `74d2c3ea-38d6-48d1-9fe7-699c39ba36da` | Integrar WhatsApp oficial, permisos y control de gasto |
 | 04 | `b509706d-a645-42ef-b4cb-860a15511b10` | Implementar cumpleaños, recuperación y medición de campañas |
-| 04 | `f73c8e40-dd42-4e18-9e00-d02277d18803` | Verificar acceso por NFC y alternativa QR |
+| 04 | `f73c8e40-dd42-4e18-9e00-d02277d18803` | Implementar y verificar acceso por NFC y QR |
 | 05 | `539efd80-a87b-4cd9-bacf-c675acb3d2a0` | Verificar aislamiento, permisos y resistencia al fraude |
 | 05 | `f6dededc-2d42-470b-a86e-f611ee2833bb` | Verificar límites de carga, colas y mensajería |
 | 05 | `75eedd89-7b6d-4c85-8953-17acf3618869` | Preparar alojamiento, copias y restauración |
@@ -59,3 +59,14 @@ Copias de consulta cargadas y verificadas por lectura MCP:
 - `Documentacion/Pantallas-y-flujos-v0.1.md`, contenido coincidente y hash `69b3f259d9bc133b5045400d948909c31498ec182e387c3cdc514a59225aea74`.
 
 La copia se actualiza explícitamente; no sustituye el vault como fuente principal.
+
+## Ronda 1 · Alcance confirmado
+
+Proyecto y 12 tareas actualizados por MCP, sin cambiar estados de desarrollo, participantes o calendario. Verificada revisión 4 con 29 tareas; el hito de piloto incorpora NFC como dependencia obligatoria, además de ambos Wallet y WhatsApp. Las versiones iniciales de documentación se conservan como históricas.
+
+Copias vigentes leídas de vuelta con contenido coincidente:
+
+- `Documentacion/Plan-inicial-v0.3.md`, hash `93fe84c81a64845044c6bf68bfc573de3ebc1be3fd4fb5c66bb93b71e48cde9a`.
+- `Documentacion/Pantallas-y-flujos-v0.2.md`, hash `84eb4db4317af4a8f6ccec8aa0fdd0ce2e56dc62df23330874047817ad681d57`.
+- `Documentacion/Requisitos-confirmados-ronda-1.md`, hash `fdbc8eace0bf570b3d53759c4a8e7b829294e309f3a4b36b0792db0b3b79c830`.
+- `Documentacion/00-Documentacion-vigente.md`, hash `872b98b815ed04134d076d252b8ac3de3caba2af8ec567aa8fbb55a2deba8607`.

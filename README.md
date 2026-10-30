@@ -22,7 +22,7 @@ Ayudar al comercio a conseguir más visitas recurrentes y evaluar si el benefici
 
 ## Punto de partida propuesto
 
-Comenzar con cafeterías y un programa de sellos por visita. Es una hipótesis de producto para validar, no una elección definitiva de sector, precio o marca.
+Público confirmado: bares y cafeterías. El comercio configura número de sellos, imagen y premio estacional de producto/servicio gratuito o descuento. Núcleo del piloto: Wallet iOS/Android, WhatsApp, NFC y QR. Nuestro equipo instala, configura inicialmente y forma al personal. Precio, marca y reglas detalladas siguen pendientes.
 
 El primer entregable será una demo con datos ficticios que permita recorrer:
 
@@ -32,7 +32,7 @@ El primer entregable será una demo con datos ficticios que permita recorrer:
 4. Canje de la recompensa una sola vez.
 5. Consulta de clientes, visitas y canjes desde el panel del propietario.
 
-Las campañas se mostrarán como simulaciones identificadas. Los mensajes reales, Apple Wallet y Google Wallet se integrarán en una etapa posterior del piloto.
+En desarrollo se podrán revisar simulaciones identificadas. El piloto requiere WhatsApp, Apple Wallet, Google Wallet, NFC y QR reales; son el núcleo confirmado, no ampliaciones posteriores.
 
 ## Documentos
 
@@ -43,6 +43,7 @@ Las campañas se mostrarán como simulaciones identificadas. Los mensajes reales
 - [Seguridad desde el inicio](Cerebro/04%20Seguridad/Seguridad%20desde%20el%20inicio.md).
 - [Identidad visual propia](Cerebro/03%20Diseno/Identidad%20e%20interfaz.md).
 - [Protocolo para asistentes](AGENTS.md).
+- [Requisitos confirmados](Cerebro/01%20Producto/Requisitos%20confirmados.md).
 - [Pantallas y flujos propuestos](Cerebro/01%20Producto/Pantallas%20y%20flujos.md).
 - [Proyecto Fideresto en NEXO](https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview).
 
