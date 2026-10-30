@@ -26,6 +26,8 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-020 | 2026-10-30 | Confirmado | El cliente sigue acumulando con recompensas pendientes. Ronda 2, respuesta 3. |
 | FID-021 | 2026-10-30 | Confirmado | El comercio configura la caducidad. Ronda 2, respuesta 4; detalles de cómputo pendientes. |
 | FID-022 | 2026-10-30 | Orientación pendiente | Víctor valora agenda propia o WhatsApp al inicio y considera engorroso integrar sistemas de reserva diferentes. La combinación de agenda manual y solicitudes WhatsApp es propuesta del asistente por validar. |
+| FID-023 | 2026-10-30 | Confirmado, sustituye la duda FID-022 | Víctor acepta agenda propia básica apoyada en solicitudes por WhatsApp: personal confirma/registra, fecha/hora, nombre, personas y estado. No implica motor de disponibilidad/mesas ni sincronización externa automática. |
+| FID-024 | 2026-10-30 | Confirmado | El premio ya ganado se conserva para canjear aunque cambie la temporada. Respuesta 2 de ronda 3; resuelve la duda de FID-019 sin cambiar la política de tarjetas en curso. |
 
 ## Propuestas abiertas
 

@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 5, seis fases y 29 tareas.
+- Última planificación comprobada: revisión 7, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -36,6 +36,7 @@ Antes de escribir mediante MCP, consultar proyecto/tareas y revisión vigente. C
 | 03 | `c3d62b40-9e52-4a00-b3cf-fb4d7c8a1ef1` | Implementar visitas, sellos y canjes consistentes |
 | 03 | `83a664d4-5564-4e44-bb1a-dd22c7b5edad` | Implementar panel del comercio y gestión del equipo |
 | 03 | `fe7765fb-a027-41b9-ae6d-256c59b421cd` | Hito: recorrido funcional seguro con datos ficticios |
+| 03 | `bbc19f0c-42fe-4f79-9089-b31250887065` | Implementar agenda básica de reservas apoyada en WhatsApp |
 | 04 | `ac5fd4f6-b979-43fd-b7ff-383e4612a9e1` | Integrar emisión y actualización de Apple Wallet |
 | 04 | `96531f47-8d01-4eb4-a2b5-82349b222040` | Integrar emisión y actualización de Google Wallet |
 | 04 | `74d2c3ea-38d6-48d1-9fe7-699c39ba36da` | Integrar WhatsApp oficial, permisos y control de gasto |
@@ -76,3 +77,11 @@ Copias vigentes leídas de vuelta con contenido coincidente:
 Cinco tareas actualizadas y revisión 5/29 tareas verificada. Estados, participantes y calendario conservados. Nota `Documentacion/Reglas-sellos-premios-ronda-2.md` leída con contenido coincidente, hash `f893a9f0ddaf762fb3b6315e00fddcaf7530cdc87420746d8f0f80021bad3b3f`. El índice de documentación vigente se ha actualizado mediante hash de concurrencia; su hash de ronda 1 queda como histórico.
 
 Reglas confirmadas en [[Reglas de sellos y premios]]. La agenda manual apoyada en WhatsApp es propuesta por revisar, no implementación ni requisito aceptado.
+
+## Ronda 3 · Agenda y premios confirmados
+
+Víctor acepta agenda básica con solicitudes WhatsApp y registro/confirmación del personal. Los premios ya ganados se conservan para canjear al cambiar temporada. FID-023/024 sustituyen las dudas de ronda 2.
+
+NEXO: siete tareas existentes ajustadas y tarea de agenda añadida; hito del piloto depende de ella. Descripción del proyecto actualizada; revisión 7/30 tareas comprobada, sin completar desarrollo ni modificar participantes o fecha objetivo. Fechas intermedias siguen siendo estimaciones revisables.
+
+Nota `Documentacion/Reglas-premios-reservas-ronda-3.md` cargada y leída con contenido coincidente, hash `a433db3d2f282eac7e19b2ed6ab4c4e350f3b2d5fb94850236e0ddf5351a07aa`; índice actualizado con hash de concurrencia vigente. Versiones anteriores se conservan como historia.

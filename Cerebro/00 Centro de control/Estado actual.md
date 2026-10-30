@@ -8,13 +8,13 @@ Proyecto de fidelización para bares y cafeterías en España; aún no hay pilot
 
 Método: Nexo como referencia para el cerebro y la seguridad. Diseño visual independiente; «CristalWhite» solo como posibilidad. Fuente vigente: [[Decisiones]].
 
-Ronda 2: un sello por cuenta; tarjeta en curso pasa al premio estacional vigente; acumulación continua con premios pendientes; caducidad configurable. Reservas mediante agenda propia y/o WhatsApp siguen por concretar. Ver [[Reglas de sellos y premios]].
+Ronda 2: un sello por cuenta; tarjeta en curso pasa al premio estacional vigente; acumulación continua con premios pendientes; caducidad configurable. Ronda 3 confirma agenda propia básica apoyada en solicitudes WhatsApp, registro/confirmación por personal, y conservación de premios ya ganados para canjear. Ver [[Reglas de sellos y premios]].
 
 ## Existe realmente
 
 - Carpeta local `outputs/fideresto` dentro del espacio de este chat.
 - Repositorio Git local en `main`, documentos iniciales, instrucciones `AGENTS.md` y este vault.
-- Proyecto Fideresto en NEXO, ID `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`: seis fases y 29 tareas, revisión 5 comprobada tras ronda 2. Cinco tareas ajustadas con las reglas de sellos/premios, sin marcar desarrollo completado. Ver [[Seguimiento Nexo]].
+- Proyecto Fideresto en NEXO, ID `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`: seis fases y 30 tareas; ronda 3 añade agenda básica y conserva premios ganados, sin marcar desarrollo completado. Revisión final de esta actualización en [[Seguimiento Nexo]]. Ver [[Seguimiento Nexo]].
 - Fecha objetivo del piloto elegida por Víctor: 31/01/2027. Fechas intermedias y alcance detallado son propuestas revisables.
 - [[Requisitos confirmados]] de ronda 1; [[Pantallas y flujos]] v0.2 y [[Plan inicial]] v0.3 ajustados y disponibles en NEXO. Diseño visual y reglas detalladas todavía pendientes.
 - Consulta de `git ls-remote` completada sin referencias: el repositorio remoto estaba vacío al comprobarlo.
@@ -31,7 +31,7 @@ Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --ch
 
 ## Siguiente trabajo
 
-1. Aclarar recompensas ya obtenidas ante cambio de temporada y elegir alcance inicial de reservas. Después, acceso/datos del cliente, validación de cuenta y reglas detalladas de vencimiento.
+1. Concretar datos/acceso del consumidor, número emisor WhatsApp del comercio, dispositivos del personal, validación de cuentas y detalle del vencimiento.
 2. Diseñar el modelo de amenazas y matriz de permisos antes de implementar operaciones.
 3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
 4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.

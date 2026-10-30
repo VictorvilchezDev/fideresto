@@ -47,7 +47,7 @@ En desarrollo se podrán revisar simulaciones identificadas. El piloto requiere 
 - [Pantallas y flujos propuestos](Cerebro/01%20Producto/Pantallas%20y%20flujos.md).
 - [Proyecto Fideresto en NEXO](https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview).
 
-NEXO contiene seis fases y 29 tareas. Objetivo revisable del piloto elegido por Víctor: 31/01/2027. La planificación detallada es una propuesta inicial; no equivale a producto implementado o requisitos ya aceptados.
+NEXO contiene seis fases y 30 tareas. Objetivo revisable del piloto elegido por Víctor: 31/01/2027. La planificación detallada es una propuesta inicial; no equivale a producto implementado o requisitos ya aceptados.
 
 Nexo es referencia del método de mantenimiento del cerebro y de seguridad. El diseño visual será distinto; «CristalWhite» es una posibilidad por explorar. La interpretación anterior de usar «Espacio claro» quedó corregida por Víctor.
 

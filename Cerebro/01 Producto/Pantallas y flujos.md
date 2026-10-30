@@ -2,7 +2,7 @@
 
 Versión 0.2 · Ajustada a la ronda 1 del 30 de octubre de 2026. No son pantallas implementadas ni diseños aprobados.
 
-Reglas actualizadas en ronda 2: [[Reglas de sellos y premios]] prevalece sobre las cuestiones todavía abiertas del diseño inicial.
+Reglas actualizadas en rondas 2 y 3: [[Reglas de sellos y premios]] prevalece sobre las cuestiones todavía abiertas del diseño inicial.
 
 ## Organización del producto
 
@@ -28,6 +28,7 @@ Público confirmado: bares y cafeterías. La tarjeta en Wallet iOS/Android y Wha
 | Propietario | Programa y recompensas | Número de sellos, imagen de tarjeta, premio de producto/servicio gratis o descuento, cambios por temporada, límites y versiones. |
 | Propietario | Equipo y permisos | Altas, roles, revocación y acceso al comercio. |
 | Propietario | Campañas | Cumpleaños, inactividad, promociones, experiencia/reseñas y comunicaciones de reservas; biblioteca ampliable de plantillas, vista previa, límites y resultados. |
+| Personal y propietario | Agenda de reservas | Fecha/hora, nombre, personas y estado; registro y confirmación manual de solicitudes recibidas por WhatsApp. |
 | Propietario | Actividad y configuración | Trazabilidad, incidencias, perfil del negocio e integraciones. |
 
 Estas funciones pueden compartir vistas y diálogos; la tabla no obliga a construir 15 páginas independientes.
@@ -77,7 +78,7 @@ Cumpleaños sigue un flujo equivalente con los datos y preferencias pertinentes.
 
 Nuestro equipo instala el sistema, ayuda con la configuración inicial y forma al personal: definir programa e imagen → configurar comercio y equipo → comprobar NFC/QR, registro y ambos Wallet → probar visita/canje/WhatsApp → formar → abrir piloto → revisar incidencias y costes.
 
-NFC y QR son requisitos del piloto. Las comunicaciones de reserva están confirmadas; el alcance de un motor propio de reservas sigue pendiente. Pedidos e integración con caja son ampliaciones posteriores.
+NFC y QR son requisitos del piloto. Agenda básica propia apoyada en solicitudes WhatsApp confirmada: el personal registra y confirma. No se presupone disponibilidad ni asignación automática de mesas. Pedidos e integración con caja son ampliaciones posteriores.
 
 ## Diseño
 
@@ -86,7 +87,7 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 ## Decisiones de producto por cerrar
 
 - Un sello por cuenta confirmado; falta identificación de la cuenta y tratamiento de cuentas partidas.
-- El comercio configura umbral, imagen y premio. Faltan coste/condiciones, caducidad y reglas para tarjetas/premios existentes al cambiar temporada.
+- El comercio configura umbral, imagen, premio y caducidad. La tarjeta en curso adopta el premio nuevo; los premios ganados se conservan para canjear. Faltan detalles del cómputo de caducidad y correcciones.
 - Quién corrige operaciones y con qué trazabilidad.
 - Datos mínimos y mecanismo de acceso/recuperación del cliente.
 - Comercio piloto y responsable; presupuesto y proveedores.

@@ -42,3 +42,11 @@ Siguiente ronda: visitas elegibles/límites, transición de temporada, ciclo de 
 - NEXO: cinco tareas ajustadas, revisión 5/29 comprobada, sin cambiar estados de avance. Nota de ronda 2 cargada y leída de vuelta; índice actualizado con hash vigente.
 
 Siguiente: aclarar premio ya ganado y elegir modalidad inicial de reservas. No hay aplicación ni controles implementados todavía.
+
+## 2026-10-30 · Ronda 3: agenda propia y premio ya ganado
+
+- Víctor responde sí a la combinación de agenda propia básica con solicitudes WhatsApp y registro/confirmación del personal. También confirma conservar el premio ya ganado para canjear cuando cambia la temporada.
+- Registrados FID-023/024 y actualizados requisitos, reglas, producto, pantallas, plan y estado. No se amplía el acuerdo a disponibilidad automática o asignación de mesas.
+- NEXO: tarea de agenda añadida y siete tareas ajustadas, conservando estados; hito del piloto depende de la agenda. Revisión 7/30 tareas leída y descripción actualizada. Nota de reglas cargada y leída de vuelta con contenido coincidente; índice documental actualizado.
+
+Siguiente: datos y acceso del consumidor, emisor WhatsApp del comercio, dispositivos del personal y detalles de validación/vencimiento. Sin aplicación ejecutable todavía.

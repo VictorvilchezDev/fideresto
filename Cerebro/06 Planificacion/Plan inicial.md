@@ -17,7 +17,7 @@ Cliente, empleado y propietario disponen de recorridos separados. El acceso púb
 
 Wallet en iOS y Android, WhatsApp, NFC y QR son núcleo obligatorio del piloto. Durante desarrollo se pueden revisar partes con datos ficticios; una demo web o integraciones simuladas no cumplen el piloto. Las comunicaciones incluyen todas las planteadas y nuevas plantillas configurables según demanda. Ver [[Requisitos confirmados]].
 
-Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumulación continua y caducidad configurable. Falta aclarar recompensas ya obtenidas, cómputo del vencimiento, cuentas partidas, correcciones y acceso del consumidor. Reservas mediante agenda propia y/o WhatsApp por decidir. Ver [[Reglas de sellos y premios]].
+Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumulación continua y caducidad configurable. Los premios ya ganados se conservan para canjear; agenda propia básica con solicitudes WhatsApp confirmada. Faltan cómputo del vencimiento, cuentas partidas, correcciones y acceso del consumidor. Ver [[Reglas de sellos y premios]].
 
 ## Fases propuestas y entregables
 
@@ -32,7 +32,7 @@ Ronda 2 confirma un sello por cuenta, nuevo premio para tarjetas en curso, acumu
 
 La seguridad se diseña e implementa en todas las fases. La fase 05 comprueba el conjunto, no es el momento de empezar a protegerlo.
 
-NEXO contiene seis fases y 29 tareas con dependencias y puntos relativos, no horas. La base documental figura completada; la definición del producto está en curso. Los responsables están pendientes de asignación; no se han invitado personas.
+NEXO contiene seis fases y 30 tareas con dependencias y puntos relativos, no horas. La base documental figura completada; la definición del producto está en curso. Los responsables están pendientes de asignación; no se han invitado personas.
 
 ## Criterios del núcleo funcional
 
@@ -53,7 +53,7 @@ NEXO contiene seis fases y 29 tareas con dependencias y puntos relativos, no hor
 
 ## Ampliaciones posteriores
 
-Referidos, varios locales y reglas de franquicia, programas por gasto, integración con caja, IA de ayuda y pedidos son ampliaciones posteriores. Las comunicaciones de reservas están confirmadas; gestionar disponibilidad, horarios y mesas dentro de Fideresto sigue por aclarar. No confundir plantillas configurables con aprobación automática por WhatsApp.
+Referidos, varios locales y reglas de franquicia, programas por gasto, integración con caja, IA de ayuda y pedidos son ampliaciones posteriores. Agenda propia básica con solicitudes WhatsApp y registro/confirmación del personal confirmada. La gestión automática de disponibilidad/mesas no forma parte del alcance actual. No confundir plantillas configurables con aprobación automática por WhatsApp.
 
 ## Trabajo paralelo de validación comercial
 
