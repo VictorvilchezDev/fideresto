@@ -54,6 +54,8 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 
 | FID-046 | 2026-10-30 | Incidencia de Víctor y corrección técnica | El QR de demo apuntaba a 127.0.0.1 y no abría en el móvil. Origen de prueba separado y servidor de compilación de producción en IP privada/puerto 3019; requiere misma Wi-Fi. No se publica el laboratorio ni se crea infraestructura de pago. Página puntual de conexión, alta/Wallet reales pendientes. Ver [[Prueba QR desde movil]]. |
 
+| FID-047 | 2026-10-30 | Petición de Víctor y avance técnico | Tarjetas Apple/Google Wallet: generadores y entrega puntual implementados/probados localmente, sin instalación real. Víctor no tiene cuentas emisoras; se explican requisitos sin autorizar altas/costes. Alta/verificación y actualización automática pendientes. Ver [[Emision de tarjetas Wallet]]. |
+
 ## Propuestas abiertas
 
 Precio, alojamiento web, creación de Supabase pendiente por coste, cuentas partidas, efectos de cambios de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

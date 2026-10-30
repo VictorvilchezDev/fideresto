@@ -4,7 +4,7 @@ const config: NextConfig = {
   agentRules: false,
   turbopack: { root: process.cwd() },
   poweredByHeader: false,
-  serverExternalPackages: ["@electric-sql/pglite"],
+  serverExternalPackages: ["@electric-sql/pglite", "passkit-generator", "sharp"],
   async headers() {
     return [
       {

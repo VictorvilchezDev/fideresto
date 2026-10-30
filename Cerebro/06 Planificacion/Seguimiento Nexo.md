@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 24, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 25, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -182,3 +182,10 @@ Incidencia reportada por Víctor: destino 127.0.0.1 no abre en teléfono. Dos ta
 - `Documentacion/QR-movil-prueba-local-v0.1.md`, hash `9b3d352405fc0be5b31bc270683c26078fa950f4a5b227e87acac2c4273d4aa1`.
 
 Detalles de reproducción y límites en [[Prueba QR desde movil]]. Dirección real de esta sesión en configuración local ignorada, no en documentos públicos de Git.
+
+
+## Emisión inicial Wallet · vigente
+
+Revisión 25: seis tareas actualizadas conservando fechas, dependencias, responsables y comentarios. Apple/Google pasan a progreso con bloqueo externo por cuentas emisoras propias pendientes; Víctor confirma no disponer de ellas. No se cierra ningún hito ni se contrata nada. Generadores/entrega puntual preparados, 39 comprobaciones locales y tipos/build; instalación real y actualización automática pendientes. Copia de consulta `Documentacion/Wallet-emision-inicial-v0.1.md`; índice actualizado. Ver [[Emision de tarjetas Wallet]].
+
+Lectura MCP de vuelta: documento Wallet coincide exactamente, hash `3277ce1f9b4b1782d9dac888042a012b52530328157e63f1e5195aaa555ccbe4`; índice `7e0cba17486cb07f8278cbb6032912da3192935bf3bc38eae5a3d85b535dd922`. Seis tareas verificadas en progreso con dependencias conservadas; revisión 25/30 tareas/6 fases y fecha 31/01/2027.

@@ -1,27 +1,40 @@
 import { Brand } from "@/components/brand";
-import { Check, QrCode } from "lucide-react";
-export default function QrConnectionPage() {
+import { PassPreview } from "@/components/wallet/pass-preview";
+import { AddWalletButtons } from "@/components/wallet/add-buttons";
+import { walletReadiness } from "@/lib/wallet/config";
+import { sampleCard } from "@/lib/wallet/model";
+export const dynamic = "force-dynamic";
+export default async function QrConnectionPage() {
+  const status = await walletReadiness();
   return (
-    <main className="center-page public-entry">
-      <section className="panel qr-connection">
-        <Brand />
-        <span className="icon-tile">
-          <QrCode size={30} />
-        </span>
-        <span className="eyebrow">PRUEBA DE CONEXIÓN</span>
-        <h1>El QR ya abre en tu móvil.</h1>
-        <p>Has llegado al acceso de demostración de Fideresto.</p>
-        <div className="notice">
-          <Check size={18} />
-          <span>Enlace abierto correctamente.</span>
-        </div>
-        <h2>La tarjeta Wallet es el siguiente paso.</h2>
-        <p>
-          El registro, la verificación del teléfono y la creación de la tarjeta todavía no están
-          disponibles. Esta pantalla solo comprueba que puedes abrir el enlace.
-        </p>
-        <small>No se han registrado datos ni añadido sellos.</small>
-      </section>
+    <main className="wallet-entry">
+      <Brand />
+      <span className="eyebrow">PRUEBA DE TARJETA DIGITAL</span>
+      <h1>De aquí, a tu Wallet.</h1>
+      <p>La misma tarjeta, en iPhone y Android. Sin instalar una app de Fideresto.</p>
+      <PassPreview card={sampleCard} />
+      <AddWalletButtons
+        status={status}
+        base="/api/wallet/sample"
+        enabled={process.env.FIDERESTO_WALLET_SAMPLE === "1"}
+      />
+      {(!status.apple.ready || !status.google.ready) && (
+        <aside className="panel wallet-setup-note">
+          <h2>Falta conectar las cuentas emisoras</h2>
+          <p>
+            El diseño y los generadores están preparados. Para instalar una tarjeta real necesitamos
+            el certificado de Apple Developer y la cuenta emisora de Google Wallet.
+          </p>
+          <p>
+            Esta prueba usa datos ficticios. No registra clientes ni suma sellos a un
+            establecimiento real.
+          </p>
+        </aside>
+      )}
+      <p className="wallet-footnote">
+        Vista previa y entrega de prueba. El alta por teléfono verificado y la actualización
+        automática de pases aún están pendientes de conexión y pruebas.
+      </p>
     </main>
   );
 }

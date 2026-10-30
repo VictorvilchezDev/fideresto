@@ -54,6 +54,14 @@ export async function localLab(
       throw error;
     });
     await state.directoryReady;
+    const walletCheck = await db.query<{ ready: boolean }>(
+      "select to_regclass('public.wallet_deliveries') is not null as ready",
+    );
+    if (!walletCheck.rows[0].ready)
+      await db.exec(
+        await readFile("supabase/migrations/20261030125042_wallet_issuance.sql", "utf8"),
+      );
+
     return db.transaction(async (tx) => {
       await tx.exec("set local role authenticated");
       await tx.query("select set_config('request.jwt.claim.sub',$1,true)", [actors[input.persona]]);

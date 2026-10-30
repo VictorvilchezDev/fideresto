@@ -1,5 +1,11 @@
 # Diario
 
+## 2026-10-30 · Emisión inicial Apple/Google Wallet
+
+Víctor pide ambos Wallet y confirma que no tiene cuentas emisoras. Explicados requisitos sin contratar nada. Generadores, identidad estable y entrega de 15 minutos implementados; cuarta migración y evolución del laboratorio sin reiniciar datos. Vista previa Crystal Clear `/prueba-qr`, botones cerrados sin credenciales. Supabase sigue sin crear.
+
+39 comprobaciones contando subcasos, tipos/build. Firma Apple/manifest con CA temporal ficticia y JWT Google verificados; REST simulado. SQL comprueba aislamiento, teléfono, caducidad/límite y privacidad. Auditoría de dependencias sin vulnerabilidades reportadas tras fijar Joi transitivo. Vista previa inspeccionada en navegador; sin instalación real ni actualización automática. Ver [[Emision de tarjetas Wallet]] y `docs/WALLET.md`.
+
 ## 2026-10-30 · Inicio y corrección de método
 
 - Se investigó ArtCraft y se analizó la propuesta de fidelización del reel aportado.

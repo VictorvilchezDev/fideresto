@@ -4,6 +4,11 @@ import { supabaseConfig } from "@/lib/config";
 
 export async function proxy(request: NextRequest) {
   let response = NextResponse.next({ request });
+  if (request.nextUrl.pathname.startsWith("/wallet/")) {
+    response.headers.set("Cache-Control", "private, no-store");
+    response.headers.set("Referrer-Policy", "no-referrer");
+    return response;
+  }
   const config = supabaseConfig();
   if (!config) return response;
   const client = createServerClient(config.url, config.key, {
@@ -20,4 +25,4 @@ export async function proxy(request: NextRequest) {
   response.headers.set("Cache-Control", "private, no-store");
   return response;
 }
-export const config = { matcher: ["/app/:path*", "/admin/:path*", "/login"] };
+export const config = { matcher: ["/app/:path*", "/admin/:path*", "/login", "/wallet/:path*"] };

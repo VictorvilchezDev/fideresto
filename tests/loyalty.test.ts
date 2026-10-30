@@ -605,7 +605,7 @@ test(
     try {
       await db.exec(await readFile("supabase/tests/bootstrap-local.sql", "utf8"));
       const files = (await readdir("supabase/migrations")).filter((f) => f.endsWith(".sql")).sort();
-      for (const file of files.slice(0, -1))
+      for (const file of files.filter((f) => f < "20261030122842_customer_phone_directory.sql"))
         await db.exec(await readFile(`supabase/migrations/${file}`, "utf8"));
       await db.exec(await readFile("supabase/tests/loyalty-fixtures.sql", "utf8"));
       await db.exec("set role authenticated");
@@ -616,7 +616,9 @@ test(
         randomUUID(),
       ]);
       await db.exec("reset role");
-      await db.exec(await readFile(`supabase/migrations/${files.at(-1)}`, "utf8"));
+      await db.exec(
+        await readFile("supabase/migrations/20261030122842_customer_phone_directory.sql", "utf8"),
+      );
       await db.exec("set role authenticated");
       await db.query("select set_config('request.jwt.claim.sub',$1,false)", [user(2)]);
       const c = (

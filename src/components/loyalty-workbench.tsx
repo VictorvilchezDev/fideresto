@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Check, Coffee, Gift, History, ShieldCheck, Sparkles } from "lucide-react";
 import { CustomerLookup, CustomerEditor } from "./customer-directory";
+import { WalletDeliveryPanel } from "@/components/wallet/delivery-panel";
 import { Brand } from "./brand";
 import type {
   Card,
@@ -216,6 +217,13 @@ export function LoyaltyWorkbench({
             disabled={busy || !!retry}
             onRefresh={() => void load()}
             onSave={(p) => load(cardCode, persona, undefined, undefined, p)}
+          />
+          <WalletDeliveryPanel
+            key={card.card_code}
+            merchant={merchant}
+            card={card.card_code}
+            verified={card.profile.phone_verified}
+            lab={lab}
           />
           <div className="loyalty-grid">
             <section className="panel loyalty-card">

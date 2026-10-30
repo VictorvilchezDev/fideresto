@@ -96,7 +96,7 @@ export function NfcPanel({
       {demo && !localOnly && (
         <div className="notice">
           QR de prueba de conexión. Conecta el móvil a la misma Wi-Fi si el enlace usa una dirección
-          de red local. Todavía no crea una tarjeta Wallet.
+          de red local. La instalación Wallet requiere conectar las cuentas emisoras.
         </div>
       )}
       <form className="inline-form" action={action}>
@@ -210,7 +210,7 @@ export function NfcPanel({
             <h3>{qr.label}</h3>
             <p>
               {demo
-                ? "Abre la comprobación de conexión desde el móvil. Todavía no registra clientes ni crea una tarjeta Wallet."
+                ? "Abre la comprobación de conexión desde el móvil. Muestra una tarjeta ficticia; la instalación requiere las credenciales del emisor."
                 : "Comparte el mismo acceso que tu etiqueta NFC."}
             </p>
             <p className="qr-link-target">{qr.url}</p>

@@ -23,7 +23,7 @@ Víctor elige Supabase, organización Victor Vilchez y región París. Consulta 
 Cuando se autorice su creación:
 
 1. Crear un proyecto dedicado a Fideresto. Inspeccionar tablas existentes y confirmar el proyecto antes de aplicar migraciones.
-2. Aplicar ambas migraciones de `supabase/migrations/` en orden: fundación y núcleo de fidelización. Nunca aplicar `supabase/tests/bootstrap-local.sql` al servicio alojado: es solo un sustituto de Auth para una base temporal de pruebas.
+2. Aplicar todas las migraciones de `supabase/migrations/` en orden: fundación, núcleo, fichas y entrega Wallet. Nunca aplicar `supabase/tests/bootstrap-local.sql` al servicio alojado: es solo un sustituto de Auth para una base temporal de pruebas.
 3. Configurar la URL y clave **publishable** en `.env.local`. No utilizar la clave secret/service_role en variables públicas ni en el runtime de esta base.
 4. Crear las cuentas profesionales mediante Supabase Auth de forma controlada, con correo verificado. No hay alta pública de dueños/camareros ni invitaciones desde el panel todavía.
 5. Asignar el primer administrador por SQL controlado, usando el UUID de esa cuenta verificada:
@@ -98,4 +98,9 @@ El laboratorio evoluciona en sitio su dataset ficticio v1 con esta migración, s
 
 `127.0.0.1`/`localhost` apuntan al dispositivo que abre el QR. La demo ahora bloquea generar QR loopback. Para una prueba en la misma Wi-Fi, configurar `FIDERESTO_LAN_PREVIEW=1` y `FIDERESTO_DEMO_QR_ORIGIN=http://IP_PRIVADA:3019` en `.env.local`; ejecutar `npm run build` y `npm exec -- next start --hostname IP_PRIVADA --port 3019`. El desarrollo sigue en loopback; no publicar su laboratorio. Regenerar el QR en NFC y QR. Los anteriores impresos/descargados no cambian.
 
-La instancia de producción devuelve 404 en laboratorio/API sintética; el QR ficticio abre `/prueba-qr`, solo una comprobación de conexión sin datos ni emisión Wallet. Mantener ordenador/servidor encendidos y teléfono en la misma red con acceso entre dispositivos. Si cambia la IP, ajustar origen, recompilar/reiniciar y regenerar QR. Para acceso fuera de esa Wi-Fi se requiere una URL HTTPS de prueba. No se ha configurado alojamiento público ni aceptado costes. Ver el cerebro para evidencias y límites.
+La instancia de producción devuelve 404 en laboratorio/API sintética; el QR ficticio abre `/prueba-qr`, ahora vista previa Wallet con botones cerrados sin cuentas emisoras, sin alta ni instalación real. Mantener ordenador/servidor encendidos y teléfono en la misma red con acceso entre dispositivos. Si cambia la IP, ajustar origen, recompilar/reiniciar y regenerar QR. Para acceso fuera de esa Wi-Fi se requiere una URL HTTPS de prueba. No se ha configurado alojamiento público ni aceptado costes. Ver el cerebro para evidencias y límites.
+
+
+## Wallet: emisión inicial
+
+Ver [WALLET.md](WALLET.md) para cuentas propias, configuración, rutas, evidencia y pendientes. Generadores y entrega implementados, 39 comprobaciones locales y tipos/build. Sin instalación real ni actualización automática. Víctor no tiene cuentas emisoras; ninguna creada/contratada. Emisión real necesita Supabase, móvil verificado, HTTPS y credenciales auténticas. Nunca usar las CA ficticias de los tests en la app ni guardar claves/certificados en Git/vault.

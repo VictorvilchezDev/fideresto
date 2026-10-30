@@ -1,6 +1,6 @@
 # Estado actual
 
-Actualizado: 30 de octubre de 2026. Núcleo de fidelización persistente local.
+Actualizado: 30 de octubre de 2026. Núcleo persistente y emisión inicial Wallet preparada localmente.
 
 ## Decisiones vigentes
 
@@ -21,11 +21,15 @@ Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccio
 
 - Núcleo local persistente: afiliaciones con verificación exigida por SQL, sellos, premios con condiciones guardadas, canjes, correcciones motivadas/autorizadas e historial. Laboratorio ficticio `/laboratorio`, componente profesional/API preparados para Supabase y gestión profesional de fichas por nombre/teléfono. Vista y ruta de consumidor retiradas. Detalles y límites en [[Nucleo de fidelizacion]].
 
-## Comprobado
+## Avance Wallet vigente
+
+Generadores Apple `.pkpass`, Google REST/Save JWT y entrega puntual de 15 minutos implementados. Identidad estable por comercio/tarjeta, sin contacto en pase; personal autorizado y teléfono verificado exigidos en SQL. `/prueba-qr` ahora muestra tarjeta ficticia con opciones cerradas sin credenciales. Víctor confirma que no tiene cuentas emisoras; ninguna contratación. 39 comprobaciones contando subcasos (cuatro migraciones PGlite), tipos/build superados. Firma Apple con CA ficticia y JWT Google verificados, REST simulado. Vista previa revisada en navegador y servidor LAN actualizado. Sin instalación real ni actualización automática. Ver [[Emision de tarjetas Wallet]] y `docs/WALLET.md`.
+
+## Comprobaciones anteriores
 
 `npm test`: 30 comprobaciones contando subcasos SQL; tres migraciones reales en PGlite. Tipos/build superados. Se añaden búsqueda y edición por dueño/camarero, teléfonos equivalentes/duplicados, mismo teléfono en dos negocios, aislamiento, versiones y evolución del dataset anterior sin perder historial. Navegador: nombre/teléfono, selección, edición, duplicado rechazado y propio número permitido. Ver [[Clientes por establecimiento]]; las pruebas locales no validan Supabase alojado, carreras multisesión o Wallet reales.
 
-Corrección del QR de demo: origen de prueba separado y acceso por IP privada en instancia de producción del puerto 3019, con laboratorio cerrado. Navegador/HTTP comprobados desde el ordenador; móvil físico aún no probado. Solo comprobación de conexión, sin alta ni Wallet. Ver [[Prueba QR desde movil]].
+Corrección del QR de demo: origen de prueba separado y acceso por IP privada en instancia de producción del puerto 3019, con laboratorio cerrado. Navegador/HTTP comprobados desde el ordenador; móvil físico aún no probado. El destino ahora muestra la vista previa Wallet del avance anterior; sin alta ni instalación reales. Ver [[Prueba QR desde movil]].
 
 ## Pendiente
 
@@ -37,7 +41,7 @@ Dueño y camarero buscan por nombre/teléfono y editan datos, incluido móvil. T
 
 ## Prioridad siguiente
 
-[[Siguiente entrega]]: el núcleo ya está implementado y probado localmente. Siguiente bloque: alta/verificación y pase Wallet del consumidor, sin área en la app e identificación cotidiana por QR/NFC; conectar Supabase cuando se autorice su creación y comprobar proveedor/concurrencia; después ambos Wallet y WhatsApp. Agenda y preparación del piloto siguen en alcance. No se autoriza gasto por este avance.
+[[Siguiente entrega]]: cuentas emisoras propias y HTTPS cuando Víctor decida, instalación en ambos Wallet y actualización automática. Alta/verificación puntual y Supabase cuando se autorice su creación; comprobar proveedor/concurrencia. QR/NFC cotidiano, WhatsApp, agenda y preparación del piloto siguen en alcance. No se autoriza gasto por este avance.
 
 ## Ubicación y continuidad
 

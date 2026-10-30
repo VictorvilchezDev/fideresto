@@ -1,5 +1,9 @@
 # Siguiente entrega
 
+## Avance Wallet vigente · 30/10/2026
+
+[[Emision de tarjetas Wallet]]: generadores/entrega puntual implementados. Víctor no tiene cuentas emisoras. Siguiente: cuentas/certificados propios y HTTPS, instalación en ambos Wallet, actualización automática y alta/verificación puntual. Supabase aún sin crear por coste. 39 comprobaciones y tipos/build locales no completan proveedor/piloto. La planificación siguiente conserva el histórico del núcleo.
+
 Orden de trabajo y avance · 30/10/2026. Víctor valora positivamente Crystal Clear y pide próximos pasos/actualización de NEXO. La base visual se adopta para continuar; el producto todavía necesita operaciones reales e integraciones.
 
 ## Prioridad inmediata: núcleo de fidelización

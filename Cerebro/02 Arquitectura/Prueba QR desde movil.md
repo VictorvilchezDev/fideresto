@@ -1,5 +1,9 @@
 # Prueba QR desde móvil
 
+## Evolución vigente: tarjeta Wallet
+
+El destino `/prueba-qr` ahora muestra una tarjeta ficticia de 5/8 y Apple/Google Wallet. Sustituye la simple confirmación de conexión descrita abajo. Misma URL: el QR LAN anterior sigue sirviendo. Instancia recompilada/reiniciada; sin cuentas emisoras, botones desactivados. Wi-Fi y cierre del laboratorio se mantienen; alta e instalación reales pendientes. Ver [[Emision de tarjetas Wallet]].
+
 30/10/2026 · Víctor informa de que el QR abre `127.0.0.1` en el teléfono y no carga. Esa dirección apunta al propio dispositivo que abre el enlace; el servidor existente solo escuchaba en loopback.
 
 ## Corrección implementada

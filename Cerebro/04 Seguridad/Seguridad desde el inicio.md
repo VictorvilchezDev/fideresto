@@ -1,5 +1,9 @@
 # Seguridad desde el inicio
 
+## Avance Wallet · 30/10/2026
+
+[[Emision de tarjetas Wallet]]: entrega de 256 bits aleatorios con hash SHA-256, 15 minutos y proyección anónima mínima; creación por dueño/camarero del comercio con ficha activa/móvil verificado. Cinco enlaces vigentes por ficha; revocación al cambiar teléfono. Sin acceso anónimo a tablas/directorio/helpers anteriores. Pase sin contacto ni permiso de sello. Secretos solo en servidor, fuera de Git/vault; muestra cerrada por defecto. 39 comprobaciones locales incluyendo firmas/manifest/JWT y SQL, no aceptación Apple/Google. Antes de publicar: límites distribuidos/caché de generación, limpieza, redacción de URLs en logs, renovación y sincronización con colas. Ver `docs/WALLET.md`.
+
 ## Confirmado y procedencia
 
 Víctor exige adoptar el método de trabajo de seguridad de Nexo desde el comienzo. Se reutilizan principios y lecciones, no credenciales, permisos operativos, infraestructura ni afirmaciones de seguridad de otra aplicación.
