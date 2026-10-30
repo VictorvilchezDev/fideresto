@@ -36,3 +36,33 @@ export function appOrigin() {
   }
   return url.origin;
 }
+
+// Separate origin for the fictitious QR connection test. Auth/NFC production
+// URLs still use appOrigin(), which keeps its HTTPS requirement.
+export function demoQrOrigin() {
+  const configured = process.env.FIDERESTO_DEMO_QR_ORIGIN;
+  if (!configured) return appOrigin();
+  const url = new URL(configured);
+  const octets = url.hostname.split(".").map(Number);
+  const privateIPv4 =
+    /^\d+\.\d+\.\d+\.\d+$/.test(url.hostname) &&
+    octets.every((n) => Number.isInteger(n) && n >= 0 && n <= 255) &&
+    (octets[0] === 10 ||
+      (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
+      (octets[0] === 192 && octets[1] === 168));
+  const lanPreview =
+    process.env.FIDERESTO_LAN_PREVIEW === "1" && privateIPv4 && url.protocol === "http:";
+  if (
+    (!lanPreview && url.protocol !== "https:") ||
+    url.username ||
+    url.password ||
+    url.pathname !== "/" ||
+    url.search ||
+    url.hash
+  ) {
+    throw new Error(
+      "El QR de prueba necesita HTTPS o una IPv4 privada con FIDERESTO_LAN_PREVIEW=1.",
+    );
+  }
+  return url.origin;
+}

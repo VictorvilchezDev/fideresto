@@ -93,3 +93,9 @@ Tercera migración `20261030122842_customer_phone_directory.sql`: teléfono norm
 El laboratorio evoluciona en sitio su dataset ficticio v1 con esta migración, sin reiniciar historial. Los mismos teléfonos pueden estar en otros comercios con ficha y tarjeta independientes. Editar no toca Auth global ni otros locales; nuevo número queda sin verificación de titularidad, sin impedir guardar ni otorgar acceso. No hay aún envío real.
 
 28 comprobaciones automáticas, tipos y build. Pruebas de unicidad/formato, búsqueda por nombre/teléfono, perfil con versión, cumpleaños, permisos, repetición entre negocios y migración sobre ledger anterior. No se ha ensayado carrera real multisesión ni servicio alojado.
+
+## Escanear el QR de demo desde un móvil
+
+`127.0.0.1`/`localhost` apuntan al dispositivo que abre el QR. La demo ahora bloquea generar QR loopback. Para una prueba en la misma Wi-Fi, configurar `FIDERESTO_LAN_PREVIEW=1` y `FIDERESTO_DEMO_QR_ORIGIN=http://IP_PRIVADA:3019` en `.env.local`; ejecutar `npm run build` y `npm exec -- next start --hostname IP_PRIVADA --port 3019`. El desarrollo sigue en loopback; no publicar su laboratorio. Regenerar el QR en NFC y QR. Los anteriores impresos/descargados no cambian.
+
+La instancia de producción devuelve 404 en laboratorio/API sintética; el QR ficticio abre `/prueba-qr`, solo una comprobación de conexión sin datos ni emisión Wallet. Mantener ordenador/servidor encendidos y teléfono en la misma red con acceso entre dispositivos. Si cambia la IP, ajustar origen, recompilar/reiniciar y regenerar QR. Para acceso fuera de esa Wi-Fi se requiere una URL HTTPS de prueba. No se ha configurado alojamiento público ni aceptado costes. Ver el cerebro para evidencias y límites.

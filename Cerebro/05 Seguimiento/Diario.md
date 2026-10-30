@@ -98,3 +98,7 @@ Composición estática del nuevo flujo revisada a 390 px en navegador, sin desbo
 Víctor corrige el recorrido: sin vista del cliente en app; búsqueda/edición por dueño y camarero; teléfono único dentro de local, repetible en otros. Retirada ruta/rol de consumidor y revocado acceso a proyección de tarjeta profesional. Nueva migración con normalización y constraint compuesto, edición con versiones y auditoría; búsqueda limitada al comercio. El dataset ficticio existente se actualiza conservando tarjetas/historial.
 
 28 comprobaciones automáticas, tipos/build. Navegador: búsqueda por nombre/teléfono, selección, edición por camarero, duplicado rechazado, número propio guardado y acceso de dueño. Sin proveedor real, multisesión, Wallet ni despliegue. Cerebro y NEXO actualizados; ver [[Clientes por establecimiento]] y [[Seguimiento Nexo]].
+
+## 30/10/2026 · Corrección del QR para móvil
+
+Víctor reporta que el QR apunta a 127.0.0.1. Corregido origen de QR ficticio, bloqueo de generación loopback y retirada de QR con origen anterior. Página puntual /prueba-qr explicita conexión disponible y Wallet pendiente. Instancia de producción en IP privada:3019, desarrollo permanece en loopback; no se publica el laboratorio. 30 comprobaciones, tipos/build. HTTP 200 de entrada y 404 de laboratorio/API, navegador y QR nuevo comprobados desde el ordenador; no móvil físico. IP/configuración de sesión excluidas de Git; captura y QR fuera del repositorio. Ver [[Prueba QR desde movil]].

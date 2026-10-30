@@ -1,6 +1,7 @@
 "use client";
 import { useActionState, useState, type Dispatch, type SetStateAction } from "react";
 import QRCode from "qrcode";
+import { isLoopbackOrigin, tagEntryLink } from "@/lib/qr-links";
 import { Copy, Radio, QrCode, Plus, ArrowUpRight } from "lucide-react";
 import { createTag, toggleTag } from "@/app/actions";
 import { initialResult, type Tag } from "@/lib/domain";
@@ -25,7 +26,7 @@ export function NfcPanel({
 }) {
   const list = tags;
   const [message, setMessage] = useState("");
-  const [qr, setQr] = useState<{ image: string; label: string } | null>(null);
+  const [qr, setQr] = useState<{ image: string; label: string; url: string } | null>(null);
   const [writing, setWriting] = useState(false);
   const [result, action, pending] = useActionState(
     demo
@@ -42,7 +43,8 @@ export function NfcPanel({
       : createTag,
     initialResult,
   );
-  const link = (tag: Tag) => (demo ? `${origin}/demo?entry=nfc` : `${origin}/t/${tag.id}`);
+  const link = (tag: Tag) => tagEntryLink(origin, tag.id, demo);
+  const localOnly = isLoopbackOrigin(origin);
   async function write(tag: Tag) {
     const Reader = (window as unknown as { NDEFReader?: new () => NFCReader }).NDEFReader;
     if (!Reader) {
@@ -85,6 +87,18 @@ export function NfcPanel({
         <h2>NFC y QR de tu local.</h2>
         <p>Un enlace estable para cada punto de tu negocio.</p>
       </div>
+      {localOnly && (
+        <div className="notice">
+          El acceso actual solo abre en este ordenador. El QR para móvil necesita una dirección de
+          prueba accesible desde el teléfono.
+        </div>
+      )}
+      {demo && !localOnly && (
+        <div className="notice">
+          QR de prueba de conexión. Conecta el móvil a la misma Wi-Fi si el enlace usa una dirección
+          de red local. Todavía no crea una tarjeta Wallet.
+        </div>
+      )}
       <form className="inline-form" action={action}>
         <input type="hidden" name="merchant_id" value={id} />
         <label>
@@ -141,9 +155,16 @@ export function NfcPanel({
                   aria-label={`Mostrar QR de ${tag.label}`}
                   onClick={async () => {
                     try {
+                      if (localOnly) {
+                        setMessage(
+                          "Este enlace solo funciona en este ordenador. Para escanear desde el móvil hay que configurar una dirección accesible desde él.",
+                        );
+                        return;
+                      }
                       setQr({
                         image: await QRCode.toDataURL(link(tag), { width: 280, margin: 2 }),
                         label: tag.label,
+                        url: link(tag),
                       });
                     } catch {
                       setMessage("No se ha podido generar el QR.");
@@ -182,12 +203,17 @@ export function NfcPanel({
           {message}
         </div>
       )}
-      {qr && (
+      {qr && qr.url && new URL(qr.url).origin === origin && !localOnly && (
         <div className="qr-preview">
           <img src={qr.image} width={240} height={240} alt={`Código QR de ${qr.label}`} />
           <div>
             <h3>{qr.label}</h3>
-            <p>Comparte el mismo acceso que tu etiqueta NFC.</p>
+            <p>
+              {demo
+                ? "Abre la comprobación de conexión desde el móvil. Todavía no registra clientes ni crea una tarjeta Wallet."
+                : "Comparte el mismo acceso que tu etiqueta NFC."}
+            </p>
+            <p className="qr-link-target">{qr.url}</p>
             <a className="button secondary" href={qr.image} download={`fideresto-qr.png`}>
               Descargar QR
               <ArrowUpRight size={15} />

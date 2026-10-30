@@ -52,6 +52,8 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-044 | 2026-10-30 | Confirmado; sustituye propuesta de vista web del consumidor | Víctor aclara que el cliente no tendrá vista en la app: consultará su tarjeta digital y sellos en Wallet. Retirados selector de consumidor/ruta de tarjeta web; alta/verificación/emisión puntual sigue pendiente. |
 | FID-045 | 2026-10-30 | Confirmado | Dueño y camarero buscan por nombre o teléfono y editan la ficha seleccionada, incluido el teléfono. Es único por establecimiento y se comprueba antes de guardar; mismo número admisible en otros con su tarjeta independiente. Detalles y evidencia en [[Clientes por establecimiento]]. |
 
+| FID-046 | 2026-10-30 | Incidencia de Víctor y corrección técnica | El QR de demo apuntaba a 127.0.0.1 y no abría en el móvil. Origen de prueba separado y servidor de compilación de producción en IP privada/puerto 3019; requiere misma Wi-Fi. No se publica el laboratorio ni se crea infraestructura de pago. Página puntual de conexión, alta/Wallet reales pendientes. Ver [[Prueba QR desde movil]]. |
+
 ## Propuestas abiertas
 
 Precio, alojamiento web, creación de Supabase pendiente por coste, cuentas partidas, efectos de cambios de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

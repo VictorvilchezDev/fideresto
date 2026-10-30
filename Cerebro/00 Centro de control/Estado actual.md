@@ -23,7 +23,9 @@ Supabase elegido para PostgreSQL. Organización Victor Vilchez y París seleccio
 
 ## Comprobado
 
-`npm test`: 28 comprobaciones contando subcasos SQL; tres migraciones reales en PGlite. Tipos/build superados. Se añaden búsqueda y edición por dueño/camarero, teléfonos equivalentes/duplicados, mismo teléfono en dos negocios, aislamiento, versiones y evolución del dataset anterior sin perder historial. Navegador: nombre/teléfono, selección, edición, duplicado rechazado y propio número permitido. Ver [[Clientes por establecimiento]]; las pruebas locales no validan Supabase alojado, carreras multisesión o Wallet reales.
+`npm test`: 30 comprobaciones contando subcasos SQL; tres migraciones reales en PGlite. Tipos/build superados. Se añaden búsqueda y edición por dueño/camarero, teléfonos equivalentes/duplicados, mismo teléfono en dos negocios, aislamiento, versiones y evolución del dataset anterior sin perder historial. Navegador: nombre/teléfono, selección, edición, duplicado rechazado y propio número permitido. Ver [[Clientes por establecimiento]]; las pruebas locales no validan Supabase alojado, carreras multisesión o Wallet reales.
+
+Corrección del QR de demo: origen de prueba separado y acceso por IP privada en instancia de producción del puerto 3019, con laboratorio cerrado. Navegador/HTTP comprobados desde el ordenador; móvil físico aún no probado. Solo comprobación de conexión, sin alta ni Wallet. Ver [[Prueba QR desde movil]].
 
 ## Pendiente
 

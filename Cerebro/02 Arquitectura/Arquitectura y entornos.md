@@ -127,3 +127,7 @@ Demo local ficticia separada: cambiar rol, simular sellos/canje, editar programa
 ## Corrección vigente · Consumidor solo Wallet y fichas por comercio
 
 [[Clientes por establecimiento]] prevalece sobre propuestas anteriores: no hay vista del consumidor dentro de la app. Se ha retirado `/tarjeta/[merchantId]` y el rol ficticio de cliente; consulta profesional restringida a pertenencia activa. Dueño/camarero buscan por nombre/teléfono y editan ficha. Número normalizado único por establecimiento (no global); ficha/tarjeta/ledger estables, cambios aislados de otros negocios y de Auth. Edición controlada por versión, duplicados rechazados y auditoría sin valores de contacto. 28 comprobaciones locales, tipos/build y recorrido de navegador. Wallet real, alta/verificación puntual y conexiones siguen pendientes.
+
+## QR de demostración desde el móvil
+
+[[Prueba QR desde movil]] documenta la corrección del destino loopback, origen separado y previsualización temporal en IP privada. No es un despliegue del piloto ni alta/Wallet completos. Desarrollo/laboratorio continúan restringidos al ordenador.

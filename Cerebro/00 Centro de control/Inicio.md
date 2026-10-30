@@ -32,3 +32,5 @@ El código y este vault comparten el repositorio Fideresto. No es un módulo de 
 - [[Nucleo de fidelizacion]]: operaciones persistentes, límites del laboratorio y evidencia local.
 
 - [[Clientes por establecimiento]]: consumidor solo Wallet; búsqueda, edición y teléfono único dentro de cada comercio.
+
+- [[Prueba QR desde movil]]: destino de demo accesible por Wi-Fi, configuración y límites de la comprobación.

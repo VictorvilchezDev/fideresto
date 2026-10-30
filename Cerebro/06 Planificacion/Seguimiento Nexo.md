@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 22, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 24, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -172,3 +172,13 @@ Nuevo documento leído con coincidencia exacta:
 - `Documentacion/Clientes-por-establecimiento-v0.1.md`, hash `6b4ac502bbaccd3b3c86ae8c7b058716db58d29074d812096bb5c7256d72a72d`.
 
 Índice y requisitos vigentes actualizados con hash de concurrencia y leídos de vuelta; la aclaración prevalece sobre propuestas históricas de vista web del consumidor. Sin despliegue, recursos de pago ni conexión a otro proyecto.
+
+## Corrección QR de demo desde el móvil
+
+Incidencia reportada por Víctor: destino 127.0.0.1 no abre en teléfono. Dos tareas y descripción actualizadas; revisión 24/30 tareas comprobada, sin cambiar fechas, responsables, dependencias ni cierre de hitos. Origen de QR ficticio separado y prueba de conexión en instancia de compilación de producción por IP privada/3019, misma Wi-Fi. Laboratorio/API 404, desarrollo en loopback, sin túnel público o recursos de pago. Alta y Wallet reales siguen pendientes.
+
+30 comprobaciones automáticas, tipos/build; QR nuevo y página de llegada revisados desde navegador/HTTP en ordenador. No prueba física con el teléfono. Índice actualizado con hash y leído de vuelta. Documento subido/leído con coincidencia exacta:
+
+- `Documentacion/QR-movil-prueba-local-v0.1.md`, hash `9b3d352405fc0be5b31bc270683c26078fa950f4a5b227e87acac2c4273d4aa1`.
+
+Detalles de reproducción y límites en [[Prueba QR desde movil]]. Dirección real de esta sesión en configuración local ignorada, no en documentos públicos de Git.

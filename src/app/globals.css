@@ -2081,3 +2081,19 @@ textarea {
 .customer-profile-form label {
   align-content: start;
 }
+.qr-link-target {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+.qr-connection {
+  max-width: 500px;
+}
+.qr-connection .notice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 24px 0;
+}
+.qr-connection h2 {
+  margin-top: 26px;
+}
