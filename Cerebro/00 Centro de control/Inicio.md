@@ -12,10 +12,12 @@ Vault local de Markdown compatible con Obsidian. Contiene el conocimiento para r
 
 - [[Como mantener el cerebro]]: protocolo de mantenimiento tomado como referencia de Nexo.
 - [[Producto y alcance]]: problema, usuarios y alcance propuesto.
+- [[Pantallas y flujos]]: recorridos de cliente, empleado y propietario; propuesta de primera versión.
 - [[Arquitectura y entornos]]: decisiones técnicas pendientes y límites de infraestructura.
 - [[Identidad e interfaz]]: diseño propio; corrección de la referencia visual a Nexo.
 - [[Seguridad desde el inicio]]: activos, riesgos, controles y verificaciones previstas.
 - [[Plan inicial]]: hitos y criterios de revisión.
+- [[Seguimiento Nexo]]: proyecto, tareas, fecha objetivo e instrucciones de actualización por MCP.
 - [[Decisiones]]: acuerdos, propuestas y decisiones sustituidas.
 - [[Diario]]: trabajo realizado y siguiente paso.
 - [[Referencias]]: fuentes consultadas y procedencia.

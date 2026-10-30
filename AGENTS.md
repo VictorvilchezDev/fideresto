@@ -19,6 +19,10 @@ La memoria del proyecto es el vault Markdown `Cerebro/`, compatible con Obsidian
 
 Actualizar la nota temática, las decisiones y pendientes, el diario y el estado actual. Registrar qué se comprobó y qué no. Separar confirmado, propuesto, pendiente y sustituido; conservar motivos y fuentes sin duplicar especificaciones.
 
+## Seguimiento en NEXO
+
+Proyecto `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`, creado por petición de Víctor. Fecha objetivo revisable del piloto: 31/01/2027. Consultar `Cerebro/06 Planificacion/Seguimiento Nexo.md` y el proyecto/tareas por MCP antes de actualizar; usar la revisión vigente y conservar cambios/comentarios ajenos. NEXO contiene planificación; el vault conserva las razones y el código vive en GitHub. No existe sincronización automática.
+
 ## Desarrollo y seguridad
 
 - Consultar `Cerebro/04 Seguridad/Seguridad desde el inicio.md` antes de diseñar datos, acceso, sellos, canjes o integraciones.

@@ -12,6 +12,9 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-006 | 2026-10-30 | Propuesto por Víctor | «Puede que un tipo cristalWhite o algo así». Dirección visual para explorar; todavía sin especificación o aprobación de pantallas. |
 | FID-007 | 2026-10-30 | Confirmado | Repositorio de trabajo y pushes: `https://github.com/VictorvilchezDev/fideresto.git`. Instrucción expresa de Víctor. |
 | FID-008 | 2026-10-30 | Elección organizativa del asistente | Renombrar carpeta local de fidelizacion a fideresto para corresponder al remoto. Nombre comercial definitivo pendiente. |
+| FID-009 | 2026-10-30 | Confirmado | Víctor pide crear Fideresto en NEXO mediante MCP y explicar objetivo, fases, pantallas y flujos. Proyecto creado y plan inicial registrado. |
+| FID-010 | 2026-10-30 | Confirmado | Víctor elige 31 de enero de 2027 como fecha objetivo revisable para tener preparado el piloto. No es un compromiso de rentabilidad demostrada. |
+| FID-011 | 2026-10-30 | Propuesta del asistente | Seis fases, 29 tareas, fechas intermedias y pantallas/flujos v0.1. Registrados como planificación inicial; alcance/reglas, stack y responsables por concretar. |
 
 ## Propuestas abiertas
 

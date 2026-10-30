@@ -1,97 +1,62 @@
 # Plan inicial
 
-30 de octubre de 2026 · Propuesta de trabajo
+Versión 0.2 · 30 de octubre de 2026 · Propuesta de producto y calendario.
+Fecha objetivo elegida por Víctor: **31 de enero de 2027**, para tener el piloto preparado. Las fechas intermedias, reglas y funcionalidades son propuestas revisables.
 
-## 1. Primer público
+## Objetivo
 
-Comercios en España. Hipótesis inicial: cafeterías con compras frecuentes y una recompensa de coste asumible. El primer piloto puede empezar con un establecimiento y ampliarse cuando el funcionamiento esté comprobado.
+Ayudar a comercios en España a convertir clientes ocasionales en recurrentes mediante una tarjeta digital de recompensas y comunicaciones útiles. Evaluar adopción, repetición y costes antes de escalar.
 
-## 2. Tres usuarios
+El piloto debe demostrar que el personal puede operarlo y que los clientes lo entienden. El plazo no promete rentabilidad demostrada ni lanzamiento masivo.
 
-| Usuario | Necesidad |
-| --- | --- |
-| Cliente | Registrarse con facilidad, consultar sellos y obtener una recompensa comprensible. |
-| Empleado | Validar visitas y canjear premios con pocos pasos. |
-| Propietario | Configurar el programa, consultar actividad y evaluar costes y resultados. |
+## Primer alcance propuesto
 
-## Seguridad y diseño antes de implementar
+Un establecimiento piloto; arquitectura preparada para aislar varios comercios. Cafeterías como hipótesis inicial. Programa de sellos por visita validada por personal, con una recompensa configurable y acceso desde el navegador móvil.
 
-Seguir el protocolo de `AGENTS.md` y las notas del vault. Nexo es referencia del cerebro y la seguridad; la interfaz será propia. CristalWhite es una posibilidad por explorar. Definir límites de confianza, aislamiento de comercios, permisos y consistencia de visitas/canjes antes de escribir operaciones. Las cuentas del personal y su autorización no se aplazan por defecto hasta el piloto.
+Cliente, empleado y propietario disponen de recorridos separados. El acceso público del comercio solo permite descubrir/registrarse; no permite añadir sellos.
 
-## 3. Hito A: demo del recorrido completo
+Desarrollar primero el recorrido completo con datos ficticios. Añadir Wallet y mensajería mediante proveedores oficiales antes de las pruebas reales de esas integraciones. No etiquetar funciones simuladas como operativas.
 
-Usar datos ficticios y presentar claramente las funciones simuladas.
+Las reglas del premio, visitas elegibles, caducidad, correcciones y acceso del consumidor siguen pendientes de concretar.
 
-- Página de registro y tarjeta digital accesible desde el navegador del móvil.
-- Programa de sellos configurable; el número de visitas y el premio son ejemplos editables.
-- Vista del empleado para registrar una visita y realizar un canje.
-- Panel del propietario con registros, visitas, recompensas y clientes recurrentes.
-- Vista de campañas de cumpleaños y recuperación, sin envío real.
+## Fases propuestas y entregables
 
-### Criterios para revisar la demo
+| Fase | Fecha de referencia | Entregable y criterio de cierre |
+| --- | --- | --- |
+| 01 · Producto, arquitectura y seguridad | 06/11/2026 | Alcance, flujos, reglas del programa, amenazas, matriz de permisos y arquitectura de trabajo revisados. |
+| 02 · Experiencia y diseño propio | 13/11/2026 | Prototipo de cliente, empleado y propietario; dirección visual propia revisada, sin heredar apariencia de Nexo. |
+| 03 · Primera versión funcional segura | 04/12/2026 | Alta, tarjeta web, visitas, canje, equipo y panel funcionando con datos ficticios; pruebas de permisos y consistencia. |
+| 04 · Wallet y comunicaciones | 08/01/2027 | Emisión/actualización de tarjetas, WhatsApp y automatizaciones comprobados con cuentas/dispositivos reales; NFC opcional. |
+| 05 · Verificación y preparación operativa | 22/01/2027 | Aislamiento, fraude, límites, recuperación y uso móvil verificados; versión candidata con riesgos pendientes visibles. |
+| 06 · Piloto y validación comercial | 31/01/2027 | Comercio configurado y formado; piloto preparado e iniciado si supera los criterios; primeras incidencias y costes registrados. |
 
-- Un cliente nuevo puede registrarse y abrir su tarjeta.
-- Una visita validada por el empleado añade un único sello.
-- Un QR público por sí solo no permite añadir sellos.
-- Al alcanzar el objetivo se habilita una recompensa.
-- Repetir una petición de canje no permite gastar dos veces la misma recompensa.
-- El cliente ve el estado actualizado después de la operación.
-- Los indicadores se calculan a partir de los registros de actividad.
-- Las simulaciones de mensajes se distinguen de mensajes enviados.
-- Las vistas principales son utilizables en móvil.
+La seguridad se diseña e implementa en todas las fases. La fase 05 comprueba el conjunto, no es el momento de empezar a protegerlo.
 
-## 4. Hito B: piloto operativo
+NEXO contiene seis fases y 29 tareas con dependencias y puntos relativos, no horas. La base documental figura completada; la definición del producto está en curso. Los responsables están pendientes de asignación; no se han invitado personas.
 
-Preparar el piloto a partir de la experiencia con la demo:
+## Criterios del núcleo funcional
 
-- Elegir comercio, incentivo, número de sellos y reglas de canje.
-- Verificar con usuarios reales de propietario y empleados los permisos diseñados e implementados desde el inicio.
-- Aislar los datos de cada comercio y registrar quién valida visitas y canjes.
-- Resolver duplicados, correcciones y recuperación de acceso.
-- Preparar consentimiento de comunicaciones, baja y tratamiento de datos para el uso real en España.
-- Configurar almacenamiento, copias de seguridad y recuperación.
-- Integrar WhatsApp mediante su plataforma oficial, con límites de gasto y control de frecuencia.
-- Incorporar tarjetas de Apple Wallet y Google Wallet, con acceso web alternativo.
-- Probar altas, actualizaciones y canjes en iPhone y Android reales.
-- Preparar el acceso por NFC como alternativa al QR y verificar el flujo con dispositivos compatibles.
+1. Un cliente se registra y recupera acceso a su tarjeta sin revelar datos de otra persona.
+2. Solo personal autorizado valida visitas de su comercio.
+3. Repetir una solicitud no duplica la operación.
+4. Dos canjes concurrentes no consumen dos veces el mismo premio.
+5. Cambios y correcciones dejan trazabilidad; las reglas del programa se versionan.
+6. Cliente y empleado ven el resultado coherente después de la operación.
+7. Un comercio no consulta ni modifica clientes, movimientos o campañas de otro.
+8. Los indicadores provienen de actividad real registrada.
+9. El núcleo es utilizable en móvil y distingue errores, carga, falta de conexión y confirmaciones.
+10. Una función externa no integrada se identifica como simulada.
 
-La participación de Víctor será necesaria para elegir el comercio, revisar el funcionamiento y gestionar las cuentas de servicios externas que se requieran.
+## Ampliaciones posteriores
 
-## 5. Hito C: validación comercial
+Referidos, varios locales y reglas de franquicia, programas por gasto, integración con caja, IA de ayuda para campañas, reservas y pedidos. Se priorizan según el piloto, no forman parte del compromiso del núcleo inicial.
 
-- Acordar un precio de prueba y qué incluye, a partir de costes reales.
-- Medir registros, visitas repetidas, canjes y bajas de comunicaciones.
-- Registrar costes de premios, mensajería, soporte y funcionamiento del servicio.
-- Recoger tiempo de uso e incidencias del personal.
-- Distinguir visitas vinculadas a una campaña de visitas adicionales causadas por ella. Una comparación con un grupo sin campaña puede ayudar a estimar este último efecto.
-- Confirmar si el propietario quiere seguir pagando al terminar el piloto.
+## Trabajo paralelo de validación comercial
 
-## 6. Ampliaciones candidatas
+Elegir comercio y persona responsable; conocer cómo atiende; estimar coste de premios; observar uso del personal; acordar soporte y propuesta de cuota con costes reales.
 
-Priorizar después de observar necesidades reales:
+Medir registros, visitas repetidas, canjes, bajas y gasto. Separar visitas vinculadas a una campaña de visitas adicionales causadas por ella; una comparación con un grupo sin campaña puede ayudar a estimar ese efecto.
 
-1. Referidos y recompensas por recomendación.
-2. Campañas por comportamiento y límites de frecuencia.
-3. Recompensas ajustadas al margen del comercio.
-4. Varias sucursales y reglas de canje por establecimiento.
-5. Integración con caja para registrar importes y reducir tareas manuales.
-6. Reservas, pedidos e IA de apoyo para redactar campañas.
+## Siguiente paso
 
-## 7. Decisiones pendientes
-
-- Comercio piloto y persona responsable.
-- Sector inicial definitivo.
-- Presupuesto de servicios y disponibilidad de trabajo.
-- Nombre comercial y dominio. Repositorio y pushes ya confirmados: `https://github.com/VictorvilchezDev/fideresto.git`.
-- Tecnología y alojamiento, a elegir al concretar los requisitos de la demo.
-- Recompensa, condiciones de obtención y costes.
-
-## 8. Referencias técnicas ya consultadas
-
-- Apple, actualización de tarjetas: https://developer.apple.com/documentation/WalletPasses/adding-a-web-service-to-update-passes
-- Google, tarjetas de fidelidad: https://developers.google.com/wallet/retail/loyalty-cards
-- WhatsApp, política de mensajería: https://business.whatsapp.com/policy
-- WhatsApp, precios: https://whatsappbusiness.com/products/platform-pricing/?lang=en
-- Google Maps, contenido y reseñas: https://support.google.com/contributionpolicy/answer/7400114?hl=es
-
-El diseño de solicitudes de reseña debe permitir opiniones auténticas sin seleccionar únicamente a clientes satisfechos.
+Concretar el programa de ejemplo y sus reglas con Víctor, cerrar matriz de permisos y presentar pantallas propias. Ver [[Pantallas y flujos]], [[Seguridad desde el inicio]] y [[Seguimiento Nexo]].
