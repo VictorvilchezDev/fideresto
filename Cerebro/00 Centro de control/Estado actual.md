@@ -20,7 +20,9 @@ No hay aplicación ejecutable, base de datos, autenticación, tarjetas Wallet, m
 
 ## Sincronización
 
-Destino autorizado: `https://github.com/VictorvilchezDev/fideresto.git`. Primer commit/push pendiente de ejecución y verificación. Esta nota se actualizará al comprobar el resultado.
+Destino autorizado: `https://github.com/VictorvilchezDev/fideresto.git`. Base documental publicada en `main`: commit inicial `7240fddf2603146466d00787e17f623c67f12e7e`, comprobado contra `git ls-remote`. La rama local sigue `origin/main`. El historial de Git es la referencia para el último commit; esta nota registra la primera publicación verificada.
+
+Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --check` correcto y exclusiones de `.env`, secretos y archivos privados comprobadas. Son verificaciones documentales y de Git, no pruebas de una aplicación.
 
 ## Siguiente trabajo
 

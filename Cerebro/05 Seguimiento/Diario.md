@@ -9,6 +9,7 @@
 - Se consultaron notas de mantenimiento del cerebro, decisiones y seguridad de Nexo y referencias de CuentasCEE. No se modificaron esos proyectos ni se operó su infraestructura.
 - Se corrigió una interpretación equivocada: Nexo no es referencia visual. El usuario lo aclaró antes de que se implementara ninguna interfaz.
 - Se renombró la carpeta a fideresto y se preparó el vault, el protocolo AGENTS.md, notas de arquitectura/diseño/seguridad y registro de decisiones.
-- `git ls-remote` sobre el repositorio indicado terminó correctamente sin referencias: estaba vacío al consultar. Primer push pendiente de verificación.
+- `git ls-remote` sobre el repositorio indicado terminó correctamente sin referencias: estaba vacío al consultar. Se creó el commit inicial `7240fdd` y se publicó en `main`; consulta posterior del remoto coincide con el hash local.
+- Se verificaron los enlaces internos de 11 notas, formato del diff y exclusión de secretos/archivos privados. No se ejecutaron pruebas de aplicación porque todavía no existe código ejecutable.
 
-Siguiente: comprobar publicación de la base documental, definir flujos y matriz de permisos, y preparar propuesta visual propia. No hay aplicación ejecutable ni controles de seguridad implementados todavía.
+Siguiente: definir flujos y matriz de permisos, y preparar propuesta visual propia. No hay aplicación ejecutable ni controles de seguridad implementados todavía.
