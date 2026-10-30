@@ -50,3 +50,9 @@ Siguiente: aclarar premio ya ganado y elegir modalidad inicial de reservas. No h
 - NEXO: tarea de agenda añadida y siete tareas ajustadas, conservando estados; hito del piloto depende de la agenda. Revisión 7/30 tareas leída y descripción actualizada. Nota de reglas cargada y leída de vuelta con contenido coincidente; índice documental actualizado.
 
 Siguiente: datos y acceso del consumidor, emisor WhatsApp del comercio, dispositivos del personal y detalles de validación/vencimiento. Sin aplicación ejecutable todavía.
+
+## 2026-10-30 · Ronda 4: datos y accesos
+
+Víctor confirma nombre/móvil obligatorios y cumpleaños opcional día/mes, WhatsApp del negocio como emisor y dispositivo del establecimiento o personal con acceso dedicado individual. Registrados FID-025–027. Requisitos, flujo y estado actualizados.
+
+NEXO: cinco tareas ajustadas; revisión 8/30 tareas comprobada, sin marcar desarrollo realizado. Requisitos consolidados cargados y leídos con contenido coincidente; índice actualizado por hash. Próximo: verificar acceso del consumidor, registrar una cuenta sin duplicados y acordar permisos de corrección. No hay aplicación ejecutable.

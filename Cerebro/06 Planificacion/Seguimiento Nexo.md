@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 7, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 8, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -85,3 +85,9 @@ Víctor acepta agenda básica con solicitudes WhatsApp y registro/confirmación 
 NEXO: siete tareas existentes ajustadas y tarea de agenda añadida; hito del piloto depende de ella. Descripción del proyecto actualizada; revisión 7/30 tareas comprobada, sin completar desarrollo ni modificar participantes o fecha objetivo. Fechas intermedias siguen siendo estimaciones revisables.
 
 Nota `Documentacion/Reglas-premios-reservas-ronda-3.md` cargada y leída con contenido coincidente, hash `a433db3d2f282eac7e19b2ed6ab4c4e350f3b2d5fb94850236e0ddf5351a07aa`; índice actualizado con hash de concurrencia vigente. Versiones anteriores se conservan como historia.
+
+## Ronda 4 · Alta, emisor WhatsApp y personal
+
+Cinco tareas ajustadas; revisión 8/30 tareas comprobada sin cambios de estados, responsables o fechas. Nombre/móvil obligatorios, cumpleaños opcional día/mes, WhatsApp de cada negocio y acceso individual del personal desde dispositivo del local o propio.
+
+`Documentacion/Requisitos-confirmados-vigentes.md` consolida rondas 1–4; carga leída de vuelta con contenido coincidente, hash `5851bee9edfd6d37a0dbe8e29d92372829778d4e8d12c107304d2fab3f3e6cde`. Índice actualizado con revisión de contenido. No hay verificación de teléfonos ni integración WhatsApp real implementadas todavía.

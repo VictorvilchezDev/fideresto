@@ -2,7 +2,7 @@
 
 Versión 0.2 · Ajustada a la ronda 1 del 30 de octubre de 2026. No son pantallas implementadas ni diseños aprobados.
 
-Reglas actualizadas en rondas 2 y 3: [[Reglas de sellos y premios]] prevalece sobre las cuestiones todavía abiertas del diseño inicial.
+Reglas de fidelización actualizadas en [[Reglas de sellos y premios]]; datos de alta, WhatsApp emisor y dispositivos del personal en [[Requisitos confirmados]]. Estas decisiones prevalecen sobre las cuestiones abiertas de la propuesta inicial.
 
 ## Organización del producto
 
@@ -39,7 +39,7 @@ La operación de Fideresto requerirá provisionar comercios y gestionar incidenc
 
 1. El comercio ofrece acceso por QR, NFC o enlace, con alternativas según compatibilidad.
 2. El cliente consulta el programa antes de registrarse.
-3. Aporta los datos mínimos acordados; comunicaciones y participación se presentan de forma diferenciada.
+3. Aporta nombre y móvil obligatorios y cumpleaños opcional (día/mes); comunicaciones y participación se presentan de forma diferenciada. Verificación/acceso por definir.
 4. El servidor crea su afiliación al comercio.
 5. Accede a su tarjeta mediante un mecanismo privado y recuperable por definir.
 6. Añade su tarjeta a Apple Wallet o Google Wallet. Esta integración es requisito del piloto.

@@ -1,6 +1,6 @@
 # Requisitos confirmados
 
-Rondas 1, 2 y 3 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas detalladas en [[Reglas de sellos y premios]].
+Rondas 1–4 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas detalladas en [[Reglas de sellos y premios]].
 
 ## Acuerdos
 
@@ -14,6 +14,9 @@ Rondas 1, 2 y 3 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Regl
 | Núcleo del piloto | Tarjeta en Wallet tanto en iOS como en Android y mensajes de WhatsApp. Una demo web parcial puede ayudar al desarrollo, pero no equivale al producto piloto confirmado. |
 | Comunicaciones | Todas las planteadas: cumpleaños, inactividad, promociones, experiencia/reseñas y comunicaciones de reservas; creación/adaptación de nuevas plantillas según demanda del comercio. |
 | Puesta en marcha | Nuestro equipo instala el sistema, forma al personal y ayuda con la configuración inicial. |
+| Alta del consumidor | Nombre y móvil obligatorios; cumpleaños opcional con día y mes. Acceso y verificación del teléfono aún por diseñar. |
+| Emisor WhatsApp | Mensajes desde el WhatsApp del negocio. Número actual o dedicado y conexión por concretar; compatibilidad todavía no comprobada. |
+| Dispositivos del personal | Del establecimiento o personales, con acceso individual dedicado y permisos del comercio. |
 
 «Cliente» al configurar el programa se refiere al comercio que contrata Fideresto; el consumidor acumula sellos y recibe el premio.
 
@@ -32,6 +35,6 @@ Rondas 1, 2 y 3 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Regl
 3. Se sigue acumulando con recompensas pendientes; detalles operativos del ciclo por diseñar.
 4. Caducidad configurable; falta concretar cómputo y efectos de cambios.
 5. Agenda básica propia apoyada en solicitudes por WhatsApp confirmada; detalles de operación/permisos por diseñar.
-6. Datos mínimos, acceso y recuperación del consumidor; modalidades de descuento.
+6. Datos mínimos confirmados; quedan verificación/acceso/recuperación del consumidor y modalidades de descuento.
 
 La configuración concreta no está decidida por el ejemplo previo de ocho visitas. No hay aplicación implementada por registrar estos requisitos.

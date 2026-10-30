@@ -10,6 +10,8 @@ Método: Nexo como referencia para el cerebro y la seguridad. Diseño visual ind
 
 Ronda 2: un sello por cuenta; tarjeta en curso pasa al premio estacional vigente; acumulación continua con premios pendientes; caducidad configurable. Ronda 3 confirma agenda propia básica apoyada en solicitudes WhatsApp, registro/confirmación por personal, y conservación de premios ya ganados para canjear. Ver [[Reglas de sellos y premios]].
 
+Ronda 4: nombre y móvil obligatorios, cumpleaños opcional (día/mes); WhatsApp emisor del negocio; dispositivo del local o personal con acceso individual dedicado. Falta concretar acceso/verificación del consumidor y validación/correcciones de cuentas.
+
 ## Existe realmente
 
 - Carpeta local `outputs/fideresto` dentro del espacio de este chat.
@@ -31,7 +33,7 @@ Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --ch
 
 ## Siguiente trabajo
 
-1. Concretar datos/acceso del consumidor, número emisor WhatsApp del comercio, dispositivos del personal, validación de cuentas y detalle del vencimiento.
+1. Concretar verificación/acceso del consumidor, validación de cuentas, permisos de corrección y detalle del vencimiento. Datos mínimos, emisor WhatsApp y dispositivos del personal ya confirmados.
 2. Diseñar el modelo de amenazas y matriz de permisos antes de implementar operaciones.
 3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
 4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.
