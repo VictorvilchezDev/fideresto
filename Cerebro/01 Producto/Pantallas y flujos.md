@@ -88,4 +88,3 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 - Quién corrige operaciones y con qué trazabilidad.
 - Datos mínimos y mecanismo de acceso/recuperación del cliente.
 - Comercio piloto y responsable; presupuesto y proveedores.
-

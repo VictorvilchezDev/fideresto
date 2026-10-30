@@ -59,4 +59,3 @@ Copias de consulta cargadas y verificadas por lectura MCP:
 - `Documentacion/Pantallas-y-flujos-v0.1.md`, contenido coincidente y hash `69b3f259d9bc133b5045400d948909c31498ec182e387c3cdc514a59225aea74`.
 
 La copia se actualiza explícitamente; no sustituye el vault como fuente principal.
-
