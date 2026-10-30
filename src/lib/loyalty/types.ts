@@ -1,7 +1,17 @@
 import type { Program } from "@/lib/domain";
-export type LoyaltyRole = "owner" | "staff" | "consumer";
+export type LoyaltyRole = "owner" | "staff";
 export type LoyaltyAction = "stamp" | "redeem" | "request" | "approve" | "reject";
+export type CustomerProfile = {
+  name: string;
+  phone: string;
+  birthday_day: number | null;
+  birthday_month: number | null;
+  version: number;
+  phone_verified: boolean;
+};
+export type CustomerMatch = { card_code: string; name: string; phone: string };
 export type Card = {
+  profile: CustomerProfile;
   pending_requests: { id: string; reason: string; target_id: string; created_at: string }[];
   card_code: string;
   name: string;
@@ -30,7 +40,6 @@ export type Card = {
 export type LoyaltyResponse = {
   card: Card;
   role: LoyaltyRole;
-  roster?: { name: string; card_code: string }[];
 };
 export const loyaltyMessages: Record<string, string> = {
   NOT_AUTHORIZED: "No tienes permiso para esta acción.",
@@ -46,6 +55,12 @@ export const loyaltyMessages: Record<string, string> = {
   REVERSE_REDEMPTION_FIRST: "Primero solicita y autoriza la corrección del canje de ese premio.",
   PHONE_NOT_VERIFIED: "Primero hay que verificar el móvil.",
   REWARD_BATCH_LIMIT: "El cambio de objetivo requiere revisar los sellos antes de continuar.",
+  PHONE_IN_USE: "Ese teléfono ya pertenece a otro cliente de este establecimiento.",
+  INVALID_PHONE:
+    "Introduce un teléfono válido: 9 cifras para España o prefijo internacional con +.",
+  INVALID_NAME: "Escribe un nombre de entre 1 y 80 caracteres.",
+  INVALID_BIRTHDAY: "Revisa el día y mes de cumpleaños.",
+  PROFILE_CHANGED: "La ficha ha cambiado desde que la abriste. Actualízala antes de guardar.",
   INVALID_ACTION: "Revisa los datos de la operación.",
 };
 export function loyaltyError(message: string) {

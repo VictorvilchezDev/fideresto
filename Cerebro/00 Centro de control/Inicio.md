@@ -30,3 +30,5 @@ Vault local de Markdown compatible con Obsidian. Contiene el conocimiento para r
 El código y este vault comparten el repositorio Fideresto. No es un módulo de memoria de la futura aplicación ni contiene los datos de sus clientes. Se puede abrir la carpeta `Cerebro` como vault en Obsidian; no se ha registrado ni abierto automáticamente en esa aplicación.
 
 - [[Nucleo de fidelizacion]]: operaciones persistentes, límites del laboratorio y evidencia local.
+
+- [[Clientes por establecimiento]]: consumidor solo Wallet; búsqueda, edición y teléfono único dentro de cada comercio.

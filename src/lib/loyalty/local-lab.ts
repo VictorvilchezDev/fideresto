@@ -4,15 +4,14 @@ import path from "node:path";
 import type { PGlite } from "@electric-sql/pglite";
 import type { z } from "zod";
 import { localLabEnabled, labRequestSchema } from "./request";
-import type { Card, LoyaltyResponse } from "./types";
+import type { Card, LoyaltyResponse, CustomerMatch } from "./types";
 const merchant = "20000000-0000-4000-8000-000000000001";
 const alex = "30000000-0000-4000-8000-000000000001";
 const actors = {
   owner: "10000000-0000-4000-8000-000000000001",
   staff: "10000000-0000-4000-8000-000000000002",
-  consumer: "10000000-0000-4000-8000-000000000003",
 };
-type LabState = { db: Promise<PGlite>; tail: Promise<unknown> };
+type LabState = { db: Promise<PGlite>; tail: Promise<unknown>; directoryReady?: Promise<void> };
 const globalLab = globalThis as typeof globalThis & { fiderestoLab?: LabState };
 async function openLab() {
   // This module is never a production database adapter or authentication provider.
@@ -34,15 +33,50 @@ async function openLab() {
   }
   return db;
 }
-export async function localLab(input: z.infer<typeof labRequestSchema>): Promise<LoyaltyResponse> {
+export async function localLab(
+  input: z.infer<typeof labRequestSchema>,
+): Promise<LoyaltyResponse | { results: CustomerMatch[]; role: "owner" | "staff" }> {
   if (!localLabEnabled()) throw new Error("LAB_DISABLED");
   const state = (globalLab.fiderestoLab ??= { db: openLab(), tail: Promise.resolve() });
   const run = state.tail.then(async () => {
     const db = await state.db;
+    // Upgrade the existing fictitious dataset in place, preserving its ledger.
+    state.directoryReady ??= (async () => {
+      const check = await db.query<{ ready: boolean }>(
+        "select to_regprocedure('public.search_loyalty_customers(uuid,text)') is not null as ready",
+      );
+      if (!check.rows[0].ready)
+        await db.exec(
+          await readFile("supabase/migrations/20261030122842_customer_phone_directory.sql", "utf8"),
+        );
+    })().catch((error) => {
+      state.directoryReady = undefined;
+      throw error;
+    });
+    await state.directoryReady;
     return db.transaction(async (tx) => {
       await tx.exec("set local role authenticated");
       await tx.query("select set_config('request.jwt.claim.sub',$1,true)", [actors[input.persona]]);
       const card = input.card ?? alex;
+      if (input.query !== undefined || !input.card) {
+        const result = await tx.query<{ results: CustomerMatch[] }>(
+          "select public.search_loyalty_customers($1,$2) as results",
+          [merchant, input.query ?? ""],
+        );
+        return { results: result.rows[0].results, role: input.persona };
+      }
+      if (input.profile) {
+        const p = input.profile;
+        await tx.query("select public.update_loyalty_customer($1,$2,$3,$4,$5,$6,$7)", [
+          merchant,
+          card,
+          p.name,
+          p.phone,
+          p.birthday_day,
+          p.birthday_month,
+          p.version,
+        ]);
+      }
       if (input.program) {
         const p = input.program;
         const result = await tx.query(
@@ -75,13 +109,6 @@ export async function localLab(input: z.infer<typeof labRequestSchema>): Promise
       return {
         card: result.rows[0].card,
         role: input.persona,
-        roster:
-          input.persona === "consumer"
-            ? undefined
-            : [
-                { name: "Alex", card_code: alex },
-                { name: "Mar", card_code: "30000000-0000-4000-8000-000000000002" },
-              ],
       };
     });
   });

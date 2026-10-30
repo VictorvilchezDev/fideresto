@@ -49,6 +49,9 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 
 | FID-043 | 2026-10-30 | Confirmado avanzar; elecciones técnicas del asistente | Víctor responde «venga ok dale» al siguiente bloque. Implementado núcleo persistente local con migración/RPC y laboratorio ficticio; SQL exige móvil verificado para alta real pero proveedor/UI aún pendientes. Se mantienen costes aplazados. Detalle de caducidad, corrección y materialización tras bajar objetivo en [[Nucleo de fidelizacion]]; esos criterios técnicos no se presentan como nuevas decisiones expresas del usuario. |
 
+| FID-044 | 2026-10-30 | Confirmado; sustituye propuesta de vista web del consumidor | Víctor aclara que el cliente no tendrá vista en la app: consultará su tarjeta digital y sellos en Wallet. Retirados selector de consumidor/ruta de tarjeta web; alta/verificación/emisión puntual sigue pendiente. |
+| FID-045 | 2026-10-30 | Confirmado | Dueño y camarero buscan por nombre o teléfono y editan la ficha seleccionada, incluido el teléfono. Es único por establecimiento y se comprueba antes de guardar; mismo número admisible en otros con su tarjeta independiente. Detalles y evidencia en [[Clientes por establecimiento]]. |
+
 ## Propuestas abiertas
 
 Precio, alojamiento web, creación de Supabase pendiente por coste, cuentas partidas, efectos de cambios de caducidad, método de verificación/acceso del consumidor y permisos detallados de la agenda. Las reglas estacionales, datos mínimos y modalidad básica de reservas ya están confirmadas. Las fases técnicas pueden desarrollar primero una parte, pero el piloto debe cumplir FID-014/015. Las estimaciones no son un compromiso cerrado.

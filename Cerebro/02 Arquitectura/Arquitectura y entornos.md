@@ -123,3 +123,7 @@ Demo local ficticia separada: cambiar rol, simular sellos/canje, editar programa
 ## Avance del núcleo · 30/10/2026
 
 [[Nucleo de fidelizacion]] recoge el estado vigente: sellos/canjes/correcciones persistentes, premios con condiciones guardadas, autorización SQL por comercio y laboratorio ficticio independiente de la demo visual. Crystal Clear continúa en tarjeta, operación del camarero e historial. 22 comprobaciones locales, tipos/build y recorrido de navegador superados. Las afirmaciones anteriores de movimientos pendientes describen la primera base y quedan sustituidas por este avance local; no se ha creado ni probado Supabase alojado, verificación real del móvil o concurrencia multisesión.
+
+## Corrección vigente · Consumidor solo Wallet y fichas por comercio
+
+[[Clientes por establecimiento]] prevalece sobre propuestas anteriores: no hay vista del consumidor dentro de la app. Se ha retirado `/tarjeta/[merchantId]` y el rol ficticio de cliente; consulta profesional restringida a pertenencia activa. Dueño/camarero buscan por nombre/teléfono y editan ficha. Número normalizado único por establecimiento (no global); ficha/tarjeta/ledger estables, cambios aislados de otros negocios y de Auth. Edición controlada por versión, duplicados rechazados y auditoría sin valores de contacto. 28 comprobaciones locales, tipos/build y recorrido de navegador. Wallet real, alta/verificación puntual y conexiones siguen pendientes.

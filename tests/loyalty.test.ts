@@ -104,7 +104,7 @@ test(
           await fails(() => card(), /NOT_AVAILABLE/);
           await fails(() => command("stamp", { paid: true }), /NOT_AUTHORIZED/);
           await actor(3);
-          assert.equal((await card()).name, "Alex");
+          await fails(() => card(), /NOT_AVAILABLE/);
           await fails(() => card(mar), /NOT_AVAILABLE/);
           await fails(() => command("stamp", { paid: true }), /NOT_AUTHORIZED/);
           await fails(
@@ -303,7 +303,7 @@ test(
         },
       );
       await scenario(
-        "rejected correction leaves the stamp valid and consumer never receives staff reasons",
+        "rejected correction leaves the stamp valid and consumers have no operational view",
         async () => {
           const stamp = await command("stamp", { paid: true });
           const r = await command("request", {
@@ -314,7 +314,7 @@ test(
           await command("reject", { request_id: r.operation_id });
           assert.equal((await card()).stamps, 1);
           await actor(3);
-          assert.ok((await card()).history.every((h) => h.reason === null));
+          await fails(() => card(), /NOT_AVAILABLE/);
         },
       );
       await scenario(
@@ -337,6 +337,154 @@ test(
           assert.equal(current.history.length, 60);
           assert.ok(!current.history.some((h) => h.id === request.operation_id));
           assert.ok(current.pending_requests.some((r) => r.id === request.operation_id));
+        },
+      );
+
+      async function search(query: string, merchant = m) {
+        return (
+          await db.query<{ data: { name: string; phone: string; card_code: string }[] }>(
+            "select public.search_loyalty_customers($1,$2) as data",
+            [merchant, query],
+          )
+        ).rows[0].data;
+      }
+      async function update(profile: Card["profile"], code = alex, merchant = m) {
+        return (
+          await db.query<{ data: Card["profile"] }>(
+            "select public.update_loyalty_customer($1,$2,$3,$4,$5,$6,$7) as data",
+            [
+              merchant,
+              code,
+              profile.name,
+              profile.phone,
+              profile.birthday_day,
+              profile.birthday_month,
+              profile.version,
+            ],
+          )
+        ).rows[0].data;
+      }
+      await scenario(
+        "staff and owners search only their own business by literal name or phone",
+        async () => {
+          assert.equal((await search("Al"))[0].name, "Alex");
+          assert.equal((await search("+34 000 000 001"))[0].card_code, alex);
+          assert.equal((await search("ma"))[0].name, "Mar");
+          assert.equal((await search("%_")).length, 0);
+          assert.equal((await search("")).length, 0);
+          await fails(() => search("Alex", other), /NOT_AUTHORIZED/);
+          await actor(3);
+          await fails(() => search("Alex"), /NOT_AUTHORIZED/);
+          await actor(5);
+          assert.equal((await search("Alex", other)).length, 0);
+        },
+      );
+      await scenario(
+        "phone formats normalize, own number is allowed and duplicates in the business are rejected",
+        async () => {
+          let a = (await card()).profile;
+          a = await update({ ...a, phone: "600 111 222" });
+          assert.equal(a.phone, "+34600111222");
+          const b = (await card(mar)).profile;
+          await update({ ...b, phone: "+34 600 111 223" }, mar);
+          await fails(() => update({ ...a, phone: "0034 600 111 223" }), /PHONE_IN_USE/);
+          const same = await update({ ...a, phone: "+34 (600) 111-222" });
+          assert.equal(same.version, a.version);
+          assert.equal((await search("600111222"))[0].card_code, alex);
+          await fails(() => update({ ...a, phone: "telefono" }), /INVALID_PHONE/);
+          await fails(() => update({ ...a, phone: "+34+600111222" }), /INVALID_PHONE/);
+        },
+      );
+      await scenario(
+        "one phone enrolls independently in different businesses and edits do not move its ledger",
+        async () => {
+          await actor(3);
+          const result = await db.query<{ code: string }>(
+            "select public.enroll_loyalty($1,'Alex de otro local') as code",
+            [other],
+          );
+          const second = result.rows[0].code;
+          assert.notEqual(second, alex);
+          await actor(2);
+          await command("stamp", { paid: true });
+          const before = await card();
+          const edited = await update({
+            ...before.profile,
+            name: "Álex actualizado",
+            phone: "600111224",
+            birthday_day: 29,
+            birthday_month: 2,
+          });
+          assert.equal(edited.phone_verified, false);
+          const after = await card();
+          assert.equal(after.card_code, before.card_code);
+          assert.equal(after.stamps, before.stamps);
+          assert.deepEqual(after.history, before.history);
+          assert.equal((await search("alex actualizado"))[0].phone, "+34600111224");
+          await actor(5);
+          const untouched = await card(second, other);
+          assert.equal(untouched.profile.phone, "+34000000001");
+          assert.equal(untouched.name, "Alex de otro local");
+          assert.equal(untouched.stamps, 0);
+          await root();
+          assert.equal(
+            (
+              await db.query<{ phone: string }>("select phone from auth.users where id=$1", [
+                user(3),
+              ])
+            ).rows[0].phone,
+            "+34000000001",
+          );
+        },
+      );
+      await scenario(
+        "editing checks versions, birthdays and tenant authorization without partial saves",
+        async () => {
+          const p = (await card()).profile;
+          const changed = await update({ ...p, name: "Alex editado" });
+          await fails(() => update({ ...p, name: "Edición antigua" }), /PROFILE_CHANGED/);
+          await fails(
+            () => update({ ...changed, birthday_day: 31, birthday_month: 2 }),
+            /INVALID_BIRTHDAY/,
+          );
+          assert.equal((await card()).name, "Alex editado");
+          await actor(5);
+          await fails(() => update(changed), /NOT_AUTHORIZED/);
+          await actor(3);
+          await fails(() => update(changed), /NOT_AUTHORIZED/);
+          await actor(2);
+          await fails(() => update(changed, alex, other), /NOT_AUTHORIZED/);
+          await fails(
+            () => db.query("select private.loyalty_card_ledger($1,$2)", [m, alex]),
+            /permission denied/,
+          );
+        },
+      );
+      await scenario(
+        "database uniqueness is per business and customer changes are audited without contact values",
+        async () => {
+          const p = (await card()).profile;
+          await update({ ...p, name: "Alex nuevo" });
+          await root();
+          const audit = await db.query<{ action: string; actor_id: string }>(
+            "select action,actor_id from public.audit_events where action like 'customer.update:%'",
+          );
+          assert.equal(audit.rows.length, 1);
+          assert.equal(audit.rows[0].actor_id, user(2));
+          assert.ok(!audit.rows[0].action.includes("Alex nuevo"));
+          assert.ok(!audit.rows[0].action.includes(p.phone));
+          await fails(
+            () =>
+              db.query(
+                "insert into public.loyalty_customers(merchant_id,name,phone) values($1,'Duplicado',$2)",
+                [m, p.phone],
+              ),
+            /unique constraint/,
+          );
+          await db.query(
+            "insert into public.loyalty_customers(merchant_id,name,phone) values($1,'Independiente',$2)",
+            [other, p.phone],
+          );
         },
       );
       await scenario(
@@ -448,3 +596,38 @@ test("request body limit is enforced without trusting Content-Length", async () 
     /BODY_TOO_LARGE/,
   );
 });
+
+test(
+  "directory migration upgrades an existing ledger without resetting cards",
+  { timeout: 30000 },
+  async () => {
+    const db = new PGlite();
+    try {
+      await db.exec(await readFile("supabase/tests/bootstrap-local.sql", "utf8"));
+      const files = (await readdir("supabase/migrations")).filter((f) => f.endsWith(".sql")).sort();
+      for (const file of files.slice(0, -1))
+        await db.exec(await readFile(`supabase/migrations/${file}`, "utf8"));
+      await db.exec(await readFile("supabase/tests/loyalty-fixtures.sql", "utf8"));
+      await db.exec("set role authenticated");
+      await db.query("select set_config('request.jwt.claim.sub',$1,false)", [user(2)]);
+      await db.query("select public.loyalty_command($1,$2,'stamp',$3,'{\"paid\":true}'::jsonb)", [
+        m,
+        alex,
+        randomUUID(),
+      ]);
+      await db.exec("reset role");
+      await db.exec(await readFile(`supabase/migrations/${files.at(-1)}`, "utf8"));
+      await db.exec("set role authenticated");
+      await db.query("select set_config('request.jwt.claim.sub',$1,false)", [user(2)]);
+      const c = (
+        await db.query<{ data: Card }>("select public.loyalty_card($1,$2) as data", [m, alex])
+      ).rows[0].data;
+      assert.equal(c.stamps, 1);
+      assert.equal(c.profile.phone, "+34000000001");
+      assert.equal(c.profile.phone_verified, true);
+      assert.equal(c.card_code, alex);
+    } finally {
+      await db.close();
+    }
+  },
+);

@@ -70,16 +70,26 @@ El manifest permite preparar el uso como web instalada. No hay soporte de operac
 
 ## Laboratorio persistente
 
-En `.env.local`, añadir `FIDERESTO_LOCAL_LAB=1` y arrancar `npm run dev`. Abrir `/laboratorio`: Alex/Mar ficticios, roles de prueba, pago → sello → premio → canje → solicitud motivada → autorización del dueño. Tres sellos por premio al arrancar el fixture; dueño puede cambiar ese programa independiente de `/demo`. Al recargar se mantiene el historial.
+En `.env.local`, añadir `FIDERESTO_LOCAL_LAB=1` y arrancar `npm run dev`. Abrir `/laboratorio`: Alex/Mar ficticios, búsqueda por nombre/teléfono y roles dueño/camarero de prueba, pago → sello → premio → canje → solicitud motivada → autorización del dueño. Tres sellos por premio al arrancar el fixture; dueño puede cambiar ese programa independiente de `/demo`. Al recargar se mantiene el historial.
 
 PGlite guarda en `.data/loyalty-lab-v1/` fuera de Git. No introducir datos reales ni publicar el servidor de desarrollo. Para reiniciar el dataset, detener el servidor y mover esa carpeta a un respaldo local; al arrancar se reconstruye con fixtures. El bootstrap y los fixtures NUNCA se ejecutan en Supabase alojado. La inicialización del laboratorio v1 es de una vez; futuras migraciones necesitarán adaptar/recrear ese dataset ficticio, no se aplican silenciosamente sobre él.
 
 La API del laboratorio exige desarrollo + bandera explícita + host loopback + Origin coincidente. En producción `/laboratorio` y su API devuelven 404, incluso con la bandera: comprobado mediante solicitudes HTTP a `next start` local. La cola/transacción aísla los actores de prueba. El adaptador profesional usa Supabase Auth/RPC y nunca acepta `persona` como autorización.
 
-`/api/loyalty`: POST JSON con comercio, código opaco de tarjeta y comando opcional (acción, clave UUID idempotente y payload); origen de aplicación y usuario validado en servidor. RPC aplican permisos incluso si se llama directamente a PostgREST. `/tarjeta/[merchantId]` consulta la tarjeta propia; falta el recorrido de entrada/verificación del consumidor. Alta RPC solo tras `phone_confirmed_at` real; no enviar un «verified=true» inventado.
+`/api/loyalty`: POST JSON con comercio, código opaco de tarjeta y comando opcional (acción, clave UUID idempotente y payload); origen de aplicación y usuario validado en servidor. RPC aplican permisos incluso si se llama directamente a PostgREST. La antigua ruta `/tarjeta/[merchantId]` se ha retirado: consumidor solo Wallet; alta/verificación y emisión puntual pendientes. Alta RPC solo tras `phone_confirmed_at` real; no enviar un «verified=true» inventado.
 
 Pruebas: 22 comprobaciones contando subcasos SQL. Incluyen temporadas, expiración, reintentos/doble canje secuencial, correcciones, permisos y privacidad de motivos, ventana de historial, gate del laboratorio y límite de lectura JSON. PGlite tiene una conexión: la carrera de dos sesiones PostgreSQL sigue pendiente. No se han usado asesores de un proyecto ajeno. Validar asesores, Auth, PostgREST, concurrencia y carga cuando se cree el proyecto dedicado.
 
 Los movimientos permanecen aunque se corrijan. Hay 60 movimientos recientes, hasta 100 premios y 100 solicitudes pendientes por tarjeta en la respuesta actual; paginación y bandeja global pendientes. El mínimo se comprueba mediante declaración del empleado, sin verificación independiente del ticket.
 
 CLI Supabase fijada en 2.122.0. Para evitar escribir configuración en el home puede usarse `SUPABASE_HOME=/ruta/de/trabajo/cli` (sin credenciales en el repo). Crear futuras migraciones con `npm exec -- supabase migration new nombre`, previa consulta de `--help`. No hace falta arrancar Docker ni crear Supabase alojado para ejecutar estas pruebas.
+
+## Aclaración: consumidor solo Wallet y fichas del local
+
+No existe vista web del cliente ni ruta `/tarjeta/[merchantId]`; rol `consumer` retirado del laboratorio. El consumidor consultará su pase y sellos en Apple/Google Wallet cuando se integren. El alta/verificación/emisión será puntual. Las menciones anteriores de tarjeta propia web describen una propuesta sustituida.
+
+Tercera migración `20261030122842_customer_phone_directory.sql`: teléfono normalizado y único por comercio, búsqueda profesional acotada, edición con versión/auditoría y acceso a tarjeta profesional exclusivo de miembros activos. Dueño y camarero pueden buscar y editar. `/api/loyalty` recibe `query` para búsqueda o `card` y `profile` para edición; no combina búsqueda/mutaciones en una petición. SQL aplica el aislamiento aunque se invoque directamente RPC.
+
+El laboratorio evoluciona en sitio su dataset ficticio v1 con esta migración, sin reiniciar historial. Los mismos teléfonos pueden estar en otros comercios con ficha y tarjeta independientes. Editar no toca Auth global ni otros locales; nuevo número queda sin verificación de titularidad, sin impedir guardar ni otorgar acceso. No hay aún envío real.
+
+28 comprobaciones automáticas, tipos y build. Pruebas de unicidad/formato, búsqueda por nombre/teléfono, perfil con versión, cumpleaños, permisos, repetición entre negocios y migración sobre ledger anterior. No se ha ensayado carrera real multisesión ni servicio alojado.

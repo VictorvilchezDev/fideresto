@@ -18,7 +18,7 @@ Para probar el núcleo persistente ficticio, activa `FIDERESTO_LOCAL_LAB=1` en `
 
 Acceso profesional preparado, permisos de servidor, configuración del programa, etiquetas NFC/QR y alta administrativa del comercio. Migración Supabase con RLS, auditoría y pruebas locales. Demo ficticia separada para revisar la interfaz; sus sellos/canjes son simulados y no se guardan.
 
-Núcleo transaccional de afiliaciones, sellos, premios, canjes y correcciones autorizadas con historial. Laboratorio local funcional y API profesional preparada para RPC Supabase; el registro real por teléfono sigue pendiente.
+Núcleo transaccional de afiliaciones, sellos, premios, canjes y correcciones autorizadas con historial. Laboratorio local funcional y API profesional preparada para RPC Supabase; el alta/verificación real por teléfono y emisión de pases Wallet siguen pendientes.
 
 El premio es un campo de texto libre. El mínimo admite 0 y las caducidades de sellos/premios se configuran por separado. NFC/QR, Wallet de iOS/Android y WhatsApp siguen siendo núcleo del piloto; las integraciones Wallet/WhatsApp y la verificación telefónica aún no están implementadas.
 
@@ -38,3 +38,5 @@ npm run build
 ```
 
 Repositorio autorizado: https://github.com/VictorvilchezDev/fideresto.git. Método de Nexo para mantener el cerebro y diseñar seguridad desde el inicio; diseño visual propio Crystal Clear aceptado como referencia de continuidad. Fecha objetivo revisable del piloto: 31/01/2027.
+
+El consumidor solo consulta su tarjeta/sellos en Wallet, sin vista en la app. Dueño/camarero buscan por nombre o teléfono y editan la ficha seleccionada. Número normalizado único por establecimiento; puede repetirse en otros con su tarjeta independiente. La ficha conserva sellos e historial al cambiar teléfono. Consulta `Cerebro/01 Producto/Clientes por establecimiento.md`.

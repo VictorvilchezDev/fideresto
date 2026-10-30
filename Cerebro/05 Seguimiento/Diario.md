@@ -92,3 +92,9 @@ Tras autorización «venga ok dale», implementados afiliaciones, movimientos, s
 22 comprobaciones automáticas, tipos y build superados. Navegador: obtención/canje, solicitud y autorización, restauración del premio, consulta del consumidor y persistencia al recargar; acumulación continúa con premio pendiente. Sin multisesión real, Auth/servicios alojados, hardware ni despliegue. Supabase no creado y sin costes aceptados. Ver [[Nucleo de fidelizacion]] y [[Seguimiento Nexo]].
 
 Composición estática del nuevo flujo revisada a 390 px en navegador, sin desbordes observados. No sustituye prueba en móvil físico. Archivos temporales de QA retirados; captura final queda fuera del repositorio.
+
+## 30/10/2026 · Consumidor solo Wallet y teléfono por establecimiento
+
+Víctor corrige el recorrido: sin vista del cliente en app; búsqueda/edición por dueño y camarero; teléfono único dentro de local, repetible en otros. Retirada ruta/rol de consumidor y revocado acceso a proyección de tarjeta profesional. Nueva migración con normalización y constraint compuesto, edición con versiones y auditoría; búsqueda limitada al comercio. El dataset ficticio existente se actualiza conservando tarjetas/historial.
+
+28 comprobaciones automáticas, tipos/build. Navegador: búsqueda por nombre/teléfono, selección, edición por camarero, duplicado rechazado, número propio guardado y acceso de dueño. Sin proveedor real, multisesión, Wallet ni despliegue. Cerebro y NEXO actualizados; ver [[Clientes por establecimiento]] y [[Seguimiento Nexo]].

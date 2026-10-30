@@ -6,11 +6,27 @@ export const commandSchema = z.object({
   key: z.uuid(),
   payload: z.record(z.string(), z.unknown()).refine((v) => JSON.stringify(v).length <= 2048),
 });
+export const profileSchema = z.object({
+  name: z.string().trim().min(1).max(80),
+  phone: z.string().trim().min(8).max(40),
+  birthday_day: z.number().int().min(1).max(31).nullable(),
+  birthday_month: z.number().int().min(1).max(12).nullable(),
+  version: z.number().int().min(1),
+});
+export const loyaltyRequestSchema = z
+  .object({
+    card: z.uuid().optional(),
+    query: z.string().trim().max(80).optional(),
+    command: commandSchema.omit({ merchant: true, card: true }).optional(),
+    profile: profileSchema.optional(),
+  })
+  .refine((v) => !(v.query !== undefined && (v.card || v.command || v.profile)))
+  .refine((v) => !(v.command && v.profile))
+  .refine((v) => !((v.command || v.profile) && !v.card));
 export const labRequestSchema = z
   .object({
-    persona: z.enum(["owner", "staff", "consumer"]),
-    card: z.uuid().optional(),
-    command: commandSchema.omit({ merchant: true, card: true }).optional(),
+    ...loyaltyRequestSchema.shape,
+    persona: z.enum(["owner", "staff"]),
     program: z
       .object({
         stamp_target: z.number().int().min(1).max(100),
@@ -21,7 +37,9 @@ export const labRequestSchema = z
       })
       .optional(),
   })
-  .refine((v) => !(v.command && v.program));
+  .refine((v) => [v.command, v.profile, v.program].filter(Boolean).length <= 1)
+  .refine((v) => !(v.query !== undefined && (v.card || v.command || v.profile || v.program)))
+  .refine((v) => !((v.command || v.profile) && !v.card));
 export function localLabEnabled() {
   return process.env.NODE_ENV === "development" && process.env.FIDERESTO_LOCAL_LAB === "1";
 }

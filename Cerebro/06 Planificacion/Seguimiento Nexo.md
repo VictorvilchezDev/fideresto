@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 20, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 22, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -27,12 +27,12 @@ Antes de escribir mediante MCP, consultar proyecto/tareas y revisión vigente. C
 | 01 | `2ed284f3-544b-42ff-9cb2-612f6086bab8` | Definir amenazas, permisos y política de datos |
 | 01 | `da96ce93-0435-49d1-b69c-4029330a4460` | Elegir arquitectura, tecnología y costes de operación |
 | 02 | `0ecba482-0fc4-4c08-9bf7-1a7851348201` | Explorar identidad visual propia y tokens de interfaz |
-| 02 | `788554fd-70fb-41e7-a8aa-422edec56ba5` | Diseñar registro, tarjeta y recompensa del cliente |
+| 02 | `788554fd-70fb-41e7-a8aa-422edec56ba5` | Diseñar alta y tarjeta Wallet del cliente |
 | 02 | `22ff8c37-9341-44b5-8156-d4903d7f8c03` | Diseñar validación del empleado y panel del propietario |
 | 02 | `35fde5b7-f71c-4fc2-add6-3d2e9c37b2f2` | Revisar prototipo y cerrar criterios de aceptación |
 | 03 | `270e7b0d-c851-4716-8274-e4bdfe60b040` | Implementar acceso, sesiones, recuperación y permisos |
 | 03 | `c87ebdda-35be-4511-b1e1-d6ecef5599f0` | Implementar modelo de comercios, programas y movimientos |
-| 03 | `95d72546-1f22-4d25-ad85-0d6f15809e25` | Implementar alta y tarjeta web del cliente |
+| 03 | `95d72546-1f22-4d25-ad85-0d6f15809e25` | Implementar alta verificada y emisión de tarjeta Wallet |
 | 03 | `c3d62b40-9e52-4a00-b3cf-fb4d7c8a1ef1` | Implementar visitas, sellos y canjes consistentes |
 | 03 | `83a664d4-5564-4e44-bb1a-dd22c7b5edad` | Implementar panel del comercio y gestión del equipo |
 | 03 | `fe7765fb-a027-41b9-ae6d-256c59b421cd` | Hito: recorrido funcional seguro con datos ficticios |
@@ -160,3 +160,15 @@ Archivo nuevo subido y leído con coincidencia exacta:
 - `Documentacion/Nucleo-local-v0.1.md`, hash `8b39ad24fb5fcb75db95d4dcec0ac14f809126473f581089e5b0e85373433857`.
 
 Índice vigente actualizado con hash de concurrencia y leído de vuelta. Se conservan versiones anteriores como historia; la nota del núcleo prevalece sobre sus afirmaciones de movimientos aún no implementados. Sin sincronización automática, recursos de pago ni despliegue.
+
+## Aclaración de clientes/Wallet y edición de fichas
+
+Siete tareas y descripción del proyecto actualizadas; revisión 22/30 tareas leída de vuelta, fecha 31/01/2027 conservada, una sola tarea completada como antes. Se renombra alta/tarjeta web a alta verificada y emisión de tarjeta Wallet, y diseño de registro/tarjeta a alta/tarjeta Wallet. Sin cambios de fases, fechas, responsables o dependencias.
+
+Consumidor sin vista en la app; dueño/camarero buscan por nombre/teléfono y editan ficha. Teléfono único por local, repetible en otros; tarjeta/ledger estable y datos independientes. 28 comprobaciones automáticas, tipos/build, navegador e incremento de esquema conservando historial. Ver [[Clientes por establecimiento]].
+
+Nuevo documento leído con coincidencia exacta:
+
+- `Documentacion/Clientes-por-establecimiento-v0.1.md`, hash `6b4ac502bbaccd3b3c86ae8c7b058716db58d29074d812096bb5c7256d72a72d`.
+
+Índice y requisitos vigentes actualizados con hash de concurrencia y leídos de vuelta; la aclaración prevalece sobre propuestas históricas de vista web del consumidor. Sin despliegue, recursos de pago ni conexión a otro proyecto.

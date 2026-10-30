@@ -43,4 +43,8 @@ Ejecutar `npm test`, `npm run typecheck` y `npm run build` tras cambios relevant
 
 `/laboratorio` es una prueba local persistente con clientes ficticios; solo desarrollo, `FIDERESTO_LOCAL_LAB=1`, loopback y origen coincidente. Nunca introducir datos reales ni publicar el servidor de desarrollo. Dataset `.data/loyalty-lab-v1/` ignorado por Git. La API real usa sesión Supabase y RPC; jamás aceptar `persona` del laboratorio como autorización profesional. Ver `Cerebro/02 Arquitectura/Nucleo de fidelizacion.md`.
 
-Las dos migraciones se prueban con PGlite. Tiene una sola conexión: no presentar reintentos/doble canje secuencial como prueba real de concurrencia entre sesiones. Validar esa carrera y asesores/Auth/PostgREST en el proyecto dedicado cuando se cree; no usar otro proyecto para suplir la creación aplazada.
+Las migraciones se prueban con PGlite. Tiene una sola conexión: no presentar reintentos/doble canje secuencial como prueba real de concurrencia entre sesiones. Validar esa carrera y asesores/Auth/PostgREST en el proyecto dedicado cuando se cree; no usar otro proyecto para suplir la creación aplazada.
+
+## Clientes y Wallet: criterio vigente
+
+El consumidor NO tiene vista ni panel dentro de la app; consulta su tarjeta/sellos en Wallet. Alta/verificación y emisión/recuperación del pase son recorridos puntuales pendientes. Dueño y camarero buscan por nombre/teléfono y editan ficha; teléfono único por establecimiento, admisible en otros con datos y tarjetas independientes. Conservar identidad interna/ledger al cambiarlo, comprobar duplicado en SQL y no modificar el perfil de otro local ni Auth global. Ver `Cerebro/01 Producto/Clientes por establecimiento.md`; sustituye la propuesta anterior de tarjeta web del consumidor.

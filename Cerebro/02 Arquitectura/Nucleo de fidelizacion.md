@@ -1,5 +1,7 @@
 # Núcleo de fidelización
 
+**Evolución vigente:** [[Clientes por establecimiento]] retira la vista web del consumidor y añade búsqueda/edición por teléfono único por local. Las secciones siguientes conservan la evidencia de la primera versión del núcleo; consultar la corrección al final.
+
 30/10/2026 · Implementación y verificación local tras «venga ok dale» de Víctor. Ver [[Reglas de sellos y premios]] para requisitos confirmados. No hay despliegue ni Supabase alojado.
 
 ## Implementado
@@ -44,3 +46,7 @@ PGlite usa una conexión: no se ha ensayado una carrera real entre dos sesiones 
 ## Siguiente bloque
 
 Registro/acceso del consumidor por teléfono verificado y gesto operativo de identificación QR/NFC; después conexión real de Supabase cuando Víctor autorice crear su proyecto, ambas Wallet y WhatsApp. Mantener seguridad y pruebas de proveedor, sesiones concurrentes, paginación, MFA y recuperación antes del piloto. Supabase de pago continúa aplazado; no se ha creado ningún recurso alojado.
+
+## Corrección vigente · Consumidor solo Wallet y fichas por comercio
+
+[[Clientes por establecimiento]] prevalece sobre propuestas anteriores: no hay vista del consumidor dentro de la app. Se ha retirado `/tarjeta/[merchantId]` y el rol ficticio de cliente; consulta profesional restringida a pertenencia activa. Dueño/camarero buscan por nombre/teléfono y editan ficha. Número normalizado único por establecimiento (no global); ficha/tarjeta/ledger estables, cambios aislados de otros negocios y de Auth. Edición controlada por versión, duplicados rechazados y auditoría sin valores de contacto. 28 comprobaciones locales, tipos/build y recorrido de navegador. Wallet real, alta/verificación puntual y conexiones siguen pendientes.

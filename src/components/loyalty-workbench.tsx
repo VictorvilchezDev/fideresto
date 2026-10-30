@@ -1,10 +1,16 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Check, Coffee, Gift, History, ShieldCheck, Sparkles } from "lucide-react";
+import { CustomerLookup, CustomerEditor } from "./customer-directory";
 import { Brand } from "./brand";
-import type { Card, LoyaltyAction, LoyaltyResponse, LoyaltyRole } from "@/lib/loyalty/types";
-const alex = "30000000-0000-4000-8000-000000000001";
+import type {
+  Card,
+  CustomerProfile,
+  LoyaltyAction,
+  LoyaltyResponse,
+  LoyaltyRole,
+} from "@/lib/loyalty/types";
 const labels: Record<LoyaltyAction, string> = {
   stamp: "Sello confirmado",
   redeem: "Premio canjeado",
@@ -39,7 +45,7 @@ export function LoyaltyWorkbench({
 }) {
   const [data, setData] = useState(initial);
   const [persona, setPersona] = useState<LoyaltyRole>("staff");
-  const [cardCode, setCardCode] = useState(initial?.card.card_code ?? (lab ? alex : ""));
+  const [cardCode, setCardCode] = useState(initial?.card.card_code ?? "");
   const [paid, setPaid] = useState(false);
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState("");
@@ -56,15 +62,16 @@ export function LoyaltyWorkbench({
   const lock = useRef(false);
   const generation = useRef(0);
   const role = data?.role ?? persona;
-  const consumer = role === "consumer";
+
   const card = data?.card;
   async function load(
     selected = cardCode,
     actor = persona,
     command?: { action: LoyaltyAction; payload: Record<string, unknown>; key: string },
     program?: Card["program"],
+    profile?: CustomerProfile,
   ) {
-    if (lock.current) return;
+    if (lock.current) return false;
     lock.current = true;
     setBusy(true);
     setError("");
@@ -75,8 +82,8 @@ export function LoyaltyWorkbench({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           lab
-            ? { persona: actor, card: selected, command, program }
-            : { merchant, card: selected, command },
+            ? { persona: actor, card: selected, command, program, profile }
+            : { merchant, card: selected, command, profile },
         ),
       });
       const result = await response.json().catch(() => {
@@ -92,23 +99,22 @@ export function LoyaltyWorkbench({
           setReason("");
           setRetry(null);
           setNotice("Operación guardada en el historial.");
-        } else if (program) setNotice("Programa de pruebas guardado.");
+        } else if (profile) setNotice("Datos del cliente guardados.");
+        else if (program) setNotice("Programa de pruebas guardado.");
       }
+      return true;
     } catch (e) {
       setError(
         e instanceof Error
           ? e.message
           : "No se pudo conectar. Recarga la tarjeta antes de continuar.",
       );
+      return false;
     } finally {
       lock.current = false;
       setBusy(false);
     }
   }
-  useEffect(() => {
-    if (lab) void load(alex, "staff"); /* Initial lab only; user actions own subsequent reads. */
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lab]);
   function act(action: LoyaltyAction, payload: Record<string, unknown>) {
     if (lock.current || retry) return;
     const request = { action, payload, key: crypto.randomUUID(), card: cardCode, persona };
@@ -122,7 +128,7 @@ export function LoyaltyWorkbench({
     setPaid(false);
     setNotice("");
     setCorrecting("");
-    void load(value === "consumer" ? alex : cardCode, value);
+    if (cardCode) void load(cardCode, value);
   }
   const body = (
     <>
@@ -142,7 +148,6 @@ export function LoyaltyWorkbench({
             >
               <option value="staff">Camarero</option>
               <option value="owner">Dueño</option>
-              <option value="consumer">Cliente Alex</option>
             </select>
           </label>
         </div>
@@ -151,12 +156,8 @@ export function LoyaltyWorkbench({
         <div className="page-heading">
           <div>
             <span className="eyebrow">CADA VISITA DEJA HUELLA</span>
-            <h1>{consumer ? "Tus buenos hábitos." : "Una visita más cerca."}</h1>
-            <p>
-              {consumer
-                ? "Tu progreso y tus premios, siempre a mano."
-                : "Confirma la cuenta, suma el sello y cuida la siguiente visita."}
-            </p>
+            <h1>Una visita más cerca.</h1>
+            <p>Busca a tu cliente, confirma su cuenta y suma una nueva visita.</p>
           </div>
           <span className="pill">
             <ShieldCheck size={15} />
@@ -164,52 +165,20 @@ export function LoyaltyWorkbench({
           </span>
         </div>
       )}
-      {!consumer && (
-        <form
-          className="panel loyalty-lookup"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setData(undefined);
-            setNotice("");
-            void load();
-          }}
-        >
-          <label>
-            {lab ? "Cliente ficticio" : "Código de la tarjeta"}
-            {lab ? (
-              <select
-                value={cardCode}
-                disabled={busy || !!retry}
-                onChange={(e) => {
-                  setCardCode(e.target.value);
-                  setData(undefined);
-                  setNotice("");
-                  setPaid(false);
-                  setCorrecting("");
-                  void load(e.target.value);
-                }}
-              >
-                <option value={alex}>Alex</option>
-                <option value="30000000-0000-4000-8000-000000000002">Mar</option>
-              </select>
-            ) : (
-              <input
-                value={cardCode}
-                onChange={(e) => {
-                  setCardCode(e.target.value);
-                  setData(undefined);
-                  setPaid(false);
-                }}
-                placeholder="Identificador de la tarjeta"
-                required
-              />
-            )}
-          </label>
-          <button className="secondary" disabled={busy || !!retry}>
-            {busy ? "Cargando…" : "Actualizar tarjeta"}
-          </button>
-        </form>
-      )}
+      <CustomerLookup
+        lab={lab}
+        merchant={merchant}
+        persona={persona}
+        disabled={busy || !!retry}
+        onSelect={(code) => {
+          setCardCode(code);
+          setData(undefined);
+          setPaid(false);
+          setNotice("");
+          setCorrecting("");
+          void load(code);
+        }}
+      />
       <div aria-live="polite">
         {notice && <p className="notice">{notice}</p>}
         {error && (
@@ -241,12 +210,19 @@ export function LoyaltyWorkbench({
       )}
       {card ? (
         <>
+          <CustomerEditor
+            key={card.card_code}
+            profile={card.profile}
+            disabled={busy || !!retry}
+            onRefresh={() => void load()}
+            onSave={(p) => load(cardCode, persona, undefined, undefined, p)}
+          />
           <div className="loyalty-grid">
             <section className="panel loyalty-card">
               <div className="panel-heading">
                 <div>
                   <span className="eyebrow">
-                    {lab ? "CAFÉ OLIVA · DATOS FICTICIOS" : "TU TARJETA"}
+                    {lab ? "CAFÉ OLIVA · DATOS FICTICIOS" : "PROGRESO DEL CLIENTE"}
                   </span>
                   <h2>{card.name}</h2>
                 </div>
@@ -271,7 +247,7 @@ export function LoyaltyWorkbench({
               {card.program.stamp_target > 20 && (
                 <p>{card.program.stamp_target} sellos para completar la tarjeta.</p>
               )}
-              <span className="eyebrow">TU PRÓXIMO PREMIO</span>
+              <span className="eyebrow">PRÓXIMO PREMIO</span>
               <h3>{card.program.reward_text}</h3>
               <p className="muted">
                 {card.stamp_expires_at
@@ -281,7 +257,7 @@ export function LoyaltyWorkbench({
                   ? `Se renuevan con actividad válida cada ${card.program.stamp_expiry_days} días.`
                   : "Caducidad de sellos desactivada."}
               </p>
-              {!consumer ? (
+              {
                 <div className="loyalty-confirm">
                   <label className="loyalty-checkbox">
                     <input
@@ -307,18 +283,13 @@ export function LoyaltyWorkbench({
                   </button>
                   <small>Un sello por cuenta. El empleado comprueba el pago.</small>
                 </div>
-              ) : (
-                <div className="loyalty-code">
-                  <small>Código de tu tarjeta</small>
-                  <code>{card.card_code}</code>
-                </div>
-              )}
+              }
             </section>
             <section className="panel loyalty-prizes">
               <div className="panel-heading">
                 <div>
                   <span className="eyebrow">GANADOS CON CADA VISITA</span>
-                  <h2>Tus premios</h2>
+                  <h2>Premios del cliente</h2>
                 </div>
                 <span className="icon-tile">
                   <Gift size={23} />
@@ -329,8 +300,8 @@ export function LoyaltyWorkbench({
                   <Sparkles size={30} />
                   <h3>El primero está cerca</h3>
                   <p>
-                    Al completar los sellos aparecerá aquí. Puedes seguir acumulando aunque tengas
-                    premios pendientes.
+                    Al completar los sellos aparecerá aquí. El cliente puede seguir acumulando
+                    aunque tenga premios pendientes.
                   </p>
                 </div>
               ) : (
@@ -339,7 +310,7 @@ export function LoyaltyWorkbench({
                     <span className={`pill reward-${r.status}`}>{statusLabels[r.status]}</span>
                     <h3>{r.reward_text}</h3>
                     <p>{r.expires_at ? `Caduca el ${date(r.expires_at)}` : "Sin caducidad"}</p>
-                    {r.status === "available" && !consumer && (
+                    {r.status === "available" && (
                       <button
                         className="secondary"
                         disabled={busy || !!retry}
@@ -415,8 +386,7 @@ export function LoyaltyWorkbench({
                     </small>
                     {h.reason && <p>{h.reason}</p>}
                   </div>
-                  {!consumer &&
-                    ["stamp", "redeem"].includes(h.action) &&
+                  {["stamp", "redeem"].includes(h.action) &&
                     !h.reversed &&
                     !h.correction_pending && (
                       <button
@@ -546,7 +516,7 @@ export function LoyaltyWorkbench({
             <h2>Empezamos por su tarjeta</h2>
             <p>
               {lab
-                ? "Selecciona un cliente ficticio para probar el flujo."
+                ? "Busca y selecciona un cliente ficticio para probar el flujo."
                 : "Introduce el código que presenta el cliente para consultar sus sellos y premios."}
             </p>
           </div>

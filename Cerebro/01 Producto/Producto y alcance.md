@@ -29,3 +29,7 @@ Un sello por cuenta. Las tarjetas en curso pasan al premio estacional vigente; s
 ## Medición
 
 Separar registros, visitas, canjes y visitas vinculadas a campañas de visitas adicionales causadas por ellas. No prometer incremento de ingresos sin medirlo.
+
+## Corrección vigente · Consumidor solo Wallet y fichas por comercio
+
+[[Clientes por establecimiento]] prevalece sobre propuestas anteriores: no hay vista del consumidor dentro de la app. Se ha retirado `/tarjeta/[merchantId]` y el rol ficticio de cliente; consulta profesional restringida a pertenencia activa. Dueño/camarero buscan por nombre/teléfono y editan ficha. Número normalizado único por establecimiento (no global); ficha/tarjeta/ledger estables, cambios aislados de otros negocios y de Auth. Edición controlada por versión, duplicados rechazados y auditoría sin valores de contacto. 28 comprobaciones locales, tipos/build y recorrido de navegador. Wallet real, alta/verificación puntual y conexiones siguen pendientes.

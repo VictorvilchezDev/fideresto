@@ -1,6 +1,6 @@
 # Requisitos confirmados
 
-Rondas 1–6 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas detalladas en [[Reglas de sellos y premios]].
+Rondas 1–6 y aclaración de clientes/Wallet · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas detalladas en [[Reglas de sellos y premios]].
 
 ## Acuerdos
 
@@ -16,7 +16,9 @@ Rondas 1–6 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas 
 | Núcleo del piloto | Tarjeta en Wallet tanto en iOS como en Android y mensajes de WhatsApp. Una demo web parcial puede ayudar al desarrollo, pero no equivale al producto piloto confirmado. |
 | Comunicaciones | Todas las planteadas: cumpleaños, inactividad, promociones, experiencia/reseñas y comunicaciones de reservas; creación/adaptación de nuevas plantillas según demanda del comercio. |
 | Puesta en marcha | Nuestro equipo instala el sistema, forma al personal y ayuda con la configuración inicial. |
-| Alta del consumidor | Nombre y móvil obligatorios; cumpleaños opcional con día y mes. Activación al verificar el móvil, sin aprobación manual del personal; método, acceso y recuperación por diseñar. |
+| Alta del consumidor | Nombre y móvil obligatorios; cumpleaños opcional con día y mes. Activación al verificar el móvil, sin aprobación manual del personal; método y emisión/recuperación del pase por diseñar; sin área de cliente en la app. |
+| Consulta del consumidor | Solo su tarjeta digital y sellos en Wallet; sin vista de cliente dentro de la aplicación. |
+| Ficha del cliente | Dueño y camarero buscan por nombre/teléfono y editan nombre, móvil y cumpleaños opcional. Teléfono único por establecimiento; puede repetirse en otros negocios con tarjetas independientes. |
 | Emisor WhatsApp | Mensajes desde el WhatsApp del negocio. Número actual o dedicado y conexión por concretar; compatibilidad todavía no comprobada. |
 | Validación inicial de cuenta | El empleado confirma la cuenta pagada; verificación adicional de la cuenta se estudiará posteriormente. |
 | Correcciones | Solicitud con mensaje explicando el motivo y autorización del encargado/propietario; conservar trazabilidad. |
@@ -40,7 +42,7 @@ Rondas 1–6 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas 
 3. Se sigue acumulando con recompensas pendientes; detalles operativos del ciclo por diseñar.
 4. Caducidades separadas confirmadas: sellos por inactividad y premios desde obtención, con opción de desactivar. Plazos concretos los configura el local; efectos de cambios y casos límite se resolverán en diseño técnico.
 5. Agenda básica propia apoyada en solicitudes por WhatsApp confirmada; detalles de operación/permisos por diseñar.
-6. Datos mínimos y necesidad de verificar móvil confirmados; quedan método de verificación, acceso/recuperación del consumidor. El premio ya se define en texto libre.
+6. Datos mínimos y necesidad de verificar móvil confirmados; quedan método de verificación y emisión/recuperación de la tarjeta Wallet. El premio ya se define en texto libre.
 
 La configuración concreta no está decidida por el ejemplo previo de ocho visitas. No hay aplicación implementada por registrar estos requisitos.
 
@@ -50,4 +52,6 @@ Víctor propone web centrada en móvil con administración de Fideresto y área 
 
 ## Inicio de implementación
 
-Víctor será a priori el primer comercio piloto y elige Supabase para alojar PostgreSQL. Creación del proyecto aplazada expresamente al conocer el coste cotizado de 10 USD/mes. Hay una primera base local; Wallet/WhatsApp reales, verificación telefónica y operaciones reales de fidelización aún no implementadas. Demo ficticia no equivale al piloto.
+Víctor será a priori el primer comercio piloto y elige Supabase para alojar PostgreSQL. Creación del proyecto aplazada expresamente al conocer el coste cotizado de 10 USD/mes. Hay una primera base local; Wallet/WhatsApp reales y verificación telefónica pendientes; operaciones de fidelización y búsqueda/edición de fichas ya implementadas y probadas localmente. Demo ficticia no equivale al piloto.
+
+La aclaración vigente de consumidor solo Wallet y teléfono por establecimiento se detalla en [[Clientes por establecimiento]]; prevalece sobre propuestas anteriores de tarjeta web o panel del consumidor.
