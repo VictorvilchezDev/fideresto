@@ -16,10 +16,11 @@ Rondas 1–6 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas 
 | Núcleo del piloto | Tarjeta en Wallet tanto en iOS como en Android y mensajes de WhatsApp. Una demo web parcial puede ayudar al desarrollo, pero no equivale al producto piloto confirmado. |
 | Comunicaciones | Todas las planteadas: cumpleaños, inactividad, promociones, experiencia/reseñas y comunicaciones de reservas; creación/adaptación de nuevas plantillas según demanda del comercio. |
 | Puesta en marcha | Nuestro equipo instala el sistema, forma al personal y ayuda con la configuración inicial. |
-| Alta del consumidor | Nombre y móvil obligatorios; cumpleaños opcional con día y mes. Verificación del móvil obligatoria al registrarse; método, acceso y recuperación por diseñar. |
+| Alta del consumidor | Nombre y móvil obligatorios; cumpleaños opcional con día y mes. Activación al verificar el móvil, sin aprobación manual del personal; método, acceso y recuperación por diseñar. |
 | Emisor WhatsApp | Mensajes desde el WhatsApp del negocio. Número actual o dedicado y conexión por concretar; compatibilidad todavía no comprobada. |
 | Validación inicial de cuenta | El empleado confirma la cuenta pagada; verificación adicional de la cuenta se estudiará posteriormente. |
 | Correcciones | Solicitud con mensaje explicando el motivo y autorización del encargado/propietario; conservar trazabilidad. |
+| Canjes por personal | El camarero/dependiente puede registrar el canje, además de confirmar sellos y solicitar correcciones con motivo. |
 | Dispositivos del personal | Del establecimiento o personales, con acceso individual dedicado y permisos del comercio. |
 
 «Cliente» al configurar el programa se refiere al comercio que contrata Fideresto; el consumidor acumula sellos y recibe el premio.
@@ -42,3 +43,7 @@ Rondas 1–6 · 30 de octubre de 2026 · Respuestas expresas de Víctor. Reglas 
 6. Datos mínimos y necesidad de verificar móvil confirmados; quedan método de verificación, acceso/recuperación del consumidor. El premio ya se define en texto libre.
 
 La configuración concreta no está decidida por el ejemplo previo de ocho visitas. No hay aplicación implementada por registrar estos requisitos.
+
+## Aclaraciones de arquitectura
+
+Víctor propone web centrada en móvil con administración de Fideresto y área de comercio con roles dueño/camarero. Se confirman activación tras verificar móvil y canjes por camarero. Evaluación técnica, matriz propuesta y límites NFC en [[Arquitectura y entornos]]. Stack y flujo NFC diario pendientes de validación.

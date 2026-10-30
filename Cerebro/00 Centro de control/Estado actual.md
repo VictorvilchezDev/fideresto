@@ -14,6 +14,8 @@ Ronda 4: nombre y móvil obligatorios, cumpleaños opcional (día/mes); WhatsApp
 
 Ronda 6: importe mínimo configurable incluido 0; premio como campo de texto libre, sin catálogo de tipos ni cálculo automático de descuentos; caducidades separadas (sellos por inactividad y premios desde obtención) con opción de desactivación.
 
+Arquitectura: Víctor plantea web centrada en móvil, administración Fideresto y comercio con roles dueño/camarero. Confirma activación tras verificar móvil, sin revisión manual, y canjes por camarero. Propuesta técnica y límites NFC contrastados en [[Arquitectura y entornos]]; stack, proveedores y flujo NFC cotidiano aún por validar.
+
 ## Existe realmente
 
 - Carpeta local `outputs/fideresto` dentro del espacio de este chat.
@@ -36,7 +38,7 @@ Verificaciones: 11 notas con enlaces internos resueltos, `git diff --cached --ch
 ## Siguiente trabajo
 
 1. Concretar método de verificación/acceso del consumidor, cuentas partidas y casos límite del vencimiento. Confirmación inicial por empleado y correcciones mediante solicitud motivada/autorización ya acordadas.
-2. Diseñar el modelo de amenazas y matriz de permisos antes de implementar operaciones.
+2. Revisar [[Arquitectura y entornos]] v0.1: matriz inicial de permisos, PWA/backend modular y NFC. Concretar flujo diario de sello y elegir stack/alojamiento antes de implementar; agenda del camarero por confirmar.
 3. Preparar una propuesta visual propia, explorando «CristalWhite» sin darla por aceptada.
 4. Elegir stack y desarrollar una demo local con datos ficticios y funciones externas simuladas de forma explícita.
 

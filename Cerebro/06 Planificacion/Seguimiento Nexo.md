@@ -6,7 +6,7 @@ Proyecto creado mediante MCP el 30 de octubre de 2026, a petición de Víctor.
 - ID: `c16a8d9e-b397-4a52-be44-2c0fbac1b95d`.
 - Enlace: https://nexo.adnconsulting.es/#/project/c16a8d9e-b397-4a52-be44-2c0fbac1b95d/overview
 - Fecha objetivo elegida por Víctor: 31/01/2027.
-- Última planificación comprobada: revisión 12, seis fases y 30 tareas.
+- Última planificación comprobada: revisión 14, seis fases y 30 tareas.
 - Una tarea completada: repositorio/vault/protocolo ya publicados; definición de producto en curso; resto pendiente.
 - Puntos de tareas y pesos de fase son estimaciones relativas propuestas, no horas ni compromiso de esfuerzo.
 - Responsables sin asignar. No se han añadido participantes.
@@ -103,3 +103,14 @@ Requisitos consolidados actualizados mediante hash y leídos de vuelta con conte
 Cinco tareas y descripción actualizadas; revisión 12/30 tareas comprobada, sin cambiar estados, participantes o fechas. Premio como campo de texto libre, sin catálogo de tipos ni cálculo automático de descuentos; mínimo configurable incluido 0; caducidades separadas/desactivables (sellos por inactividad y premios desde obtención). Estas decisiones prevalecen sobre los ejemplos y propuestas anteriores.
 
 Documento consolidado rondas 1–6 escrito con hash y leído con contenido coincidente: `Documentacion/Requisitos-confirmados-vigentes.md`, hash `706d753e36a9fa9921209b045ec014f87b43f3fb84852a0bf9edd3d7a839a76c`. Enlaces internos y formato del diff comprobados antes de publicar. Sin aplicación implementada.
+
+## Arquitectura propuesta v0.1
+
+Siete tareas y descripción del proyecto ajustadas; revisión 14/30 tareas comprobada sin cambios de estados, responsables o calendario. Evaluada propuesta de Víctor de web principalmente móvil, administración Fideresto y comercio con dueño/camarero. Confirmados alta activa al verificar móvil sin aprobación manual y canjes por camarero. PWA/backend modular/PostgreSQL y TypeScript/Next.js candidatos, sin elegir stack ni alojamiento. Límites NFC contrastados en fuentes oficiales; flujo diario y hardware aún sin validar.
+
+Archivos leídos con contenido coincidente, índice actualizado con hash de concurrencia:
+
+- `Documentacion/Arquitectura-propuesta-v0.1.md`, hash `c8247e2cc0b0b42b33ffc259f9d544389a1f393b77d0ec187b7127bc66f022d9`.
+- `Documentacion/Requisitos-confirmados-vigentes.md`, hash `7f944e9b989f872b109d3e94bd0890509f185b48043993f19c4573c066d1fb20`.
+
+Comprobados enlaces internos del vault y formato del diff antes de publicar; no son pruebas de aplicación ni de dispositivos.

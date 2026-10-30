@@ -64,3 +64,7 @@ Víctor confirma verificación del móvil al registrarse, cuenta pagada confirma
 ## 2026-10-30 · Ronda 6: simplificación del premio
 
 Víctor confirma importe mínimo por local incluido 0, premio en un campo de texto libre y caducidades separadas/desactivables: sellos por inactividad y premios desde obtención. Corrige la propuesta innecesaria de enumerar/modelar descuentos; se elimina esa complejidad de requisitos, flujos y planificación. FID-031–033. Se conservan reglas estacionales y canjes trazables. Documentación actualizada, sin código ni controles implementados; sincronización y comprobaciones en [[Seguimiento Nexo]].
+
+## 2026-10-30 · Propuesta de arquitectura y NFC
+
+Víctor plantea web principalmente móvil, administración Fideresto y comercio con dueño/camarero. Aclara que verificar móvil activa afiliación sin aprobación manual y que camarero puede registrar canjes. FID-034–037 separan propuesta de usuario, aclaraciones confirmadas y recomendación técnica. Se documentan arquitectura v0.1, matriz de permisos, PWA/backend modular/stack candidato, NFC URL estable y alternativas de grabación Android/iPhone. Fuentes oficiales consultadas; no se probó hardware ni se implementó aplicación. Agenda del camarero y flujo NFC cotidiano pendientes de validar. Plan y copia NEXO según [[Seguimiento Nexo]].

@@ -40,7 +40,7 @@ La operación de Fideresto requerirá provisionar comercios y gestionar incidenc
 1. El comercio ofrece acceso por QR, NFC o enlace, con alternativas según compatibilidad.
 2. El cliente consulta el programa antes de registrarse.
 3. Aporta nombre y móvil obligatorios y cumpleaños opcional (día/mes); comunicaciones y participación se presentan de forma diferenciada. Debe verificar el móvil al registrarse; método de verificación, acceso y recuperación por definir.
-4. El servidor crea su afiliación al comercio.
+4. El servidor activa su afiliación al comercio tras verificar el móvil, sin aprobación manual del personal.
 5. Accede a su tarjeta mediante un mecanismo privado y recuperable por definir.
 6. Añade su tarjeta a Apple Wallet o Google Wallet. Esta integración es requisito del piloto.
 
@@ -91,3 +91,7 @@ Identidad propia. CristalWhite es una dirección por explorar. Priorizar legibil
 - Solicitud de corrección con motivo y autorización del encargado/propietario confirmada; falta concretar estados y permisos detallados.
 - Datos mínimos y verificación de móvil al registrarse confirmados; falta elegir mecanismo de verificación/acceso/recuperación del cliente.
 - Comercio piloto y responsable; presupuesto y proveedores.
+
+## Revisión de arquitectura v0.1
+
+Dos áreas profesionales planteadas por Víctor: administración Fideresto y comercio; dentro del comercio, dueño y camarero/dependiente. El recorrido público del consumidor es separado. Camarero confirma sellos, registra canjes y solicita correcciones con motivo; dueño configura y autoriza. No se requiere aprobar altas tras verificar móvil. Acceso del camarero a agenda pendiente ante la restricción de funciones planteada. Propuesta de uso cotidiano NFC/QR y alternativa QR personal en [[Arquitectura y entornos]]; no prometer lectura Wallet por acercar dos móviles.

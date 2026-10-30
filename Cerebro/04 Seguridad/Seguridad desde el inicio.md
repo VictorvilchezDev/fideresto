@@ -47,3 +47,7 @@ Revisar las reglas vigentes de cada integración al implementarla. No selecciona
 ## Ronda 5 · Requisitos operativos confirmados
 
 Verificar móvil al registrarse, con método/canal pendiente. Diseñar códigos/enlaces con expiración, un solo uso y límites sin enumeración de clientes. Al principio el empleado confirma la cuenta pagada: esto no aporta verificación independiente del ticket; permisos, auditoría e idempotencia siguen siendo necesarios. Correcciones solo tras solicitud con motivo y autorización del encargado/propietario. Proponer registro de solicitud/autorización/resultado y pruebas de rechazo a operaciones directas de empleado sin autorización. Son controles por diseñar e implementar, no pruebas realizadas.
+
+## Revisión de arquitectura
+
+Matriz inicial y límites en [[Arquitectura y entornos]]. Administración Fideresto y dueño requieren autenticación reforzada propuesta; acceso de soporte acotado y trazable, sin lectura/modificación global de clientes por defecto. El camarero no configura programa, WhatsApp ni etiquetas ni autoriza sus propias correcciones. Altas se activan al verificar móvil; canje por camarero confirmado. El NFC público contiene una URL copiable, sin claves ni datos personales: no prueba presencia ni autoriza sellos. Verificar ámbito de comercio en cada operación y trabajo en segundo plano. Ninguno de estos controles se ha implementado todavía.

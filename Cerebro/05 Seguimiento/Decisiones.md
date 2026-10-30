@@ -37,6 +37,10 @@ No confundir acuerdos del usuario con propuestas de implementación. Las autoriz
 | FID-031 | 2026-10-30 | Confirmado | Importe mínimo de cuenta configurable por local, incluido 0. Ronda 6, respuesta 1. |
 | FID-032 | 2026-10-30 | Confirmado; aclara FID-013 | Premio en un único campo de texto libre escrito por el comercio. Ronda 6, respuesta 2: sustituye la propuesta de tipos/opciones estructuradas y cálculo de descuentos. El empleado entrega/aplica lo descrito y registra el canje. |
 | FID-033 | 2026-10-30 | Confirmado; concreta FID-021 | Caducidades configurables por separado: sellos tras un plazo sin actividad y premios desde su obtención; posibilidad de desactivar la caducidad. Ronda 6, respuesta 3. |
+| FID-034 | 2026-10-30 | Propuesta de Víctor, evaluada | Web de uso principalmente móvil, dos áreas profesionales (administración Fideresto y comercio); dueño y camarero como roles mínimos del comercio. Evaluación y recomendaciones en [[Arquitectura y entornos]]. |
+| FID-035 | 2026-10-30 | Confirmado | Afiliación activa al verificar móvil, sin aprobación manual por el personal. Respuesta de aclaración durante arquitectura; resuelve «aceptar clientes que se registren». |
+| FID-036 | 2026-10-30 | Confirmado | Camarero/dependiente también puede registrar canje de premios, además de confirmar sellos y solicitar correcciones con motivo. Respuesta de aclaración durante arquitectura. |
+| FID-037 | 2026-10-30 | Propuesta técnica del asistente | PWA y backend modular, PostgreSQL y trabajos de Wallet/WhatsApp en segundo plano; TypeScript/Next.js como stack candidato. URL estable por etiqueta NFC y grabación inicial asistida; escritura web Android compatible, alternativa nativa para iPhone. Sin stack aprobado ni hardware probado. |
 
 ## Propuestas abiertas
 
